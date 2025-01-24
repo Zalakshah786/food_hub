@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-02bkwgt*o4q7^w4cz--g+hwqe^)si2%5)5v9*6c2dq&=*w_g_1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','food-hub-0b5046e8acf1.herokuapp.com','localhost',]
 
@@ -126,11 +126,14 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
-# Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
+# Ensure the directory exists or create it
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-)
+]
 
+# Create the static directory if it doesn't exist
+if not os.path.exists(STATICFILES_DIRS[0]):
+    os.makedirs(STATICFILES_DIRS[0])
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
