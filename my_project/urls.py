@@ -17,9 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from food_hub import views as index_views
-
+from users import views as user_views
 
 urlpatterns = [
+    path('user/', user_views.user_me, name='user_me'),
+    path('food_hub/', index_views.index, name='index'),
     path('admin/', admin.site.urls),
-    path('', index_views.index, name='index'),
+    
 ]

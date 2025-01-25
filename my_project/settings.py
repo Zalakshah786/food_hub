@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-02bkwgt*o4q7^w4cz--g+hwqe^)si2%5)5v9*6c2dq&=*w_g_1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','food-hub-0b5046e8acf1.herokuapp.com','localhost',]
+ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com','localhost',]
 
 
 # Application definition
@@ -40,10 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'food_hub',
     'users',
-    'chefs',
-    'menu',
-    'orders',
-    'reviews',
+    
+    
 ]
 
 MIDDLEWARE = [
