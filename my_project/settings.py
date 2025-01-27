@@ -28,7 +28,7 @@ if os.path.exists(os.path.join(BASE_DIR, 'env.py')):
 SECRET_KEY = 'django-insecure-6xd2#e=9%+%$z(t^0w6)%cfdi_y@y^ei^x%vz-3&cixbenx8d6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com']
 
@@ -90,6 +90,7 @@ WSGI_APPLICATION = 'my_project.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
 
 # Add this print statement temporarily to debug
 print("Database URL:", os.environ.get("DATABASE_URL"))
