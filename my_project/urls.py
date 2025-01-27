@@ -2,7 +2,7 @@
 URL configuration for my_project project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urls/
+    https://docs.djangoproject.com/en/5.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -16,11 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from food_hub import views as food_views
+from foodhub import views as foodhub_views
+from DiscoverUs import views as DiscoverUs_views
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('food_hub.urls')),  # Landing Page
-    path('users/', include('users.urls')),   # User Authentication URLs
+urlpatterns =[
+    
+    path('DiscoverUs/', DiscoverUs_views.index, name='DiscoverUs'),
+    path('foodhub/', foodhub_views.index, name='foodhub'),
+    path('admin/', admin.site.urls, name='admin'),
 ]
-
