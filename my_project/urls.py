@@ -16,12 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from foodhub import views as foodhub_views
-from DiscoverUs import views as DiscoverUs_views
+
 
 urlpatterns =[
-    
-    path('DiscoverUs/', DiscoverUs_views.index, name='DiscoverUs'),
-    path('foodhub/', foodhub_views.index, name='foodhub'),
+
+    #path('', include("DiscoverUs.urls"), name="DiscoverUs-urls"),
+    path('', include("foodhub.urls"), name="foodhub-urls"),
     path('admin/', admin.site.urls, name='admin'),
 ]
