@@ -5,4 +5,4 @@ from .models import Post, Comment
 # Create your views here.
 class PostList(generic.ListView):
     queryset = Post.objects.all()
-    template_name = "food_list.html"
+    template_name = "foodhub/index.html"

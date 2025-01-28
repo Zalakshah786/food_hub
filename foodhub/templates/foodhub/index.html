@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section id="hero">
+    <!-- Add a hero image and catchy tagline -->
+    <div class="hero-image">
+        <img src="{% static 'images/hero.jpg' %}" alt="Delicious Gujarati Food">
+        <div class="hero-text">
+            <h1>Welcome to Food Hub</h1>
+            <p>Your gateway to authentic Gujarati cuisine</p>
+            <a href="#popular-recipes" class="btn btn-primary">Explore Recipes</a>
+        </div>
+    </div>
+</section>
+<section id="features">
+    <!-- Highlight key features of your platform -->
+</section>
+<section id="popular-recipes">
+    <!-- Display some popular Gujarati recipes -->
+</section>
+<section id="cta">
+    <!-- Call-to-action for user signup or exploration -->
+</section>
+{% endblock %}

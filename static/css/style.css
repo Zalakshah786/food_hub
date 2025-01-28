@@ -1,0 +1,45 @@
+body {
+    background-color: #656C12;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+h1 {
+    color: #343a40;
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+#hero {
+    background: url('/path/to/hero-image.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+#features, #popular-recipes, #cta {
+    padding: 20px 0;
+}
+
+#features {
+    background-color: #e9ecef;
+}
+
+#popular-recipes {
+    background-color: #ffffff;
+}
+
+#cta {
+    background-color: #e9ecef;
+    text-align: center;
+}
