@@ -17,14 +17,32 @@ footer {
 }
 
 #hero {
-    background: url('/path/to/hero-image.jpg') no-repeat center center;
+    background: url('/static/foodhub/images/hero.jpg') no-repeat center center;
     background-size: cover;
-    height: 400px;
+    max-width: 100%;
+    max-height: min-content;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
+}
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar {
+    background-color: ; /* Change this to your desired color */
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #ffffff; /* Change this to your desired text color */
+}
+
+.navbar .nav-link:hover {
+    color: #cccccc; /* Change this to your desired hover text color */
 }
 
 #features, #popular-recipes, #cta {
