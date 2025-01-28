@@ -1,63 +1,217 @@
+/* General Styles */
 body {
-    background-color: #656C12;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
     margin: 0;
     padding: 0;
-    
+}
+
+.container {
+    padding-top: 30px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #900533 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.navbar a {
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+}
+
+.navbar a:hover {
+    background-color: #731314;
+    color: white;
+}
+
+.navbar .navbar-nav .nav-item {
+    margin-right: 20px;
+}
+
+/* Buttons */
+.btn {
+    background-color: #731314;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #900533;
+}
+
+/* Footer */
+footer {
+    background-color: #900533;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #900533;
+    font-weight: 700;
 }
 
 h1 {
-    color: #343a40;
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-footer {
-    background-color: #343a40;
-    color: #ffffff;
-    padding: 10px 0;
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-#hero {
-    background: url('/static/foodhub/images/hero.jpg') no-repeat center center;
-    background-size: cover;
-    max-width: 100%;
-    max-height: min-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Links */
+a {
+    color: #731314;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #9B3D29; /* Lighter shade */
+}
+
+/* Section Styling */
+.section {
+    padding: 30px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+form input[type="submit"] {
+    background-color: #731314;
     color: white;
-    text-align: center;
+    border: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
-.hero-image img {
-    max-width: 100%;
+
+form input[type="submit"]:hover {
+    background-color: #900533;
+}
+
+/* Card Styling for Menu or Recipes */
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
     height: auto;
+    border-bottom: 4px solid #731314;
 }
 
-.navbar {
-    background-color: ; /* Change this to your desired color */
+.card-body {
+    padding: 20px;
+    background-color: #fff;
 }
 
-.navbar .navbar-brand,
-.navbar .nav-link {
-    color: #ffffff; /* Change this to your desired text color */
+.card-title {
+    font-size: 1.5rem;
+    color: #900533;
+    font-weight: bold;
 }
 
-.navbar .nav-link:hover {
-    color: #cccccc; /* Change this to your desired hover text color */
+.card-text {
+    color: #555;
 }
 
-#features, #popular-recipes, #cta {
-    padding: 20px 0;
+.card-footer {
+    background-color: #f8f9fa;
+    text-align: right;
 }
 
-#features {
-    background-color: #e9ecef;
+/* Hover Effect for Cards */
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
 }
 
-#popular-recipes {
-    background-color: #ffffff;
+/* Modal Styling (if used for login, registration, etc.) */
+.modal-content {
+    border-radius: 8px;
 }
 
-#cta {
-    background-color: #e9ecef;
-    text-align: center;
+.modal-header {
+    background-color: #900533;
+    color: white;
+    font-weight: bold;
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .navbar .navbar-nav {
+        text-align: center;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
 }
