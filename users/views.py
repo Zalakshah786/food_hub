@@ -4,7 +4,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-
+from django.contrib import messages
 # Register new user
 def register_user(request):
     if request.method == "POST":
@@ -12,6 +12,7 @@ def register_user(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
+            messages.success(request, "Registration successful!")
             return redirect("home")  # Redirect to homepage after registration
     else:
         form = UserCreationForm()
@@ -24,6 +25,7 @@ def user_login(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
+            messages.success(request, "Login successful!")
             return redirect("home")  # Redirect to homepage after login
     else:
         form = AuthenticationForm()
@@ -32,4 +34,5 @@ def user_login(request):
 # User Logout
 def user_logout(request):
     logout(request)
+    messages.success(request, "You have logged out successfully.")
     return redirect("home")  # Redirect to homepage after logout

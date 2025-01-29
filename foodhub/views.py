@@ -34,7 +34,7 @@ def register_view(request):
 
 @login_required
 def dashboard(request):
-    return render(request, "food_hub/dashboard.html")
+    return render(request, "login.html")
 
 def logout_view(request):
     logout(request)  # This will log the user out
@@ -45,6 +45,17 @@ def post_detail(request, pk):
     comments = Comment.objects.filter(post=post)
     return render(request, 'post_detail.html', {'post': post, 'comments': comments})
 
+
+
+def home_view(request):
+    # Fetching all published posts
+    posts = Post.objects.filter(status=1).order_by('-created_on')
+    
+    # Fetching comments for each post
+    for post in posts:
+        post.comments = Comment.objects.filter(post=post, approved=True)
+
+    return render(request, 'index.html', {'posts': posts})
 # Create your views here.
 class Home(TemplateView):
     queryset = Post.objects.all()

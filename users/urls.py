@@ -6,4 +6,5 @@ urlpatterns = [
     path("register/", register_user, name="register"),
     path("login/", user_login, name="login"),
     path("logout/", user_logout, name="logout"),
+    path('password_reset/', auth_views.PasswordResetView.as_view(), name='password_reset'),
 ]

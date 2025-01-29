@@ -1,40 +1,49 @@
 /* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+    font-family: 'Lato', sans-serif;
+    background-color: #94571D;
     margin: 0;
     padding: 0;
-}
-
-.container {
-    padding-top: 30px;
 }
 
 /* Navbar */
 .navbar {
     background-color: #900533 !important;
+    padding: 12px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .navbar-brand {
+.navbar-brand {
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: bold;
+    color: #fff !important;
 }
 
-.navbar a {
-    color: #fff;
-    font-size: 1.1rem;
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
     padding: 10px 15px;
+    transition: 0.3s ease-in-out;
 }
 
-.navbar a:hover {
+.navbar-nav .nav-link:hover {
     background-color: #731314;
-    color: white;
+    border-radius: 5px;
 }
 
-.navbar .navbar-nav .nav-item {
-    margin-right: 20px;
+/* Dropdown Menu */
+.dropdown-menu {
+    background-color: #900533;
+    border: none;
+}
+
+.dropdown-item {
+    color: #fff !important;
+    font-weight: 500;
+}
+
+.dropdown-item:hover {
+    background-color: #731314 !important;
 }
 
 /* Buttons */
@@ -56,8 +65,9 @@ body {
 /* Footer */
 footer {
     background-color: #900533;
-    color: #fff;
-    padding: 20px 0;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
     margin-top: 40px;
 }
 
@@ -85,16 +95,6 @@ h2 {
 h3 {
     font-size: 2rem;
     margin-bottom: 15px;
-}
-
-/* Links */
-a {
-    color: #731314;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #9B3D29; /* Lighter shade */
 }
 
 /* Section Styling */
@@ -137,6 +137,7 @@ form input[type="submit"]:hover {
     background-color: #900533;
 }
 
+
 /* Card Styling for Menu or Recipes */
 .card {
     border: none;
@@ -144,6 +145,11 @@ form input[type="submit"]:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     margin-bottom: 20px;
+}
+.cover-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .card img {
@@ -215,3 +221,50 @@ form input[type="submit"]:hover {
         font-size: 2rem;
     }
 }
+
+
+.gradient-overlay {
+    position: relative;
+    height: 100vh;
+}
+
+.gradient-overlay img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.gradient-overlay .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.gradient-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+    z-index: 0;
+}
+
+.overlay-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.overlay-content p {
+    font-size: 1.25rem;
+}
+
+
+
+
+
