@@ -1,1 +1,1 @@
-web: gunicorn food_hub.wsgi
+web: gunicorn my_project.wsgi
