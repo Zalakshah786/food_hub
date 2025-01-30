@@ -12,9 +12,14 @@ class PostAdmin(SummernoteModelAdmin):
     list_filter = ('status', 'created_on')
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('user', 'dish', 'rating', 'created_at')  # Use correct field names
+    list_display = ('user','post', 'rating', 'created_at')  # Use correct field names
     list_filter = ('created_at',)  # Remove 'approved' if it doesn't exist
+    search_fields = ('user', 'post')  # Use correct field names
 
-admin.site.register(Dish)
+@admin.register(Dish)
+class DishAdmin(admin.ModelAdmin):
+    list_display = ('post','name','dish_image','description')
+    search_fields = ('name', 'description')
+
 #admin.site.register(Post)
 #admin.site.register(Comment)

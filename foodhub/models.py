@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from django.utils import timezone
+from datetime import datetime
 
 # Status choices for the Post model
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -23,18 +24,31 @@ class Post(models.Model):
     def __str__(self):
         return f"{self.title} | by {self.user.username}"
 
+class Dish(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, default=1)
+    name = models.CharField(max_length=200)
+    description = models.TextField()
+    dish_image = models.ImageField(upload_to='dish_images/', blank=True, null=True)
+    
+    def __str__(self):
+        return self.name
+
 class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    dish = models.ForeignKey('Dish', on_delete=models.CASCADE , null=True, blank=True)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, default=1)
     text = models.TextField()
     rating = models.IntegerField(default=1)  # Rating from 1 to 5
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.user.username} - {self.dish.name} ({self.rating}⭐)"
-class Dish(models.Model):
+        return f"{self.user.username} - {self.post.title} ({self.rating}⭐)"
+
+class Recipe(models.Model):
+    dish = models.ForeignKey(Dish, on_delete=models.CASCADE, default=1)
     name = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='recipe_images/')
     description = models.TextField()
-    
+    created_at = models.DateTimeField(auto_now_add=True)
+
     def __str__(self):
         return self.name
