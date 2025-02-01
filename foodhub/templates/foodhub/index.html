@@ -28,7 +28,7 @@
     }
 
     // Add scroll event listener
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const exploreSection = document.getElementById('popular-dishes-section');
         if (isInViewport(exploreSection)) {
             exploreSection.classList.add('visible');
@@ -95,42 +95,6 @@
 
 
 
-<!-- Displaying Posts Section -->
-<div class="container mt-5">
-    <h2 class="text-center mb-4">About US</h2>
-    <div class="row">
-        {% for post in posts %}
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    {% if post.image %}
-                        <img src="{% static 'images/handvo.jpg' %}" class="card-img-top" alt="{{ post.title }}">
-                    {% endif %}
-                    <div class="card-body">
-                        <h5 class="card-title">{{ post.title }}</h5>
-                        <p class="card-text">{{ post.content|truncatewords:20 }}...</p>
-                        <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-primary">Read More</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Posted by {{ post.user.username }} on {{ post.created_on|date:"F d, Y" }}
-                        
-                        <div class="comments mt-3">
-                            <h6>Comments:</h6>
-                            {% for comment in post.comments.all %}
-                                <div class="comment">
-                                    <p><strong>{{ comment.author.username }}:</strong> {{ comment.content }}</p>
-                                </div>
-                            {% empty %}
-                                <p>No comments yet.</p>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {% empty %}
-            <p>No posts available.</p>
-        {% endfor %}
-    </div>
-</div>
 
 
 {% endblock %}

@@ -13,10 +13,13 @@ class Post(models.Model):
     # Uncomment the following lines if you want to add ingredients and recipe steps
     # ingredients = models.TextField(help_text="List ingredients separated by commas.", default="No ingredients provided")
     # recipe_steps = models.TextField(help_text="Step-by-step cooking instructions.")
-    image = models.ImageField(upload_to='dish_images/', blank=True, null=True)  # Upload dish image
+    image = models.ImageField(upload_to='post_images/', blank=True, null=True)  # Upload dish image
     phone = models.CharField(max_length=15, help_text="Contact number (Optional)", blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    youtube_link = models.URLField(blank=True, null=True)
+    instagram_link = models.URLField(blank=True, null=True)
+    facebook_link = models.URLField(blank=True, null=True)
 
     class Meta:
         ordering = ["-created_on"]

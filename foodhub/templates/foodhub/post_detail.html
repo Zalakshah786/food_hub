@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">{{ post.title }}</h2>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card mb-4">
+                {% if post.image %}
+                    <img src="{% static 'images/Nehacook_book.jpg' %}" class="card-img-top" alt="{{ post.title }}">
+                {% else %}
+                    <img src="{% static 'images/default.jpg' %}" class="card-img-top" alt="Default Image">
+                {% endif %}
+                <div class="card-body">
+                    <p class="card-text">{{ post.content }}</p>
+                </div>
+
+                <div class="card-footer text-muted">
+                    Posted by {{ post.user.username }} on {{ post.created_on|date:"F d, Y" }}
+                </div>
+
+                <div class="comments mt-3">
+                    <h6>Comments:</h6>
+                    {% for comment in comments %}
+                    <div class="comment">
+                        <p><strong>{{ comment.author.username }}:</strong> {{ comment.content }}</p>
+                        {% if user == comment.author %}
+                        <a href="{% url 'edit_comment' pk=comment.pk %}" class="btn btn-sm btn-warning">Edit</a>
+                        <a href="{% url 'delete_comment' pk=comment.pk %}" class="btn btn-sm btn-danger">Delete</a>
+                        {% endif %}
+                    </div>
+                    {% empty %}
+                    <p>No comments yet.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
