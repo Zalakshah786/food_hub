@@ -1,6 +1,6 @@
 
 from django.views import generic
-from .models import Post, Comment
+from .models import Post, Chef_Comment ,Dish_Receipe
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
@@ -8,7 +8,9 @@ from django.contrib.auth import login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import TemplateView
 
+import logging
 
+logger = logging.getLogger('django')
 
 def login_view(request):
     if request.method == 'POST':
@@ -42,20 +44,25 @@ def logout_view(request):
 
 def post_detail(request, pk):
     post = Post.objects.get(pk=pk)
-    comments = Comment.objects.filter(post=post)
-    return render(request, 'post_detail.html', {'post': post, 'comments': comments})
-
+    comments = Chef_Comment.objects.filter(post=post)
+    return render(request, 'foodhub/chef.html', {'post': post, 'comments': comments})
+def dish_detail(request, pk):
+    dish = Dish_Receipe.objects.get(pk=pk)
+    return render(request, 'foodhub/dish_detail.html', {'dish': dish})
 
 
 def home_view(request):
     # Fetching all published posts
     posts = Post.objects.filter(status=1).order_by('-created_on')
     
+    # Fetching all dishes
+    dishes = Dish_Receipe.objects.all()
+    
     # Fetching comments for each post
     for post in posts:
-        post.comments = Comment.objects.filter(post=post, approved=True)
+        post.comments = Chef_Comment.objects.filter(post=post, approved=True)
 
-    return render(request, 'index.html', {'posts': posts})
+    return render(request, 'index.html', {'posts': posts,'dishes': dishes})
 # Create your views here.
 class Home(TemplateView):
     queryset = Post.objects.all()
@@ -64,5 +71,8 @@ class Home(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['posts'] = Post.objects.all()  # Add the posts to the context
+        context['dishes'] = Dish_Receipe.objects.all()  # Add the dishes to the context
         return context
+
+    
     

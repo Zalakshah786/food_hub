@@ -12,6 +12,7 @@ urlpatterns = [
     path('register/', views.register_view, name='register'),  # Register page
     path('logout/', views.logout_view, name='logout'),  # Logout action
     path('post_detail/<int:pk>/', views.post_detail, name='post_detail'),  # Post detail page
+    path('dish_detail/<int:pk>/', views.dish_detail, name='dish_detail'),  # Dish detail page
 ]
 
 
