@@ -45,16 +45,25 @@ def logout_view(request):
 def post_detail(request, pk):
     post = Post.objects.get(pk=pk)
     comments = Chef_Comment.objects.filter(post=post)
-    return render(request, 'foodhub/chef.html', {'post': post, 'comments': comments})
+    for comment in comments:
+        comment.star_range = range(comment.rating)
+    user_has_commented = False
+    if request.user.is_authenticated:
+        user_has_commented = Chef_Comment.objects.filter(post=post, user=request.user).exists()
+    return render(request, 'foodhub/chef.html', {'post': post, 'comments': comments, 'user_has_commented': user_has_commented})
+
 def dish_detail(request, pk):
     dish = Dish_Receipe.objects.get(pk=pk)
     return render(request, 'foodhub/dish_detail.html', {'dish': dish})
+
 @login_required
 def add_comment(request, pk):
     post = get_object_or_404(Post, pk=pk)
+    if Chef_Comment.objects.filter(post=post, user=request.user).exists():
+        return redirect('post_detail', pk=pk)
     if request.method == 'POST':
         comment_text = request.POST.get('comment', '')
-        rating = request.POST['rating']
+        rating = request.POST.get('rating', 0)  # Default to None if not provided
         comment = Chef_Comment(user=request.user, post=post, text=comment_text, rating=rating)
         comment.save()
         return redirect('post_detail', pk=pk)

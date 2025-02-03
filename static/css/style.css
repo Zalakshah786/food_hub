@@ -275,6 +275,12 @@ footer p {
 }
 
 /* Rating Stars */
+
+.fa, .fas {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #FFD700; /* Default color: yellow */
+}
 .rating {
     display: flex;
     flex-direction: row-reverse;
