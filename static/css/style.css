@@ -255,6 +255,25 @@ footer p {
 }
 
 
+/* Comments Section */
+.comments {
+    margin-top: 20px;
+}
+
+.comment {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.comment p {
+    margin: 0;
+}
+
+.comment .btn {
+    margin-right: 5px;
+}
+
 /* Rating Stars */
 .rating {
     display: flex;
@@ -285,7 +304,6 @@ footer p {
     color: #000; /* Black border color */
 }
 
-
 .rating label:hover::before,
 .rating label:hover ~ label::before {
     color: #FFD700; /* Hover color: yellow */
@@ -302,7 +320,6 @@ footer p {
 .rating label:hover ~ input:checked ~ label::before {
     color: #FFD700; /* Hover color when selected: yellow */
 }
-
 
 /* Responsive Design */
 @media (max-width: 991px) {

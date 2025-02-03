@@ -2,7 +2,7 @@
 from django.views import generic
 from .models import Post, Chef_Comment ,Dish_Receipe
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout
 from django.contrib.auth.forms import UserCreationForm
@@ -49,27 +49,40 @@ def post_detail(request, pk):
 def dish_detail(request, pk):
     dish = Dish_Receipe.objects.get(pk=pk)
     return render(request, 'foodhub/dish_detail.html', {'dish': dish})
-
+@login_required
 def add_comment(request, pk):
-    post = Post.objects.get(pk=pk)
+    post = get_object_or_404(Post, pk=pk)
     if request.method == 'POST':
-        comment = Chef_Comment(user=request.user, post=post, text=request.POST['comment'], rating=request.POST['rating'])
+        comment_text = request.POST.get('comment', '')
+        rating = request.POST['rating']
+        comment = Chef_Comment(user=request.user, post=post, text=comment_text, rating=rating)
         comment.save()
         return redirect('post_detail', pk=pk)
     return render(request, 'foodhub/chef.html', {'post': post})
+
+@login_required
 def edit_comment(request, pk):
-    comment = Chef_Comment.objects.get(pk=pk)
+    comment = get_object_or_404(Chef_Comment, pk=pk)
+    if request.user != comment.user:
+        return redirect('post_detail', pk=comment.post.pk)
     if request.method == 'POST':
-        comment.text = request.POST['comment']
-        comment.rating = request.POST['rating']
+        comment.text = request.POST.get('comment', '')
+        comment.rating = request.POST.get('rating', 0)  # Default to 0 if not provided
         comment.save()
-        return redirect('post_detail', pk=comment.post.id)
-    return render(request, 'edit_comment.html', {'comment': comment})
+        return redirect('post_detail', pk=comment.post.pk)
+    return render(request, 'foodhub/chef.html', {'post': comment.post, 'edit_comment': comment})
+
+
+@login_required
 def delete_comment(request, pk):
-    comment = Chef_Comment.objects.get(pk=pk)
-    post_id = comment.post.id
-    comment.delete()
-    return redirect('post_detail', pk=post_id)
+    comment = get_object_or_404(Chef_Comment, pk=pk)
+    if request.user != comment.user:
+        return redirect('post_detail', pk=comment.post.pk)
+    if request.method == 'POST':
+        comment.delete()
+        return redirect('post_detail', pk=comment.post.pk)
+    return render(request, 'foodhub/chef.html', {'post': comment.post, 'delete_comment': comment})
+
 
 
 def home_view(request):

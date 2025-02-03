@@ -2,6 +2,15 @@ from . import views
 from django.urls import path
 from .views import dashboard
 from .views import Home
+from .views import login_view
+from .views import register_view
+from .views import logout_view
+from .views import post_detail
+from .views import dish_detail
+from .views import add_comment
+from .views import edit_comment
+from .views import delete_comment
+
 urlpatterns = [
     path('', Home.as_view(), name='home'),   # Home page
     #path('recipes/', views.recipes, name='recipes'),  # Recipes page
