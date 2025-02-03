@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 from datetime import datetime
+from django_summernote.fields import SummernoteTextField
 
 # Status choices for the Post model
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -42,10 +43,26 @@ class Chef_Comment(models.Model):
 
 class Dish_Receipe(models.Model):
     name = models.CharField(max_length=100, unique=True)
-    description = models.TextField(help_text="Short description of dish", default="No description provided")
+    description = models.TextField(help_text="Short description of dish")  # Rich text editor
     small_image = models.ImageField(upload_to='dish_images/', blank=True, null=True)
     big_image = models.ImageField(upload_to='dish_images/', blank=True, null=True)
     chef = models.ForeignKey(User, on_delete=models.CASCADE)  # Link to Chef/User
     
     def __str__(self):
         return f"{self.name} | by {self.chef.username}"
+    
+class Dish(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, default=1)
+    name = models.CharField(max_length=200)
+    description = models.TextField()
+    dish_image = models.ImageField(upload_to='dish_images/', blank=True, null=True)
+    
+    def __str__(self):
+        return self.name
+    
+class Recipe(models.Model):
+    dish = models.ForeignKey(Dish, on_delete=models.CASCADE, default=1)
+    name = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='recipe_images/')
+    description = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)    

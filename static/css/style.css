@@ -159,7 +159,7 @@ p {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 20px;
-    color: #fff;
+   
 }
 
 /* Section Styling */
@@ -253,6 +253,56 @@ footer p {
     margin: 0;
     font-size: 1rem;
 }
+
+
+/* Rating Stars */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    position: relative;
+    width: 1em;
+    font-size: 3rem;
+    color: #fff; /* Default color: white */
+    cursor: pointer;
+    border: 1px solid #000; /* Black border */
+    border-radius: 50%;
+}
+
+.rating label::before {
+    content: "\f005"; /* Font Awesome star icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    opacity: 1;
+    color: #000; /* Black border color */
+}
+
+
+.rating label:hover::before,
+.rating label:hover ~ label::before {
+    color: #FFD700; /* Hover color: yellow */
+}
+
+.rating input:checked ~ label::before {
+    color: #FFD700; /* Selected color: yellow */
+}
+
+.rating input:checked + label:hover::before,
+.rating input:checked + label:hover ~ label::before,
+.rating input:checked ~ label:hover::before,
+.rating input:checked ~ label:hover ~ label::before,
+.rating label:hover ~ input:checked ~ label::before {
+    color: #FFD700; /* Hover color when selected: yellow */
+}
+
 
 /* Responsive Design */
 @media (max-width: 991px) {

@@ -50,6 +50,27 @@ def dish_detail(request, pk):
     dish = Dish_Receipe.objects.get(pk=pk)
     return render(request, 'foodhub/dish_detail.html', {'dish': dish})
 
+def add_comment(request, pk):
+    post = Post.objects.get(pk=pk)
+    if request.method == 'POST':
+        comment = Chef_Comment(user=request.user, post=post, text=request.POST['comment'], rating=request.POST['rating'])
+        comment.save()
+        return redirect('post_detail', pk=pk)
+    return render(request, 'foodhub/chef.html', {'post': post})
+def edit_comment(request, pk):
+    comment = Chef_Comment.objects.get(pk=pk)
+    if request.method == 'POST':
+        comment.text = request.POST['comment']
+        comment.rating = request.POST['rating']
+        comment.save()
+        return redirect('post_detail', pk=comment.post.id)
+    return render(request, 'edit_comment.html', {'comment': comment})
+def delete_comment(request, pk):
+    comment = Chef_Comment.objects.get(pk=pk)
+    post_id = comment.post.id
+    comment.delete()
+    return redirect('post_detail', pk=post_id)
+
 
 def home_view(request):
     # Fetching all published posts
@@ -73,6 +94,8 @@ class Home(TemplateView):
         context['posts'] = Post.objects.all()  # Add the posts to the context
         context['dishes'] = Dish_Receipe.objects.all()  # Add the dishes to the context
         return context
+    
+
 
     
     

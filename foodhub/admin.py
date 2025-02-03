@@ -5,9 +5,9 @@ from django_summernote.admin import SummernoteModelAdmin
 # Register your models here.
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
-    summernote_fields = ('content',)
+    summernote_fields = ('content','description',)
     search_fields = ['title']
-    list_display = ('title', 'user','description','chef_logo', 'status', 'created_on')
+    list_display = ('title', 'user','chef_logo', 'status', 'created_on')
     list_filter = ('status', 'created_on')
 
 @admin.register(Chef_Comment)
@@ -16,8 +16,8 @@ class Chef_CommentAdmin(admin.ModelAdmin):
     list_display = ('user','post', 'rating', 'created_at')
 
 @admin.register(Dish_Receipe)
-class Dish_ReceipeAdmin(admin.ModelAdmin):
+class Dish_ReceipeAdmin(SummernoteModelAdmin):
     summernote_fields = ('description',)
-    list_display = ('name', 'chef', 'description', 'small_image', 'big_image')
+    list_display = ('name', 'chef', 'small_image', 'big_image')
    
    

@@ -13,6 +13,9 @@ urlpatterns = [
     path('logout/', views.logout_view, name='logout'),  # Logout action
     path('post_detail/<int:pk>/', views.post_detail, name='post_detail'),  # Post detail page
     path('dish_detail/<int:pk>/', views.dish_detail, name='dish_detail'),  # Dish detail page
+    path('add_comment/<int:pk>/', views.add_comment, name='add_comment'),  # Add comment action
+    path('edit_comment/<int:pk>/', views.edit_comment, name='edit_comment'),  # Edit comment action
+    path('delete_comment/<int:pk>/', views.delete_comment, name='delete_comment'),  # Delete comment action
 ]
 
 
