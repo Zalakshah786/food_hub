@@ -28,7 +28,7 @@ body {
     margin-left: 10px;
     font-weight: bold;
     padding: 5px 0;
-    color: #FFD700; /* Gold/Yellow for contrast - adjust as needed */
+    color: #94571D; /* Gold/Yellow for contrast - adjust as needed */
     text-shadow: 2px 2px 4px #000000; /* More subtle text shadow */
     
 }
@@ -287,18 +287,39 @@ form input[type="submit"]:hover {
     transition: transform 0.3s ease;
 }
 
-/* Footer */
+
+/* Footer Styles */
 footer {
-    background-color: #900533;
-    color: white;
+    background-color: #900533; /* Dark background */
+    color: white; /* White text */
+    padding: 20px 0;
     text-align: center;
-    padding: 15px 0;
     margin-top: 40px;
 }
 
-footer p {
-    margin: 0;
-    font-size: 1rem;
+footer a {
+    color: white; /* White links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #94571D; /* Gold color on hover */
+}
+
+footer .social-icons a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+footer hr {
+    border-top: 1px solid #b18620; /* Gold color for the horizontal line */
+}
+footer .row > div {
+    margin-bottom: 20px; /* Space between sections */
+}
+
+footer .social-icons a:hover {
+    color: #b18620; /* Gold color on hover for social icons */
 }
 
 
@@ -389,5 +410,73 @@ footer p {
     .btn, .explore-btn {
         padding: 10px 20px;
         font-size: 1rem;
+    }
+}
+/* Responsive Styles for Footer */
+
+/* Mobile Devices (max-width: 576px) */
+@media (max-width: 576px) {
+    footer .row > div {
+        margin-bottom: 15px; /* Adjust spacing for mobile */
+    }
+
+    footer .social-icons a {
+        font-size: 1.2rem; /* Adjust icon size for mobile */
+        margin-right: 10px; /* Adjust spacing for mobile */
+    }
+
+    footer .text-uppercase {
+        font-size: 1rem; /* Adjust heading size for mobile */
+    }
+
+    footer p {
+        font-size: 0.9rem; /* Adjust paragraph size for mobile */
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    footer .row > div {
+        margin-bottom: 18px; /* Adjust spacing for tablets */
+    }
+
+    footer .social-icons a {
+        font-size: 1.3rem; /* Adjust icon size for tablets */
+        margin-right: 12px; /* Adjust spacing for tablets */
+    }
+
+    footer .text-uppercase {
+        font-size: 1.1rem; /* Adjust heading size for tablets */
+    }
+
+    footer p {
+        font-size: 1rem; /* Adjust paragraph size for tablets */
+    }
+}
+
+/* Laptops (max-width: 992px) */
+@media (max-width: 992px) {
+    footer .row {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    footer .row > div {
+        margin-bottom: 20px; /* Adjust spacing for laptops */
+    }
+
+    footer .social-icons a {
+        font-size: 1.4rem; /* Adjust icon size for laptops */
+        margin-right: 14px; /* Adjust spacing for laptops */
+        transform: translateY(2px); /* Align icons with text */
+    }
+
+    footer .text-uppercase {
+        font-size: 1.2rem; /* Adjust heading size for laptops */
+    }
+
+    footer p {
+        font-size: 1.1rem; /* Adjust paragraph size for laptops */
     }
 }

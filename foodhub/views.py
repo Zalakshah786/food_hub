@@ -54,7 +54,7 @@ def post_detail(request, pk):
 
 def dish_detail(request, pk):
     dish = Dish_Receipe.objects.get(pk=pk)
-    return render(request, 'foodhub/dish_detail.html', {'dish': dish})
+    return render(request, 'foodhub/dish_detail.html', {'pk': pk, 'dish': dish})
 
 @login_required
 def add_comment(request, pk):
@@ -117,6 +117,14 @@ class Home(TemplateView):
         context['dishes'] = Dish_Receipe.objects.all()  # Add the dishes to the context
         return context
     
+
+
+
+
+
+
+
+
 
 
     

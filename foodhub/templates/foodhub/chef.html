@@ -6,75 +6,90 @@
 {% block content %}
 <div class="container mt-5">
     <h2 class="text-center mb-4">{{ post.title }}</h2>
-    <div class="col-md-8">
-        <div class="card mb-4">
-            {% if post.image %}
-                <img src="/media/{{ post.image }}" class="card-img-top" alt="{{ post.title }}">
-            {% else %}
-                <img src="{% static 'images/default.jpg' %}" class="card-img-top" alt="Default Image">
-            {% endif %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                {% if post.image %}
+                    <img src="/media/{{ post.image }}" class="card-img-top" alt="{{ post.title }}">
+                {% else %}
+                    <img src="{% static 'images/default.jpg' %}" class="card-img-top" alt="Default Image">
+                {% endif %}
+                <div class="card-body text-center">
+                    <a href="{{ post.youtube_link }}" class="btn btn-danger me-2" target="_blank">
+                        <i class="fab fa-youtube"></i> YouTube
+                    </a>
+                    <a href="{{ post.instagram_link }}" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="{{ post.facebook_link }}" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
             <div class="card-body">
                 <p class="card-text">{{ post.content|safe }}</p>
-            </div>
-            <div class="card-footer text-muted">
-                Post created on {{ post.created_on|date:"F d, Y" }}
-            </div>
-        </div>
-        <div class="comments mt-3">
-            <h6>Comments:</h6>
-            {% for comment in comments %}
-                <div class="comment mb-3 comment-{{ comment.pk }}">
-                    <p><strong>{{ comment.user.username }}:</strong> {{ comment.text }}</p>
-                    <p>Rating: {{ comment.rating }}</p>
-                    <div class="rating">
-                        {% for i in comment.star_range %}
-                        <i class="fas fa-star"></i>
-                        {% endfor %}
-                    </div>   
-                    <p>Commented on {{ comment.created_at|date:"F d, Y" }}</p>
-                </div>   
-                {% if user == comment.user %}
-                <button class="btn btn-sm btn-primary edit-btn-{{ comment.pk }}" onclick="document.querySelector('.edit-comment-{{ comment.pk }}').style.display = 'block'; document.querySelector('.comment-{{ comment.pk }}').style.display = 'none'; document.querySelector('.edit-btn-{{ comment.pk }}').style.display = 'none' ">Edit</button>
-                <div class="edit-comment-{{ comment.pk }}" style="display: none;">
-                <form action="{% url 'edit_comment' comment.pk %}" id="edit-form-comment-{{ comment.pk }}" method="post">
-                    {% csrf_token %}
-                    <input type="text" name="comment" value="{{ comment.text }}" class="form-control mb-2">
-                    <div class="rating">
-                        <input type="radio" id="star5" name="rating" value="5" {% if comment.rating == 5 %}checked{% endif %}><label for="star5" title="5 stars"><i class="fas fa-star"></i></label>
-                        <input type="radio" id="star4" name="rating" value="4" {% if comment.rating == 4 %}checked{% endif %}><label for="star4" title="4 stars"><i class="fas fa-star"></i></label>
-                        <input type="radio" id="star3" name="rating" value="3" {% if comment.rating == 3 %}checked{% endif %}><label for="star3" title="3 stars"><i class="fas fa-star"></i></label>
-                        <input type="radio" id="star2" name="rating" value="2" {% if comment.rating == 2 %}checked{% endif %}><label for="star2" title="2 stars"><i class="fas fa-star"></i></label>
-                        <input type="radio" id="star1" name="rating" value="1" {% if comment.rating == 1 %}checked{% endif %}><label for="star1" title="1 star"><i class="fas fa-star"></i></label>
-                    </div>
-                    <button type="button" class="btn btn-sm btn-warning" onclick="document.querySelector('#edit-form-comment-{{ comment.pk }}').submit();">Update</button>
-                    <button type="button" class="btn btn-sm btn-danger" onclick="document.querySelector('#delete-form-comment-{{ comment.pk }}').submit();">Delete</button>
-                </form>
-                <form action="{% url 'delete_comment' comment.pk %}" style="display: none" id="delete-form-comment-{{ comment.pk }}" method="post">
-                    {% csrf_token %}  
-                </form>
+                <div class="card-footer text-muted">
+                    Post created on {{ post.created_on|date:"F d, Y" }}
                 </div>
-                {% endif %}
-            {% empty %}
-            <p>No comments yet.</p>
-            {% endfor %}
+            </div>
         </div>
-        {% if not user_has_commented %}
-        <div>
-            <h6>Add a comment:</h6>
-            <form action="{% url 'add_comment' post.pk %}" method="post">
-                {% csrf_token %}
-                <input type="text" name="comment" placeholder="Add a comment" class="form-control mb-2">
-                <div class="rating">
-                    <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 stars"><i class="fas fa-star"></i></label>
-                    <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars"><i class="fas fa-star"></i></label>
-                    <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars"><i class="fas fa-star"></i></label>
-                    <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars"><i class="fas fa-star"></i></label>
-                    <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star"><i class="fas fa-star"></i></label>
-                </div>
-                <button class="btn btn-primary mt-2">Comment</button>
-            </form>
-        </div>
-        {% endif %}
     </div>
+    <div class="comments mt-5">
+        <h6>Comments:</h6>
+        {% for comment in comments %}
+            <div class="comment mb-3 comment-{{ comment.pk }}">
+                <p><strong>{{ comment.user.username }}:</strong> {{ comment.text }}</p>
+                <p>Rating: {{ comment.rating }}</p>
+                <div class="rating">
+                    {% for i in comment.star_range %}
+                    <i class="fas fa-star"></i>
+                    {% endfor %}
+                </div>   
+                <p>Commented on {{ comment.created_at|date:"F d, Y" }}</p>
+            </div>   
+            {% if user == comment.user %}
+            <button class="btn btn-sm btn-primary edit-btn-{{ comment.pk }}" onclick="document.querySelector('.edit-comment-{{ comment.pk }}').style.display = 'block'; document.querySelector('.comment-{{ comment.pk }}').style.display = 'none'; document.querySelector('.edit-btn-{{ comment.pk }}').style.display = 'none' ">Edit</button>
+            <div class="edit-comment-{{ comment.pk }}" style="display: none;">
+            <form action="{% url 'edit_comment' comment.pk %}" id="edit-form-comment-{{ comment.pk }}" method="post">
+                {% csrf_token %}
+                <input type="text" name="comment" value="{{ comment.text }}" class="form-control mb-2">
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5" {% if comment.rating == 5 %}checked{% endif %}><label for="star5" title="5 stars"><i class="fas fa-star"></i></label>
+                    <input type="radio" id="star4" name="rating" value="4" {% if comment.rating == 4 %}checked{% endif %}><label for="star4" title="4 stars"><i class="fas fa-star"></i></label>
+                    <input type="radio" id="star3" name="rating" value="3" {% if comment.rating == 3 %}checked{% endif %}><label for="star3" title="3 stars"><i class="fas fa-star"></i></label>
+                    <input type="radio" id="star2" name="rating" value="2" {% if comment.rating == 2 %}checked{% endif %}><label for="star2" title="2 stars"><i class="fas fa-star"></i></label>
+                    <input type="radio" id="star1" name="rating" value="1" {% if comment.rating == 1 %}checked{% endif %}><label for="star1" title="1 star"><i class="fas fa-star"></i></label>
+                </div>
+                <button type="button" class="btn btn-sm btn-warning" onclick="document.querySelector('#edit-form-comment-{{ comment.pk }}').submit();">Update</button>
+                <button type="button" class="btn btn-sm btn-danger" onclick="document.querySelector('#delete-form-comment-{{ comment.pk }}').submit();">Delete</button>
+            </form>
+            <form action="{% url 'delete_comment' comment.pk %}" style="display: none" id="delete-form-comment-{{ comment.pk }}" method="post">
+                {% csrf_token %}  
+            </form>
+            </div>
+            {% endif %}
+        {% empty %}
+        <p>No comments yet.</p>
+        {% endfor %}
+    </div>
+    {% if not user_has_commented %}
+    <div class="mt-4">
+        <h6>Add a comment:</h6>
+        <form action="{% url 'add_comment' post.pk %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="comment" placeholder="Add a comment" class="form-control mb-2">
+            <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 stars"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star"><i class="fas fa-star"></i></label>
+            </div>
+            <button class="btn btn-primary mt-2">Comment</button>
+        </form>
+    </div>
+    {% endif %}
 </div>
 {% endblock %}

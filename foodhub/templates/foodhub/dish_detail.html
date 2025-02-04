@@ -1,25 +1,26 @@
-
-
 {% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
-<div class="container mt-5" >
+<div class="container mt-5">
     <div class="row">
-        <h2 class="text-center mb-4">{{ dish.name }}</h2>
-        <div class="col-md-8">
-            <div class="card mb-4">
+        <div class="col-12">
+            <h1 class="text-center mb-4 display-4">{{ dish.name }}</h1>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-3">
                 {% if dish.big_image %}
                     <img src="/media/{{ dish.big_image }}" class="card-img-top" alt="{{ dish.name }}">
                 {% else %}
                     <img src="{% static 'images/default_dish.webp' %}" class="card-img-top" alt="Default Image">
                 {% endif %}
-                <div class="card-body">
-                    <p class="card-text">{{ dish.description|safe }}</p>
-                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card-body">
+                <p class="card-text">{{ dish.description|safe }}</p>
             </div>
         </div>
     </div>
 </div>
 {% endblock %}
-                
