@@ -22,6 +22,19 @@ body {
 .navbar-brand img:hover {
     transform: scale(1.1);
 }
+.navbar-toggler {
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 0;
+    background-color: transparent;
+    transition: color 0.3s ease;
+}
+.navbar-toggler-icon {
+    filter: invert(1); /* Make it visible on dark background */
+    
+}
 
 .navbar-text h1 {
     font-size: 25px;
@@ -124,56 +137,6 @@ body {
     background-color: #900533;
 }
 
-/* Cover Image with Gradient Overlay */
-.gradient-overlay {
-    position: relative;
-    height: 60vh; /* Reduced height */
-    width: 100%;
-    overflow: hidden;
-    margin: 0 auto;
-}
-
-.gradient-overlay img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-/* Overlay Content */
-.overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    z-index: 10;
-}
-
-.overlay-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.overlay-content p {
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-    font-weight: 300;
-}
-
-.overlay-content .btn {
-    background-color: #b18620;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-}
-
-.overlay-content .btn:hover {
-    background-color: #900533;
-}
 
 /* Headings */
 h1, h2, h3  {
@@ -249,10 +212,10 @@ form input[type="submit"]:hover {
 /* Card Styling for Menu or Recipes */
 .card {
     border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
 }
 
 .card img {
@@ -283,8 +246,8 @@ form input[type="submit"]:hover {
 
 /* Hover Effect for Cards */
 .card:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease;
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 
@@ -480,3 +443,243 @@ footer .social-icons a:hover {
         font-size: 1.1rem; /* Adjust paragraph size for laptops */
     }
 }
+
+
+/* Custom styles for dish links and images */
+.dish-card a {
+    color: #900533; /* Replace with your primary color */
+    text-decoration: none;
+}
+
+.dish-card a:hover {
+    color: #d4af37; /* Replace with your hover color */
+}
+
+.dish-card img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.dish-card img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.dish-name {
+    font-size: 1.50rem; /* Increase font size */
+    font-weight: bold; /* Make the font bold */
+}
+
+/* Custom styles for chef links and images */
+.chef-card a {
+    color: #900533; /* Replace with your primary color */
+    text-decoration: none;
+}
+
+.chef-card a:hover {
+    color: #d4af37; /* Replace with your hover color */
+    
+}
+.chef-name {
+    font-size: 1.50rem; /* Increase font size */
+    font-weight: bold; /* Make the font bold */
+}
+
+.chef-card img {
+    transition: transform 0.3s ease-in-out;
+}
+.chef-heading {
+    font-size: 2rem; /* Increase font size */
+    font-weight: bold; /* Make the font bold */
+    color: #900533; /* Primary color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add text shadow */
+}
+
+.chef-card img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+/* Cover Image with Gradient Overlay */
+.gradient-overlay {
+    position: relative;
+    height: 60vh; /* Reduced height */
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.gradient-overlay img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Overlay Content */
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+.overlay-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.overlay-content p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.overlay-content .btn {
+    background-color: #b18620;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.overlay-content .btn:hover {
+    background-color: #900533;
+}
+
+/* Custom styles for discover heading */
+.discover-heading {
+    font-size: 2.5rem; /* Increase font size */
+    font-weight: bold; /* Make the font bold */
+    color: #900533; /* Primary color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add text shadow */
+    text-align: center; /* Center align the heading */
+    margin-bottom: 30px; /* Add space below the heading */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+    transition: 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Custom styles for discover section */
+#discover-section {
+    padding: 50px 0; /* Add padding */
+    background-color: #b18620; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+    box-shadow: 0 4px 8px rgba(179, 67, 67, 0.1); /* Subtle shadow */
+    transition: 0.3s ease-in-out; /* Smooth transition */
+    transform: translateY(20px); /* Add a slight lift effect */
+}
+
+
+#discover-section p {
+    font-size: 1.2rem; /* Adjust font size */
+    line-height: 1.6; /* Improve readability */
+    color: #333; /* Text color */
+    text-align: center; /* Center align the text */
+    margin-bottom: 20px; /* Add space below the text */
+    transform: translateY(20px); /* Add a slight lift effect */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+}
+
+/* Custom styles for buttons */
+.btn-primary {
+    background-color: #900533 !important; /* Primary color */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 20px;
+    transform: translateY(20px); /* Add a slight lift effect */
+}
+
+.btn-primary:hover {
+    background-color: #d4af37; /* Hover color */
+}
+
+.btn-success {
+    background-color: #28a745; /* Success color */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 20px;
+    transform: translateY(20px); /* Add a slight lift effect */
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Hover color */
+}
+
+/* Custom styles for order heading */
+.order-heading {
+    font-size: 2.5rem; /* Increase font size */
+    font-weight: bold; /* Make the font bold */
+    color: #28a745; /* Success color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add text shadow */
+    text-align: center; /* Center align the heading */
+    margin-bottom: 30px; /* Add space below the heading */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+}
+
+/* Custom styles for menu heading */
+.menu-heading {
+    font-size: 2.5rem; /* Increase font size */
+    font-weight: bold; /* Make the font bold */
+    color: #900533; /* Primary color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add text shadow */
+    text-align: center; /* Center align the heading */
+    margin-bottom: 30px; /* Add space below the heading */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+}
+
+/* Custom styles for menu cards */
+.menu-card {
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.menu-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Custom styles for menu category */
+.menu-category {
+    font-size: 1.5rem; /* Increase font size */
+    font-weight: bold; /* Make the font bold */
+    color: #900533; /* Primary color */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+}
+
+/* Custom styles for list group items */
+.list-group-item {
+    font-size: 1.1rem; /* Adjust font size */
+    color: #333; /* Text color */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+}
+
+/* Custom styles for dropdown menu */
+.navbar .dropdown-menu {
+    background-color: #900533; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-size: medium;
+    color :#000000
+}
+
+.navbar .dropdown-item {
+    font-size: 1.1rem; /* Adjust font size */
+    color: #333; /* Text color */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #900533; /* Hover background color */
+    color: #fff; /* Hover text color */
+}
+
