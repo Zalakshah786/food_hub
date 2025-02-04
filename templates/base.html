@@ -23,7 +23,13 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">FoodHub</a>
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{% static 'images/default.webp' %}" alt="FoodHub Logo"  class="d-inline-block align-text-top">
+
+        </a>
+        <span class="navbar-text">
+            <h1 class="text">Food Hub</h1>
+        </span>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,14 +40,14 @@
                     <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Recipes</a>  
+                    <a class="nav-link" href="{% url 'dish_detail.html' %}">Recipes</a>  
                          
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Menu List</a>       
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Chef Information</a> 
+                    <a class="nav-link" href="{% url 'chef.html' %}">Chef Information</a> 
                 </li>
             </ul>
             <ul class="navbar-nav">
