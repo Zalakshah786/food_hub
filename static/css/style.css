@@ -118,6 +118,17 @@ body {
 .btn:hover {
     background-color: #7A4616; /* Darker shade on hover */
 }
+/* Custom styles for buttons */
+.btn-primary {
+    background-color: #900533;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d4af37;
+    color: #fff;
+}
 
 
 /* Explore Button */
@@ -218,6 +229,11 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
     background-color: #900533;
+}
+/* Custom styles for alerts */
+.alert {
+    border-radius: 5px;
+    color:#000000;
 }
 
 /* Card Styling for Menu or Recipes */

@@ -3,11 +3,15 @@ from django.views import generic
 from .models import Post, Chef_Comment ,Dish_Receipe, MenuItem
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
 from django.contrib.auth import login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import TemplateView
 from django.core.paginator import Paginator
+from django.http import HttpResponse
+from .forms import ChefRegistrationForm
+
+
 
 import logging
 
@@ -34,6 +38,18 @@ def register_view(request):
     else:
         form = UserCreationForm()
     return render(request, 'register.html', {'form': form})
+
+def register_chef_view(request):
+    if request.method == 'POST':
+        form = ChefRegistrationForm(request.POST, request.FILES)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('home')  # Redirect to home or another page
+    else:
+        form = ChefRegistrationForm()
+    return render(request, 'register_chef.html', {'form': form})
+
 
 @login_required
 def dashboard(request):
