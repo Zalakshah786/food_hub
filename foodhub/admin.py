@@ -27,3 +27,4 @@ class MenuItemAdmin(admin.ModelAdmin):
     list_display = ('name', 'category', 'chef_name', 'description')
     list_filter = ('category', 'chef_name')
     search_fields = ('name', 'description', 'chef_name')
+

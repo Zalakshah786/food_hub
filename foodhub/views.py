@@ -10,14 +10,18 @@ from django.views.generic import TemplateView
 from django.core.paginator import Paginator
 from django.http import HttpResponse
 from .forms import ChefRegistrationForm
+from django.contrib import messages
 
 
 
-import logging
-
-logger = logging.getLogger('django')
 
 def login_view(request):
+
+    if request.user.is_authenticated:
+        messages.info(request, "You are already logged in!")
+        return redirect('home') # Redirect to home or another page
+
+
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
@@ -43,9 +47,11 @@ def register_chef_view(request):
     if request.method == 'POST':
         form = ChefRegistrationForm(request.POST, request.FILES)
         if form.is_valid():
-            user = form.save()
-            login(request, user)
-            return redirect('home')  # Redirect to home or another page
+            form.save()  # Save the form data to the database
+            messages.success(request, "Your account has been created successfully! You can now log in.")
+            return redirect("login")  # Redirect to the login page
+        else:
+            messages.error(request, "There was an error in your form. Please check the fields.")
     else:
         form = ChefRegistrationForm()
     return render(request, 'register_chef.html', {'form': form})
