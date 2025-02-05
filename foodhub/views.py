@@ -1,12 +1,13 @@
 
 from django.views import generic
-from .models import Post, Chef_Comment ,Dish_Receipe
+from .models import Post, Chef_Comment ,Dish_Receipe, MenuItem
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import TemplateView
+from django.core.paginator import Paginator
 
 import logging
 
@@ -106,6 +107,33 @@ def home_view(request):
         post.comments = Chef_Comment.objects.filter(post=post, approved=True)
 
     return render(request, 'index.html', {'posts': posts,'dishes': dishes})
+def menu_list(request):
+    snacks = MenuItem.objects.filter(category='snacks')
+    breakfast = MenuItem.objects.filter(category='breakfast')
+    lunch = MenuItem.objects.filter(category='lunch')
+    dinner = MenuItem.objects.filter(category='dinner')
+
+    paginator_snacks = Paginator(snacks, 4)  # Show 4 snacks per page
+    paginator_breakfast = Paginator(breakfast, 4)  # Show 4 breakfast items per page
+    paginator_lunch = Paginator(lunch, 4)  # Show 4 lunch items per page
+    paginator_dinner = Paginator(dinner, 4)  # Show 4 dinner items per page
+
+    page_number_snacks = request.GET.get('page_snacks')
+    page_number_breakfast = request.GET.get('page_breakfast')
+    page_number_lunch = request.GET.get('page_lunch')
+    page_number_dinner = request.GET.get('page_dinner')
+
+    snacks = paginator_snacks.get_page(page_number_snacks)
+    breakfast = paginator_breakfast.get_page(page_number_breakfast)
+    lunch = paginator_lunch.get_page(page_number_lunch)
+    dinner = paginator_dinner.get_page(page_number_dinner)
+    context = {
+        'snacks': snacks,
+        'breakfast': breakfast,
+        'lunch': lunch,
+        'dinner': dinner,
+    }
+    return render(request, 'foodhub/menu_list.html', context)
 # Create your views here.
 class Home(TemplateView):
     queryset = Post.objects.all()

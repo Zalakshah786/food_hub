@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block title %}Menu List{% endblock %}
+
+{% block content %}
+<div class="container mt-5" id="menu-list-section">
+    <h2 class="text-center mb-4 menu-heading"><i class="fas fa-list-alt me-2"></i> Menu List</h2>
+    
+    <!-- Snacks Section -->
+    <div class="container mt-5" id="snacks-section">
+        <h2 class="text-center mb-4 menu-heading"><i class="fas fa-cookie-bite me-2"></i> Snacks</h2>
+        <div class="row">
+            {% for item in snacks %}
+            <div class="col-md-3">
+                <div class="card mb-4 snack-card">
+                    <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.name }}</h5>
+                        <p class="card-text">{{ item.description }}</p>
+                        <p class="card-text"><small class="text-muted">Chef: {{ item.chef_name }}</small></p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- Pagination controls for snacks -->
+        <ul class="pagination justify-content-center">
+            {% if snacks.has_previous %}
+            <li class="page-item">
+                <a href="?page_snacks={{ snacks.previous_page_number }}" class="page-link">&laquo; Previous</a>
+            </li>
+            {% endif %}
+            {% if snacks.has_next %}
+            <li class="page-item">
+                <a href="?page_snacks={{ snacks.next_page_number }}" class="page-link">Next &raquo;</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+
+    <!-- Breakfast Section -->
+    <div class="container mt-5" id="breakfast-section">
+        <h2 class="text-center mb-4 menu-heading"><i class="fas fa-coffee me-2"></i> Breakfast</h2>
+        <div class="row">
+            {% for item in breakfast %}
+            <div class="col-md-4">
+                <div class="card mb-4 snack-card">
+                    <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.name }}</h5>
+                        <p class="card-text">{{ item.description }}</p>
+                        <p class="card-text"><small class="text-muted">Chef: {{ item.chef_name }}</small></p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- Pagination controls for breakfast -->
+        <ul class="pagination justify-content-center">
+            {% if breakfast.has_previous %}
+            <li class="page-item">
+                <a href="?page_breakfast={{ breakfast.previous_page_number }}" class="page-link">&laquo; Previous</a>
+            </li>
+            {% endif %}
+            {% if breakfast.has_next %}
+            <li class="page-item">
+                <a href="?page_breakfast={{ breakfast.next_page_number }}" class="page-link">Next &raquo;</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+
+    <!-- Lunch Section -->
+    <div class="container mt-5" id="lunch-section">
+        <h2 class="text-center mb-4 menu-heading"><i class="fas fa-utensils me-2"></i> Lunch</h2>
+        <div class="row">
+            {% for item in lunch %}
+            <div class="col-md-4">
+                <div class="card mb-4 snack-card">
+                    <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.name }}</h5>
+                        <p class="card-text">{{ item.description }}</p>
+                        <p class="card-text"><small class="text-muted">Chef: {{ item.chef_name }}</small></p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- Pagination controls for lunch -->
+        <ul class="pagination justify-content-center">
+            {% if lunch.has_previous %}
+            <li class="page-item">
+                <a href="?page_lunch={{ lunch.previous_page_number }}" class="page-link">&laquo; Previous</a>
+            </li>
+            {% endif %}
+            {% if lunch.has_next %}
+            <li class="page-item">
+                <a href="?page_lunch={{ lunch.next_page_number }}" class="page-link">Next &raquo;</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+
+    <!-- Dinner Section -->
+    <div class="container mt-5" id="dinner-section">
+        <h2 class="text-center mb-4 menu-heading"><i class="fas fa-drumstick-bite me-2"></i> Dinner</h2>
+        <div class="row">
+            {% for item in dinner %}
+            <div class="col-md-4">
+                <div class="card mb-4 snack-card">
+                    <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.name }}</h5>
+                        <p class="card-text">{{ item.description }}</p>
+                        <p class="card-text"><small class="text-muted">Chef: {{ item.chef_name }}</small></p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- Pagination controls for dinner -->
+        <ul class="pagination justify-content-center">
+            {% if dinner.has_previous %}
+            <li class="page-item">
+                <a href="?page_dinner={{ dinner.previous_page_number }}" class="page-link">&laquo; Previous</a>
+            </li>
+            {% endif %}
+            {% if dinner.has_next %}
+            <li class="page-item">
+                <a href="?page_dinner={{ dinner.next_page_number }}" class="page-link">Next &raquo;</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

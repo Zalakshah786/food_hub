@@ -60,7 +60,7 @@ body {
 .navbar-nav .nav-item .nav-link.active {
     
     color: #900533;
-    background-color: #FFD700; /* Gold/Yellow on hover/active */
+    background-color: #731314; /* Gold/Yellow on hover/active */
 }
 
 /* Mobile Toggle Button */
@@ -683,3 +683,83 @@ footer .social-icons a:hover {
     color: #fff; /* Hover text color */
 }
 
+/* Custom styles for pagination links */
+.pagination .page-link {
+    color: #900533; /* Primary color */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.pagination .page-link:hover {
+    background-color: #d4af37; /* Hover color */
+    color: #fff; /* Text color on hover */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #900533; /* Active page color */
+    border-color: #900533;
+    color: #fff; /* Text color for active page */
+}
+/* Custom styles for pagination links */
+.pagination .page-link {
+    color: #900533; /* Primary color */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.pagination .page-link:hover {
+    background-color: #d4af37; /* Hover color */
+    color: #fff; /* Text color on hover */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #900533; /* Active page color */
+    border-color: #900533;
+    color: #fff; /* Text color for active page */
+}
+
+/* Custom styles for snack cards */
+.snack-card {
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    margin-bottom: 20px; /* Space between cards */
+    width: 18rem; /* Full width */
+    height: 100%; /* Full height */
+}
+
+.snack-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.snack-card .card-img-top {
+    height: 150px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-top-left-radius: 10px; /* Match card border radius */
+    border-top-right-radius: 10px; /* Match card border radius */
+}
+
+.snack-card .card-body {
+    padding: 15px; /* Adjust padding */
+}
+
+.snack-card .card-title {
+    font-size: 1.2rem; /* Adjust font size */
+    font-weight: bold; /* Make the font bold */
+    color: #900533; /* Primary color */
+}
+
+.snack-card .card-text {
+    font-size: 1rem; /* Adjust font size */
+    color: #333; /* Text color */
+}

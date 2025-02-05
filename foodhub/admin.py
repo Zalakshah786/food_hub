@@ -1,8 +1,9 @@
 from django.contrib import admin
-from .models import Post, Chef_Comment,Dish_Receipe
+from .models import Post, Chef_Comment,Dish_Receipe, MenuItem
 from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.
+
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
     summernote_fields = ('content','description',)
@@ -19,5 +20,10 @@ class Chef_CommentAdmin(admin.ModelAdmin):
 class Dish_ReceipeAdmin(SummernoteModelAdmin):
     summernote_fields = ('description',)
     list_display = ('name', 'chef', 'small_image', 'big_image')
-   
-   
+
+    
+@admin.register(MenuItem) 
+class MenuItemAdmin(admin.ModelAdmin):
+    list_display = ('name', 'category', 'chef_name', 'description')
+    list_filter = ('category', 'chef_name')
+    search_fields = ('name', 'description', 'chef_name')

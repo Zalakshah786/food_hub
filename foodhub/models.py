@@ -51,6 +51,38 @@ class Dish_Receipe(models.Model):
     def __str__(self):
         return f"{self.name} | by {self.chef.username}"
     
+
+class MenuItem(models.Model):
+    CATEGORY_CHOICES = [
+        ('snacks', 'Snacks'),
+        ('breakfast', 'Breakfast'),
+        ('lunch', 'Lunch'),
+        ('dinner', 'Dinner'),
+    ]
+
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    image = models.ImageField(upload_to='menu_images/', blank=True, null=True)
+    category = models.CharField(max_length=50, choices=CATEGORY_CHOICES)
+    chef_name = models.CharField(max_length=100 ,default='Unknown Chef')  # Add chef_name field
+
+    def __str__(self):
+        return self.name
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 class Dish(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, default=1)
     name = models.CharField(max_length=200)
