@@ -35,38 +35,41 @@
                     
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'dish_detail'}">Recipes</a>  
+                    <a class="nav-link" href="#">Recipes</a>  
                          
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#discover-section">Discover Us</a>  
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="{% url 'menu_list' %}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Menu List
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                       
                         <li><a class="dropdown-item" href="{% url 'menu_list' %}">View Menu List</a></li>
-                        <li><a class="dropdown-item" href="#snacks-section">Snacks</a></li>
-                        <li><a class="dropdown-item" href="#breakfast-section">Breakfast</a></li>
-                        <li><a class="dropdown-item" href="#lunch-section">Lunch</a></li>
-                        <li><a class="dropdown-item" href="#dinner-section">Dinner</a></li>
+                            <li><a class="dropdown-item" href="#snacks-section">Snacks</a></li>
+                            <li><a class="dropdown-item" href="#breakfast-section">Breakfast</a></li>
+                            <li><a class="dropdown-item" href="#lunch-section">Lunch</a></li>
+                            <li><a class="dropdown-item" href="#dinner-section">Dinner</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#chef-section">Chef Information</a> 
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'register' %}">Register</a>
-                </li>
+                
             </ul>
             <ul class="navbar-nav">
                 {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'register' %}">Register</a>
                 </li>
                 {% endif %}
             </ul>

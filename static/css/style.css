@@ -187,6 +187,17 @@ form {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+.form-label {
+    font-weight: bold;
+    color: #900533;
+}
+
+/* Custom styles for form inputs */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #900533;
+}
+
 
 form input, form select, form textarea {
     width: 100%;
@@ -216,7 +227,7 @@ form input[type="submit"]:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
-}
+
 
 .card img {
     width: 100%;

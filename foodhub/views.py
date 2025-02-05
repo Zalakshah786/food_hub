@@ -108,15 +108,15 @@ def home_view(request):
 
     return render(request, 'index.html', {'posts': posts,'dishes': dishes})
 def menu_list(request):
-    snacks = MenuItem.objects.filter(category='snacks')
-    breakfast = MenuItem.objects.filter(category='breakfast')
-    lunch = MenuItem.objects.filter(category='lunch')
-    dinner = MenuItem.objects.filter(category='dinner')
+    snacks_list = MenuItem.objects.filter(category='snacks').order_by('name')
+    breakfast_list = MenuItem.objects.filter(category='breakfast').order_by('name')
+    lunch_list = MenuItem.objects.filter(category='lunch').order_by('name')
+    dinner_list = MenuItem.objects.filter(category='dinner').order_by('name')
 
-    paginator_snacks = Paginator(snacks, 4)  # Show 4 snacks per page
-    paginator_breakfast = Paginator(breakfast, 4)  # Show 4 breakfast items per page
-    paginator_lunch = Paginator(lunch, 4)  # Show 4 lunch items per page
-    paginator_dinner = Paginator(dinner, 4)  # Show 4 dinner items per page
+    paginator_snacks = Paginator(snacks_list, 4)  # Show 4 snacks per page
+    paginator_breakfast = Paginator(breakfast_list, 4)  # Show 4 breakfast items per page
+    paginator_lunch = Paginator(lunch_list, 4)  # Show 4 lunch items per page
+    paginator_dinner = Paginator(dinner_list, 4)  # Show 4 dinner items per page
 
     page_number_snacks = request.GET.get('page_snacks')
     page_number_breakfast = request.GET.get('page_breakfast')
@@ -127,6 +127,7 @@ def menu_list(request):
     breakfast = paginator_breakfast.get_page(page_number_breakfast)
     lunch = paginator_lunch.get_page(page_number_lunch)
     dinner = paginator_dinner.get_page(page_number_dinner)
+
     context = {
         'snacks': snacks,
         'breakfast': breakfast,

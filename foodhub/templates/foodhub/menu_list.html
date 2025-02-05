@@ -13,7 +13,7 @@
             {% for item in snacks %}
             <div class="col-md-3">
                 <div class="card mb-4 snack-card">
-                    <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}">
+                    <img src="media/{{item.image}}"  class="card-img-top" alt="{{ item.name }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ item.name }}</h5>
                         <p class="card-text">{{ item.description }}</p>
@@ -43,9 +43,9 @@
         <h2 class="text-center mb-4 menu-heading"><i class="fas fa-coffee me-2"></i> Breakfast</h2>
         <div class="row">
             {% for item in breakfast %}
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card mb-4 snack-card">
-                    <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}">
+                    <img src="media/{{item.images }}" class="card-img-top" alt="{{ item.name }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ item.name }}</h5>
                         <p class="card-text">{{ item.description }}</p>
@@ -75,9 +75,9 @@
         <h2 class="text-center mb-4 menu-heading"><i class="fas fa-utensils me-2"></i> Lunch</h2>
         <div class="row">
             {% for item in lunch %}
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card mb-4 snack-card">
-                    <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}">
+                    <img src="{{ item.images}}" class="card-img-top" alt="{{ item.name }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ item.name }}</h5>
                         <p class="card-text">{{ item.description }}</p>
@@ -109,7 +109,7 @@
             {% for item in dinner %}
             <div class="col-md-4">
                 <div class="card mb-4 snack-card">
-                    <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}">
+                    <img src="{{ item.images.url }}" class="card-img-top" alt="{{ item.name }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ item.name }}</h5>
                         <p class="card-text">{{ item.description }}</p>
