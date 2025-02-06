@@ -28,7 +28,7 @@ if os.path.exists(os.path.join(BASE_DIR, 'env.py')):
 SECRET_KEY = 'django-insecure-6xd2#e=9%+%$z(t^0w6)%cfdi_y@y^ei^x%vz-3&cixbenx8d6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com']
 
