@@ -10,7 +10,7 @@
         <div class="col-md-4">
             <div class="card mb-3">
                 {% if dish.big_image %}
-                    <img src="/media/{{ dish.big_image }}" class="card-img-top" alt="{{ dish.name }}">
+                    <img src="{{ dish.big_image.url }}" class="card-img-top" alt="{{ dish.name }}">
                 {% else %}
                     <img src="{% static 'images/default_dish.webp' %}" class="card-img-top" alt="Default Image">
                 {% endif %}
