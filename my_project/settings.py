@@ -25,10 +25,10 @@ if os.path.exists(os.path.join(BASE_DIR, 'env.py')):
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-6xd2#e=9%+%$z(t^0w6)%cfdi_y@y^ei^x%vz-3&cixbenx8d6'
 
+SECRET_KEY = os.getenv('SECRET_KEY', 'your-secret-key')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com']
 
@@ -45,10 +45,22 @@ INSTALLED_APPS = [
     'foodhub', 
     'DiscoverUs',
     'users',
+    'whitenoise.runserver_nostatic',  # Ensures static files are handled properly
+    'cloudinary',
+    'cloudinary_storage',
     'django_summernote',
+
+
     
 
 ]
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -59,6 +71,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'my_project.urls'
@@ -144,13 +157,21 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+
+
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+import os
+
+
+
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-if 'MEDIA_ROOT' not in os.environ:
-    MEDIA_ROOT = '/app/media'  # Default for Heroku
 
 LOGIN_URL = "login"
 LOGIN_REDIRECT_URL = "home"  # Redirect after login

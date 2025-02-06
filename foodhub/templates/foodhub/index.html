@@ -38,7 +38,7 @@
                 <h5 class="text-center mb-4 dish-name"><a href="{% url 'dish_detail' dish.pk %}" >{{ dish.name}}</a></h5>
                 <a href="{% url 'dish_detail' dish.pk %}">
                 {% if dish.small_image %}
-                    <img src="media/{{ dish.small_image}}" class="card-img-top" alt="{{ dish.name }}">
+                    <img src="{{ dish.small_image.url}}" class="card-img-top" alt="{{ dish.name }}">
                 {% else %}
                     <img src="{% static 'images/default_dish.webp' %}" class="card-img-top" alt="Default Image">
                 {% endif %}
@@ -59,7 +59,7 @@
                 <h5 class="text-center mb-4 chef-name"><a href="{% url 'post_detail' post.pk %}" >{{ post.title }}</a></h5>
                 <a href="{% url 'post_detail' post.pk %}">
                 {% if post.chef_logo %}
-                    <img src="media/{{ post.chef_logo }}" class="card-img-top" alt="{{ post.title }}">
+                    <img src="{{ post.chef_logo.url}}" class="card-img-top" alt="{{ post.title }}">
                 {% else %}
                     <img src="{% static 'images/default.webp' %}" class="card-img-top" alt="Default Image">
                 {% endif %}
