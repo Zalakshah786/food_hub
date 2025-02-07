@@ -10,7 +10,6 @@ from .views import dish_detail
 from .views import add_comment
 from .views import edit_comment
 from .views import delete_comment
-from users import views as user_views
 from foodhub import views as foodhub_views
 
 urlpatterns = [
@@ -19,10 +18,10 @@ urlpatterns = [
     path('menu_list/', views.menu_list, name='menu_list'),  # Menu List page
     #path('chefs/', views.chefs, name='chefs'),  # Chefs page
     path('dashboard/', views.dashboard, name='dashboard'),  # Dashboard page
-    path('login/', user_views.login_view, name='login'),  # Login page
-    path('register/', user_views.register_view, name='register'),  # Register page
-    path('register_chef/', views.register_chef_view, name='register_chef'),  # Sign Up as Chef page
-    path('logout/',foodhub_views.logout_view, name='logout'),  # Logout action
+    path('login/', views.login_view, name='login'),  # Login page
+    path('register/', views.register_view, name='register'),  # Register page
+    path('logout/', views.logout_view, name='logout'),  # Logout action
+    path('register_chef/', views.register_chef_view, name='register_chef'),
     path('post_detail/<int:pk>/', views.post_detail, name='post_detail'),  # Post detail page
     path('dish_detail/<int:pk>/', views.dish_detail, name='dish_detail'),  # Dish detail page
     path('add_comment/<int:pk>/', views.add_comment, name='add_comment'),  # Add comment action
