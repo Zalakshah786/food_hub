@@ -1,12 +1,19 @@
 from django import forms
-from django.contrib.auth.models import User
+
 from django.contrib.auth.forms import UserCreationForm
 
-class ChefRegistrationForm(UserCreationForm):
-    email = forms.EmailField(required=True)
-    bio = forms.CharField(widget=forms.Textarea, required=True)
-    photo = forms.ImageField(required=True)
+from .models import Chef_Comment
+from .models import CollaborateRequest
 
+
+
+class ChefCommentForm(forms.ModelForm):
     class Meta:
-        model = User
-        fields = ['username', 'email', 'password1', 'password2', 'bio', 'photo']
+        model = Chef_Comment
+        fields = ['text', 'rating']
+
+class CollaborateRequestForm(forms.ModelForm):
+    class Meta:
+        model = CollaborateRequest
+        fields = ['name', 'email', 'message']
+       

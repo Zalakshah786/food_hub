@@ -2,15 +2,16 @@
 from django.views import generic
 from .models import Post, Chef_Comment ,Dish_Receipe, MenuItem
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404,reverse
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
 from django.contrib.auth import login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import TemplateView
 from django.core.paginator import Paginator
 from django.http import HttpResponse
-from .forms import ChefRegistrationForm
 from django.contrib import messages
+from .forms import ChefCommentForm , CollaborateRequestForm
+from django.http import HttpResponseRedirect
 
 
 
@@ -43,20 +44,6 @@ def register_view(request):
         form = UserCreationForm()
     return render(request, 'register.html', {'form': form})
 
-def register_chef_view(request):
-    if request.method == 'POST':
-        form = ChefRegistrationForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()  # Save the form data to the database
-            messages.success(request, "Your account has been created successfully! You can now log in.")
-            return redirect("login")  # Redirect to the login page
-        else:
-            messages.error(request, "There was an error in your form. Please check the fields.")
-    else:
-        form = ChefRegistrationForm()
-    return render(request, 'register_chef.html', {'form': form})
-
-
 @login_required
 def dashboard(request):
     return render(request, "login.html")
@@ -65,15 +52,43 @@ def logout_view(request):
     logout(request)  # This will log the user out
     return redirect('home')  # Redirect to home or login page after logout
 
+
 def post_detail(request, pk):
-    post = Post.objects.get(pk=pk)
-    comments = Chef_Comment.objects.filter(post=post)
-    for comment in comments:
-        comment.star_range = range(comment.rating)
+    queryset = Post.objects.filter(status=1)
+    post = get_object_or_404(queryset, pk=pk)
+    comments = Chef_Comment.objects.filter(post=post, approved=True).order_by('-created_at')
+    comments_count = comments.count()
+    comment_form = ChefCommentForm()
+
+    if request.method == 'POST':
+        if request.user.is_authenticated:
+            comment_form = ChefCommentForm(data=request.POST)
+            if comment_form.is_valid():
+                comment = comment_form.save(commit=False)
+                comment.post = post
+                comment.user = request.user
+                comment.save()
+                messages.add_message(request, messages.SUCCESS, 'Comment submitted and awaiting approval')
+                return redirect('post_detail', pk=pk)
+        else:
+            messages.add_message(request, messages.ERROR, 'You must be logged in to submit a comment')
+            return redirect('account_login')
+
     user_has_commented = False
     if request.user.is_authenticated:
         user_has_commented = Chef_Comment.objects.filter(post=post, user=request.user).exists()
-    return render(request, 'foodhub/chef.html', {'post': post, 'comments': comments, 'user_has_commented': user_has_commented})
+
+    return render(request, 'foodhub/chef.html', {
+        'post': post,
+        'comments': comments,
+        'comments_count': comments_count,
+        'comment_form': comment_form,
+        'user_has_commented': user_has_commented
+    })
+
+
+
+
 
 def dish_detail(request, pk):
     dish = Dish_Receipe.objects.get(pk=pk)
@@ -168,7 +183,16 @@ class Home(TemplateView):
         context['dishes'] = Dish_Receipe.objects.all()  # Add the dishes to the context
         return context
     
-
+def collaborate_request_view(request):
+    if request.method == 'POST':
+        form = CollaborateRequestForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your collaboration request has been submitted successfully!')
+            return redirect('home')  # Redirect to home or another page
+    else:
+        form = CollaborateRequestForm()
+    return render(request, 'collaborate_request.html', {'form': form})
 
 
 

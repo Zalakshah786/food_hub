@@ -3,12 +3,10 @@
 {% url 'account_login' as login_url %}
 {% url 'account_logout' as logout_url %}
 {% url 'account_signup' as signup_url %}
-{% url 'register_chef' as register_chef %}
 {% url 'home' as home_url %}
 {% url 'menu_list' as menu_list %}
-{% url 'register_chef' as register_chef %}
 {% url 'home' as home_url %}
-{% url 'menu_list' as menu_list %}
+{% url 'collaborate_request' as collaborate_request_url %}
 
 
 
@@ -72,6 +70,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#chef-section">Chef Information</a> 
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ collaborate_request_url }}">Collaborate with Us</a>
+                </li>
                 
             </ul>
             <ul class="navbar-nav">
@@ -94,24 +95,38 @@
                     <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
                             href="{% url 'account_signup' %}">Register</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'register_chef' %}">Register as Chef</a>
-                </li>
+                
                 {% endif %}
             </ul>
         </div>
     </div>
 </nav>
 
+<!-- displaying Django messages -->
+<!-- <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        {% for message in messages %}
+        <div class="alert {{ message.tags }} alert-dismissible
+          fade show" id="msg" role="alert">
+          {{ message | safe }}
+          <button type="button" class="btn-close"
+            data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div> -->
+
 
    
 
     <main class="flex-shrink-0 main-bg">
-        {% if user.is_authenticated %}
+        <!-- {% if user.is_authenticated %}
         <p class="text-end m-3">You are logged in as {{ user.username }}</p>
         {% else %}
         <p class="text-end m-3">You are not logged in</p>
-        {% endif %}
+        {% endif %} -->
         
         {% block content %}
         <!-- Content Goes here -->

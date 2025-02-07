@@ -28,7 +28,8 @@ if os.path.exists(os.path.join(BASE_DIR, 'env.py')):
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+
 
 ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com']
 
@@ -50,6 +51,8 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',  # Ensures static files are handled properly
     'cloudinary',
     'cloudinary_storage',
+    'crispy_forms',
+    'crispy_bootstrap5',
     'django_summernote',
 
 
@@ -183,6 +186,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 

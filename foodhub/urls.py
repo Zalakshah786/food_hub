@@ -21,12 +21,14 @@ urlpatterns = [
     path('login/', views.login_view, name='login'),  # Login page
     path('register/', views.register_view, name='register'),  # Register page
     path('logout/', views.logout_view, name='logout'),  # Logout action
-    path('register_chef/', views.register_chef_view, name='register_chef'),
+    #path('register_chef/', views.register_chef_view, name='register_chef'),
     path('post_detail/<int:pk>/', views.post_detail, name='post_detail'),  # Post detail page
     path('dish_detail/<int:pk>/', views.dish_detail, name='dish_detail'),  # Dish detail page
     path('add_comment/<int:pk>/', views.add_comment, name='add_comment'),  # Add comment action
     path('edit_comment/<int:pk>/', views.edit_comment, name='edit_comment'),  # Edit comment action
     path('delete_comment/<int:pk>/', views.delete_comment, name='delete_comment'),  # Delete comment action
+    path('collaborate_request/', views.collaborate_request_view, name='collaborate_request'),
+   
     
 ]
 

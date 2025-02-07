@@ -34,14 +34,15 @@ class Post(models.Model):
         return f"{self.title} | by {self.user.username}"
     
 class Chef_Comment(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, default=1)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1, related_name='chef_comments')
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, default=1, related_name='comments')
     text = models.TextField()
     rating = models.IntegerField(default=1)  # Rating from 1 to 5
     created_at = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"{self.user.username} - {self.post.title} ({self.rating}⭐)"    
+        return f" comment By{self.user.username} on {self.post.title} ({self.rating}⭐)"    
 
 
 class Dish_Receipe(models.Model):
@@ -75,6 +76,17 @@ class MenuItem(models.Model):
     def __str__(self):
         return self.name
     
+
+
+
+class CollaborateRequest(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.EmailField()
+    message = models.TextField()
+    read = models.BooleanField(default=False)  # Add the read field
+
+    def __str__(self):
+        return f"Collaboration request from {self.name}"
 
 
 

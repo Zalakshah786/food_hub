@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Post, Chef_Comment,Dish_Receipe, MenuItem
 from django_summernote.admin import SummernoteModelAdmin
-
+from .models import CollaborateRequest
 # Register your models here.
 
 @admin.register(Post)
@@ -28,3 +28,8 @@ class MenuItemAdmin(admin.ModelAdmin):
     list_filter = ('category', 'chef_name')
     search_fields = ('name', 'description', 'chef_name')
 
+
+@admin.register(CollaborateRequest)
+class CollaborateRequestAdmin(admin.ModelAdmin):
+
+    list_display = ('name', 'email', 'message', 'read')
