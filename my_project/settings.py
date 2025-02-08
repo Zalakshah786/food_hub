@@ -199,21 +199,28 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'handlers': {
-         'console': {
+        'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+            'stream': 'ext://sys.stdout',
         },
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'debug.log'),
+            'formatter': 'verbose',
+            'encoding': 'utf-8',  # Use utf-8 encoding
         },
     },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
-            'propagate': True,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
         },
+    },
+    'root': {
+        'handlers': ['console', 'file'],
+        'level': 'DEBUG',
     },
 }

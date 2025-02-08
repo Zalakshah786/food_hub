@@ -7,7 +7,7 @@ from .views import register_view
 from .views import logout_view
 from .views import post_detail
 from .views import dish_detail
-from .views import add_comment
+
 from .views import edit_comment
 from .views import delete_comment
 from foodhub import views as foodhub_views
@@ -24,9 +24,10 @@ urlpatterns = [
     #path('register_chef/', views.register_chef_view, name='register_chef'),
     path('post_detail/<int:pk>/', views.post_detail, name='post_detail'),  # Post detail page
     path('dish_detail/<int:pk>/', views.dish_detail, name='dish_detail'),  # Dish detail page
-    path('add_comment/<int:pk>/', views.add_comment, name='add_comment'),  # Add comment action
-    path('edit_comment/<int:pk>/', views.edit_comment, name='edit_comment'),  # Edit comment action
-    path('delete_comment/<int:pk>/', views.delete_comment, name='delete_comment'),  # Delete comment action
+    
+    path('edit_comment/<int:pk>/<int:comment_id>/', views.edit_comment, name='edit_comment'),  # Edit comment page
+    path('delete_comment/<int:pk>/<int:comment_id>/', views.delete_comment, name='delete_comment'),  # Delete comment action
+
     path('collaborate_request/', views.collaborate_request_view, name='collaborate_request'),
    
     

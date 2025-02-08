@@ -12,6 +12,8 @@ from django.http import HttpResponse
 from django.contrib import messages
 from .forms import ChefCommentForm , CollaborateRequestForm
 from django.http import HttpResponseRedirect
+from django.http import JsonResponse
+
 
 
 
@@ -94,42 +96,39 @@ def dish_detail(request, pk):
     dish = Dish_Receipe.objects.get(pk=pk)
     return render(request, 'foodhub/dish_detail.html', {'pk': pk, 'dish': dish})
 
-@login_required
-def add_comment(request, pk):
-    post = get_object_or_404(Post, pk=pk)
-    if Chef_Comment.objects.filter(post=post, user=request.user).exists():
-        return redirect('post_detail', pk=pk)
-    if request.method == 'POST':
-        comment_text = request.POST.get('comment', '')
-        rating = request.POST.get('rating', 0)  # Default to None if not provided
-        comment = Chef_Comment(user=request.user, post=post, text=comment_text, rating=rating)
-        comment.save()
-        return redirect('post_detail', pk=pk)
-    return render(request, 'foodhub/chef.html', {'post': post})
 
 @login_required
-def edit_comment(request, pk):
-    comment = get_object_or_404(Chef_Comment, pk=pk)
-    if request.user != comment.user:
-        return redirect('post_detail', pk=comment.post.pk)
+def edit_comment(request, pk, comment_id):
+    """
+    Edit a comment
+    """
+    comment = get_object_or_404(Chef_Comment, pk=comment_id, post_id=pk, approved=True)
     if request.method == 'POST':
-        comment.text = request.POST.get('comment', '')
-        comment.rating = request.POST.get('rating', 0)  # Default to 0 if not provided
-        comment.save()
-        return redirect('post_detail', pk=comment.post.pk)
-    return render(request, 'foodhub/chef.html', {'post': comment.post, 'edit_comment': comment})
+        form = ChefCommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            messages.add_message(request, messages.SUCCESS, 'Comment updated successfully')
+            return JsonResponse({'success': True, 'text': form.cleaned_data['text'], 'rating': form.cleaned_data['rating']})
+        else:
+            return JsonResponse({'success': False, 'errors': form.errors})
+    return JsonResponse({'success': False, 'message': 'Invalid request method'})
 
 
 @login_required
-def delete_comment(request, pk):
-    comment = get_object_or_404(Chef_Comment, pk=pk)
-    if request.user != comment.user:
-        return redirect('post_detail', pk=comment.post.pk)
-    if request.method == 'POST':
+def delete_comment(request,pk,comment_id):
+    """
+    
+    Delete a comment
+    
+    """
+    comment = get_object_or_404(Chef_Comment, pk=comment_id, post_id=pk, approved=True)
+   
+    if request.user == comment.user:
         comment.delete()
-        return redirect('post_detail', pk=comment.post.pk)
-    return render(request, 'foodhub/chef.html', {'post': comment.post, 'delete_comment': comment})
-
+        messages.add_message(request, messages.SUCCESS, 'Comment deleted successfully')
+    else:
+        messages.add_message(request, messages.ERROR, 'You must be logged in to delete a comment')
+    return HttpResponseRedirect(reverse('post_detail', args=[pk]))
 
 
 def home_view(request):
@@ -144,6 +143,7 @@ def home_view(request):
         post.comments = Chef_Comment.objects.filter(post=post, approved=True)
 
     return render(request, 'index.html', {'posts': posts,'dishes': dishes})
+
 def menu_list(request):
     snacks_list = MenuItem.objects.filter(category='snacks').order_by('name')
     breakfast_list = MenuItem.objects.filter(category='breakfast').order_by('name')
@@ -188,7 +188,7 @@ def collaborate_request_view(request):
         form = CollaborateRequestForm(data=request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your collaboration request has been submitted successfully!')
+            messages.success(request, 'Your collaboration request has been submitted successfully!I endeavour to respond within 2 working days.')
             return redirect('home')  # Redirect to home or another page
     else:
         form = CollaborateRequestForm()

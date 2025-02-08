@@ -20,7 +20,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Google Fonts CSS -->
-    
+    {% block extras %}{% endblock %}
     
     
     <!-- Font Awesome CSS -->
@@ -103,7 +103,7 @@
 </nav>
 
 <!-- displaying Django messages -->
-<!-- <div class="container">
+ <div class="container">
     <div class="row">
       <div class="col-md-8 offset-md-2">
         {% for message in messages %}
@@ -116,7 +116,7 @@
         {% endfor %}
       </div>
     </div>
-  </div> -->
+  </div> 
 
 
    
@@ -156,7 +156,7 @@
                             <a href="#dish-section" class="text-white">Recipes</a>
                         </li>
                         <li>
-                            <a href="#" class="text-white">Contact Us</a>
+                            <a href="{{ collaborate_request_url }}" class="text-white">Collaborate with Us</a>
                         </li>
                     </ul>
                 </div>
@@ -180,8 +180,8 @@
             <hr class="my-4">
             <p class="m-0 text-center text-white">
                 {% block copyright %}
-                    Made by Zalak Shah
-                {% endblock copyright %}
+                &copy; {{ current_year }} Made by Zalak Shah. All rights reserved.
+            {% endblock %}
             </p>
         </div>
     </footer>

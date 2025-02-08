@@ -1,10 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 {% load crispy_forms_tags %}
+{% load custom_filters %}
 {% block title %}{{ post.title }}{% endblock %}
-
-
-
 
 {% block content %}
 <div class="container mt-5">
@@ -13,7 +11,7 @@
     <div class="col-md-6">
       <div class="card mb-4">
         {% if post.image %}
-        <img src="{{post.image.url }}" class="card-img-top" alt="{{ post.title }}">
+        <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.title }}">
         {% else %}
         <img src="{% static 'images/default.jpg' %}" class="card-img-top" alt="Default Image">
         {% endif %}
@@ -52,33 +50,40 @@
   </div>
   <!-- Displaying Comments -->
   <div class="row">
-    <div class="col-md-8 card mb-4  mt-3 ">
+    <div class="col-md-8 mb-4 mt-3">
       <h3>Comments:</h3>
-      <div class="card-body">
-        <!-- We want a for loop inside the empty control tags
-          to iterate through each comment in comments -->
-        {% for comment in comments %}
-        <div class="p-2 mb-3 comment-card {% if not comment.approved and comment.user == user %}faded{% elif not comment.approved %} d-none{% endif %}">
-          <p class="font-weight-bold">
-            {{ comment.user }}
-            <span class="font-weight-normal">
-              {{ comment.created_at|date:"F d, Y" }}
-            </span> wrote:
-          </p>
-          <div id="comment{{ comment.id }}">
-            {{ comment.text | linebreaks }}
-          </div>
-          {% if not comment.approved and comment.user == user %}
-          <p class="approval">
-            This comment is awaiting approval
-          </p>
-          {% endif %}
-          {% if request.user == comment.user %}
+      <div class="card">
+        <div class="card-body">
+          {% for comment in comments %}
+          <div class="p-2 mb-3 comment-card {% if not comment.approved and comment.user == user %}faded{% elif not comment.approved %} d-none{% endif %}">
+            <p class="font-weight-bold">
+              {{ comment.user }}
+              <span class="font-weight-normal">
+                {{ comment.created_at|date:"F d, Y" }}
+              </span> wrote:
+            </p>
+            <div id="comment{{ comment.id }}">
+              {{ comment.text | linebreaks }}
+            </div>
+            <div class="rating" id="rating{{ comment.id }}">
+              {% for i in 1|times:comment.rating %}
+              <i class="fas fa-star text-warning"></i>
+              {% endfor %}
+              {% for i in comment.rating|add:1|times:5 %}
+              <i class="far fa-star text-warning"></i>
+              {% endfor %}
+            </div>
+            {% if not comment.approved and comment.user == user %}
+            <p class="approval" onclick="showApprovalMessage()">This comment is awaiting approval</p>
+            {% endif %}
+            {% if request.user == comment.user %}
             <div class="d-flex justify-content-end">
-              <a href="{% url 'edit_comment' comment.pk %}" class="btn btn-sm btn-warning me-2">Edit</a>
-              <form method="POST" action="{% url 'delete_comment' comment.pk %}" style="display:inline;">
+              <div class="me-2 d-inline">
+                <button class="btn btn-sm btn-warning me-2 btn-edit" data-comment-id="{{ comment.id }}">Edit</button>
+              </div>
+              <form method="POST" action="{% url 'delete_comment' post.pk comment.pk %}" style="all: unset;">
                 {% csrf_token %}
-                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                <button type="submit" class="btn btn-sm btn-danger" style="all: unset;">Delete</button>
               </form>
             </div>
             {% endif %}
@@ -87,24 +92,150 @@
         </div>
       </div>
     </div>
-   <!-- Creating New Comments -->
-   <div class="col-md-4 mb-4 mt-3">
-    <div class="card">
-      <div class="card-body">
-        {% if user.is_authenticated %}
-        <h3>Leave a comment:</h3>
-        <p>Posting as: {{ user.username }}</p>
-        <form id="comment_form" method="post">
-          {{ comment_form | crispy }}
-          {% csrf_token %}
-          <button id="submitButton" type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
-        </form>
-        {% else %}
-        <p>Log in to leave a comment</p>
-        {% endif %}
+    <!-- Creating New Comments -->
+    <div class="col-md-4 mb-4 mt-3">
+      <div class="card">
+        <div class="card-body">
+          {% if user.is_authenticated %}
+          <h3>Leave a comment:</h3>
+          <p>Posting as: {{ user.username }}</p>
+          <form id="comment_form" method="post">
+            {{ comment_form | crispy }}
+            {% csrf_token %}
+            <div class="star-rating" id="new_comment_rating">
+              <i class="far fa-star text-warning" data-rating="1"></i>
+              <i class="far fa-star text-warning" data-rating="2"></i>
+              <i class="far fa-star text-warning" data-rating="3"></i>
+              <i class="far fa-star text-warning" data-rating="4"></i>
+              <i class="far fa-star text-warning" data-rating="5"></i>
+            </div>
+            <input type="hidden" name="rating" value="0">
+            <button id="submitButton" type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
+          </form>
+          {% else %}
+          <p>Log in to leave a comment</p>
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Approval Message Modal -->
+<div class="modal fade" id="approvalModal" tabindex="-1" aria-labelledby="approvalModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="approvalModalLabel">Approval Status</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        This comment is awaiting approval.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
+
+<script>
+function showApprovalMessage() {
+  var approvalModal = new bootstrap.Modal(document.getElementById('approvalModal'));
+  approvalModal.show();
+}
+
+// Edit Comment
+document.querySelectorAll('.btn-edit').forEach(item => {
+  item.addEventListener('click', event => {
+    const commentId = item.getAttribute('data-comment-id');
+    const comment = document.querySelector(`#comment${commentId}`);
+    const commentText = comment.innerText.trim();
+    const rating = document.querySelector(`#rating${commentId}`).querySelectorAll('.fas').length;
+    const edit_comment_url = "{% url 'edit_comment' post.pk 0 %}".replace('0', commentId);
+    const form = `
+      <form id="edit_comment_form_${commentId}" method="POST" action="${edit_comment_url}">
+        {% csrf_token %}
+        <input type="hidden" name="comment_id" value="${commentId}">
+        <textarea name="text" class="form-control">${commentText}</textarea>
+        <label for="rating">Rating:</label>
+        <div class="star-rating">
+          ${[1, 2, 3, 4, 5].map(i => `
+            <i class="${i <= rating ? 'fas' : 'far'} fa-star text-warning" data-rating="${i}"></i>
+          `).join('')}
+        </div>
+        <input type="hidden" name="rating" value="${rating}">
+        <button type="submit" class="btn btn-primary mt-2">Save</button>
+      </form>
+    `;
+    comment.innerHTML = form;
+
+    document.querySelectorAll(`#edit_comment_form_${commentId} .fa-star`).forEach(star => {
+      star.addEventListener('click', function() {
+        const rating = this.getAttribute('data-rating');
+        document.querySelector(`#edit_comment_form_${commentId} input[name="rating"]`).value = rating;
+        document.querySelectorAll(`#edit_comment_form_${commentId} .fa-star`).forEach(s => {
+          s.classList.remove('fas');
+          s.classList.add('far');
+        });
+        for (let i = 1; i <= rating; i++) {
+          document.querySelector(`#edit_comment_form_${commentId} .fa-star[data-rating="${i}"]`).classList.remove('far');
+          document.querySelector(`#edit_comment_form_${commentId} .fa-star[data-rating="${i}"]`).classList.add('fas');
+        }
+      });
+    });
+
+    document.querySelector(`#edit_comment_form_${commentId}`).addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      fetch(edit_comment_url, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest',
+          'X-CSRFToken': formData.get('csrfmiddlewaretoken')
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          comment.innerHTML = `<p>${data.text}</p>`;
+          const ratingDiv = document.querySelector(`#rating${commentId}`);
+          ratingDiv.innerHTML = '';
+          for (let i = 1; i <= data.rating; i++) {
+            ratingDiv.innerHTML += '<i class="fas fa-star text-warning"></i>';
+          }
+          for (let i = data.rating + 1; i <= 5; i++) {
+            ratingDiv.innerHTML += '<i class="far fa-star text-warning"></i>';
+          }
+          alert('Comment updated successfully');
+        } else {
+          alert('Error in updating comment');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Error in updating comment');
+      });
+    });
+  });
+});
+
+// New Comment Rating
+document.querySelectorAll('#new_comment_rating .fa-star').forEach(star => {
+  star.addEventListener('click', function() {
+    const rating = this.getAttribute('data-rating');
+    document.querySelector('#comment_form input[name="rating"]').value = rating;
+    document.querySelectorAll('#new_comment_rating .fa-star').forEach(s => {
+      s.classList.remove('fas');
+      s.classList.add('far');
+    });
+    for (let i = 1; i <= rating; i++) {
+      document.querySelector(`#new_comment_rating .fa-star[data-rating="${i}"]`).classList.remove('far');
+      document.querySelector(`#new_comment_rating .fa-star[data-rating="${i}"]`).classList.add('fas');
+    }
+  });
+});
+document.querySelector("#id_rating").style.display = "none";
+</script>
 {% endblock %}

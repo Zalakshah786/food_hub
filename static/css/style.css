@@ -63,19 +63,8 @@ body {
     background-color: #731314; /* Gold/Yellow on hover/active */
 }
 
-/* Mobile Toggle Button */
-.navbar-toggler {
-    border: none;
-    outline: none;
-    color: #fff;
-    font-size: 24px;
-    padding: 0;
-    background-color: transparent;
-    transition: color 0.3s ease;
-    }
-
-.navbar-toggler-icon {
-    filter: invert(1); /* Make it visible on dark background */
+.navbar-nav .nav-item .nav-link.active {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* Ensure Navbar is responsive */
@@ -232,10 +221,9 @@ form input[type="submit"]:hover {
 }
 /* Custom styles for alerts */
 .alert {
-    border-radius: 5px;
-    color:#000000;
     margin-top: 20px;
 }
+
 /* Approval Message Styles */
 .approval {
     font-size: 12px;
@@ -323,37 +311,6 @@ footer .social-icons a:hover {
     color: #b18620; /* Gold color on hover for social icons */
 }
 
-/* Card Styles */
-.card {
-    border-radius: 10px;
-}
-
-/* Comment Card Styles */
-.comment-card {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: #f9f9f9;
-}
-/* Form Styles */
-form {
-    margin-top: 20px;
-}
-
-form .btn {
-    padding: 10px;
-    font-size: 16px;
-}
-
-/* Link Styles */
-a.link {
-    color: #900533;
-}
-
-a.link:hover {
-    color: #700422;
-    text-decoration: underline;
-}
 /* Responsive Design */
 @media (max-width: 991px) {
     .navbar-nav {
@@ -739,7 +696,7 @@ a.link:hover {
 }
 
 .snack-card .card-img-top {
-    height: 150px; /* Set a fixed height for the image */
+    height: 300px; /* Set a fixed height for the image */
     object-fit: cover; /* Ensure the image covers the area */
     border-top-left-radius: 10px; /* Match card border radius */
     border-top-right-radius: 10px; /* Match card border radius */
