@@ -38,4 +38,49 @@ Food Hub is more than just a recipe website; it is a vibrant community dedicated
 
 ## UX Design Process:
 - **Link to User Stories in GitHub Projects:**
-  - [Add a link to the GitHub Projects kanban board.]
+  - [(https://github.com/users/Zalakshah786/projects/10)]
+
+ **Wireframes:**
+  - [Wireframe Designs]https://balsamiq.cloud/shet7bv/pwveyaz/rD893
+
+**1. Main Page (Homepage)**
+ 
+ * Displays dish images and names to grab user attention.
+ * Users can click on a dish image or name to navigate to the detailed Dish Page.
+ * Includes a section for chefs and their kitchens, where users can click to explore further
+ * Navigation bar has clear categories (Food Hub, Recipes, Discover Us) with Login and Sign-up options.
+   
+**Usability & Accessibility:**
+* Large images and clickable elements ensure easy navigation.
+* Descriptive labels and buttons improve clarity for users, including those with screen readers.
+* Consistent layout across pages enhances familiarity and ease of use
+
+  
+**2. Dish Page**
+* Displays a larger dish image, name, and step-by-step preparation method.
+* Ensures users can easily read and follow recipes.
+* Header and footer remain the same across pages for consistency.
+* Usability & Accessibility:
+* Simple and structured layout with clear separation between image and text.
+* Text-based instructions allow compatibility with screen readers.
+
+
+**3. Chef's Kitchen Page**
+* Shows chef’s name, specialty, and social media links (YouTube, Facebook, Instagram).
+* Users can leave comments and ratings (Login required).
+* Display user comments with username, date, time, and rating.
+* Edit and Delete options for authorized users.
+  
+**Usability & Accessibility:**
+* Clickable social media links allow users to explore the chef’s content externally.
+* Comments section promotes interaction while maintaining moderation control.
+* Login requirement for commenting prevents spam and ensures engagement from real users.
+
+
+**Navigation Between Pages**
+* Clicking on a dish on the homepage redirects to the Dish Page for full details.
+* Clicking on a chef's name or kitchen redirects to the Chef's Kitchen Page.
+* Consistent navigation and visual hierarchy help users understand where they are in the site.
+
+
+
