@@ -313,13 +313,13 @@ Before you start, ensure you have the following:
  ### 1.User Authentication (Login, Logout, Register):
 ✅1. **Sign Up Functinality:**
  - Tests to Perform: User Registration
-        [Sign Up ](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/signup/)
+       -  [Sign Up ](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/signup/)
 
   
 - Try registering a new user and check if the system successfully creates an account.
-     [Register user with name xyz](https://github.com/user-attachments/assets/eb54341d-6403-40ae-a9a4-3daf7fb9284c)
+     - [Register user with name xyz](https://github.com/user-attachments/assets/eb54341d-6403-40ae-a9a4-3daf7fb9284c)
      Confirm that an already registered email cannot be used again.
-      [confirm that user already register](https://github.com/user-attachments/assets/7b048ccd-2154-4aa2-aef2-9ee3f19f733c)
+     -  [confirm that user already register](https://github.com/user-attachments/assets/7b048ccd-2154-4aa2-aef2-9ee3f19f733c)
 
 ✅2. **Login Functinality:**
 Log in with valid credentials and ensure access to restricted pages.
@@ -367,7 +367,7 @@ It's not showing any message because I didn't set
  -  Confirm that a chef can delete their profile, and the associated data (e.g., dishes) is handled correctly.
 ✔ Social Media Links
 -  Test if the YouTube, Instagram, and Facebook links added in the chef profile open correctly.
-   [Create chef's kitchen profile Management](http://127.0.0.1:8000/admin/foodhub/post/add/)
+  -  [Create chef's kitchen profile Management](http://127.0.0.1:8000/admin/foodhub/post/add/)
 
           
 ### Dish Listings Management**
@@ -392,62 +392,69 @@ It's not showing any message because I didn't set
 ### Reviews and Comments on Chef's Kitchen Profile:**
 ✅**3.Tests to Perform:**
  ✔ Adding a Comment and Rating
-    [login required to comment](https://github.com/user-attachments/assets/398f872e-c76d-4556-bd95-934d5883a3e5)
+   -  [login required to comment](https://github.com/user-attachments/assets/398f872e-c76d-4556-bd95-934d5883a3e5)
 
 -  Log in as a user and submit a comment on a chef’s profile.
 -  Ensure the comment appears under the chef’s profile with a rating.
-    [required to login](https://github.com/user-attachments/assets/b541714c-0ea2-438f-a4be-c089c42266ca)
+   -  [required to login](https://github.com/user-attachments/assets/b541714c-0ea2-438f-a4be-c089c42266ca)
 
    
   ✔ Approving Comments:
     
  - Log in as an admin and approve/unapprove comments.
  - Confirm that unapproved comments are not visible on the website.
-   [approve comment](https://github.com/user-attachments/assets/d8200198-b932-44c2-acfb-6b67af272600)
-   [Approving Comment](https://food-hub-0b5046e8acf1.herokuapp.com/post_detail/7/)
+   - [approve comment](https://github.com/user-attachments/assets/d8200198-b932-44c2-acfb-6b67af272600)
+   - [Approving Comment](https://food-hub-0b5046e8acf1.herokuapp.com/post_detail/7/)
       
 ✔ Editing and Deleting Comments:
 
   - Test if authorized users (Test and Zalak) can edit and delete comments.
   - Verify that regular users can only delete their own comments.
-    [Admin can approve comment](https://github.com/user-attachments/assets/28e7c503-debc-4d65-9bd7-957b9487870c)
-    [Admin can approve comment](https://github.com/user-attachments/assets/3762dbcf-dbc5-40da-973a-147c7e9bdc6c)
-    [edit and delete comment](https://github.com/user-attachments/assets/bdf75773-6f05-4853-be29-4b83869681d6)
+    - [Admin can approve comment](https://github.com/user-attachments/assets/28e7c503-debc-4d65-9bd7-957b9487870c)
+    - [Admin can approve comment](https://github.com/user-attachments/assets/3762dbcf-dbc5-40da-973a-147c7e9bdc6c)
+    - [edit and delete comment](https://github.com/user-attachments/assets/bdf75773-6f05-4853-be29-4b83869681d6)
 
     
-✅ 5. Menu Management
-Tests to Perform:
+ ### Menu Management
+✅**Tests to Perform:**
 ✔ Creating a Menu Item
-
-Check that a menu item can be created with a name, description, chef name, image, and category.
+  - Check that a menu item can be created with a name, description, chef name, image, and category.
 ✔ Viewing the Menu
+  - Ensure that menu items display correctly under the correct categories.
+✔ Editing and Deleting Menu Items and only authorized users (admin or chef) can modify or remove menu items.
+  - [Menu Listing](https://github.com/user-attachments/assets/f4d32519-b91f-4c4b-bc44-daa8d23b16e5)
+  - [Editing and Deleting Menu Items](http://127.0.0.1:8000/admin/foodhub/menuitem/add/)
 
-Ensure that menu items display correctly under the correct categories.
-✔ Editing and Deleting Menu Items
-
-Verify that only authorized users (admin or chef) can modify or remove menu items.
-✅ 6. Collaboration Requests (Contact Us Feature)
-Tests to Perform:
+### Collaboration Requests (Contact Us Feature)
+✅Tests to Perform:
 ✔ Submitting a Collaboration Request
+[Collobration Form])(https://food-hub-0b5046e8acf1.herokuapp.com/collaborate_request/)
+[Collobration form Image](https://github.com/user-attachments/assets/5b6000ff-db91-4e9b-881a-7321b9f816ec)
 
 Fill out the collaboration request form with a name, email, and message.
+[collobration request submit Message](https://github.com/user-attachments/assets/64cf0215-c6ed-4d89-8094-c00667f17144)
+
 Check if the request is successfully stored in the database.
+[Collobration request can view in database](https://github.com/user-attachments/assets/bd719f93-40ff-4387-99ac-a3cace3bf7c8)
+
+
+
 ✔ Viewing and Managing Requests
-
-Log in as an admin and check if collaboration requests appear in the admin panel.
-Ensure that unread requests are marked as "Unread" and can be updated to "Read" when viewed.
-✅ 7. Navbar and Page Navigation
-Tests to Perform:
+  - Log in as an admin and check if collaboration requests appear in the admin panel.
+  - Ensure that can be updated to "Read" when viewed.
+  - [Collobration request can view and delet as well](http://127.0.0.1:8000/admin/foodhub/collaboraterequest/1/change/)
+### Navbar and Page Navigation
+✅Tests to Perform:
 ✔ Dynamic Navbar for Logged-in Users vs. Guests
-
-Ensure the navbar changes based on login status.
-Guests should see Login and Register links, while logged-in users see Dashboard and Logout.
+- Ensure the navbar changes based on login status.
+- Guests should see Login and Register links, while logged-in users see Dashboard and Logout.
 ✔ Navigation Links
+ - Click on Home, Recipes, Menu, and Chefs to check if pages load correctly.
+   [Navbar ](https://github.com/user-attachments/assets/ec11a305-6f02-49d3-8300-02edad4d3619)
 
-Click on Home, Recipes, Menu, and Chefs to check if pages load correctly.
-✔ Responsive Design
 
-Test if the navbar and pages display properly on mobile devices.
+
+
 
 
 2. **Cross-Browser and Device Testing:** Test across browsers and devices to ensure compatibility and responsiveness.
