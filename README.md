@@ -308,7 +308,7 @@ Before you start, ensure you have the following:
 
 ### Steps to Verify the Deployed Version Matches the Development Version
 
-1. **Test Core Features:** Verify key functionality like user registration, login/logout, and the ability to create and manage content (e.g., notices, dishes, chefs)
+ **Test Core Features:** Verify key functionality like user registration, login/logout, and the ability to create and manage content (e.g., notices, dishes, chefs)
 
  ### 1.User Authentication (Login, Logout, Register):
 ✅1. **Sign Up Functinality:**
@@ -355,32 +355,32 @@ It's not showing any message because I didn't set
 
 ### Chef Profile Management
 
-✅1.** Tests to Perform:**
-  ✔ Creating a Chef Profile
-    Verify that a logged-in user can create a chef profile with details such as name, description, specialty, and images.
-    Check that required fields cannot be left blank.
-    Confirm that image uploads (via Cloudinary) work properly.
-  ✔ Editing and Updating Profile
-  Ensure that chefs can edit and update their details (e.g., change profile image, update description).
-  ✔ Deleting Profile
-  Confirm that a chef can delete their profile, and the associated data (e.g., dishes) is handled correctly.
-  ✔ Social Media Links
-    Test if the YouTube, Instagram, and Facebook links added in the chef profile open correctly.
-    [Create chef's kitchen profile Management](http://127.0.0.1:8000/admin/foodhub/post/add/)
+✅**Tests to Perform:**
 
-✅**2. Dish Listings and Recipe Management**
-Tests to Perform:
+✔ Creating a Chef Profile
+  -  Verify that a logged-in user can create a chef profile with details such as name, description, specialty, and images.
+  -  Check that required fields cannot be left blank.
+  - Confirm that image uploads (via Cloudinary) work properly.
+✔ Editing and Updating Profile
+ - Ensure that chefs can edit and update their details (e.g., change profile image, update description).
+✔ Deleting Profile
+ -  Confirm that a chef can delete their profile, and the associated data (e.g., dishes) is handled correctly.
+✔ Social Media Links
+-  Test if the YouTube, Instagram, and Facebook links added in the chef profile open correctly.
+   [Create chef's kitchen profile Management](http://127.0.0.1:8000/admin/foodhub/post/add/)
+
+          
+### Dish Listings Management**
+✅ **Tests to Perform:**
 ✔ Adding a New Dish
-
-Ensure that chefs can successfully add dishes with names, descriptions, images, and categories.
-Verify that a chef can assign a dish to a category (Snacks, Breakfast, Lunch, Dinner).
+  -  Ensure that chefs can successfully add dishes with names, descriptions, images, and categories.
+  -  Verify that a chef can assign a dish to a category (Snacks, Breakfast, Lunch, Dinner).
 ✔ Viewing Dishes
-
-Check if all dishes are displayed correctly on the menu page.
-Ensure images load correctly via Cloudinary.
-
+   - check if all dishes are displayed correctly on the menu page.
+   - Ensure images load correctly via Cloudinary.
 ✔ Editing and Deleting Dishes
-[Adding new Dishes](http://127.0.0.1:8000/admin/foodhub/dish_receipe/add/)
+    -  [Adding new Dishes](http://127.0.0.1:8000/admin/foodhub/dish_receipe/add/)
+    -  [Adding New Dishes](https://github.com/user-attachments/assets/fc673e9c-1d14-46a9-8732-8a7f35985213)
 
 
 **future Expantion User Stories:**
@@ -389,22 +389,32 @@ Ensure images load correctly via Cloudinary.
 - Verify if the search functionality works correctly when searching for a dish.
 
 
-✅**3. Reviews and Comments on Chef's Kitchen Profile:**
-     ** Tests to Perform:**
-    ✔ Adding a Comment and Rating
+### Reviews and Comments on Chef's Kitchen Profile:**
+✅**3.Tests to Perform:**
+ ✔ Adding a Comment and Rating
     [login required to comment](https://github.com/user-attachments/assets/398f872e-c76d-4556-bd95-934d5883a3e5)
 
- -  Log in as a user and submit a comment on a chef’s profile.
- -  Ensure the comment appears under the chef’s profile with a rating.
+-  Log in as a user and submit a comment on a chef’s profile.
+-  Ensure the comment appears under the chef’s profile with a rating.
+    [required to login](https://github.com/user-attachments/assets/b541714c-0ea2-438f-a4be-c089c42266ca)
+
    
-✔ Approving Comments
+  ✔ Approving Comments:
+    
+ - Log in as an admin and approve/unapprove comments.
+ - Confirm that unapproved comments are not visible on the website.
+   [approve comment](https://github.com/user-attachments/assets/d8200198-b932-44c2-acfb-6b67af272600)
+   [Approving Comment](https://food-hub-0b5046e8acf1.herokuapp.com/post_detail/7/)
+      
+✔ Editing and Deleting Comments:
 
-Log in as an admin and approve/unapprove comments.
-Confirm that unapproved comments are not visible on the website.
-✔ Editing and Deleting Comments
+  - Test if authorized users (Test and Zalak) can edit and delete comments.
+  - Verify that regular users can only delete their own comments.
+    [Admin can approve comment](https://github.com/user-attachments/assets/28e7c503-debc-4d65-9bd7-957b9487870c)
+    [Admin can approve comment](https://github.com/user-attachments/assets/3762dbcf-dbc5-40da-973a-147c7e9bdc6c)
+    [edit and delete comment](https://github.com/user-attachments/assets/bdf75773-6f05-4853-be29-4b83869681d6)
 
-Test if authorized users (Test and Zalak) can edit and delete comments.
-Verify that regular users can only delete their own comments.
+    
 ✅ 5. Menu Management
 Tests to Perform:
 ✔ Creating a Menu Item
