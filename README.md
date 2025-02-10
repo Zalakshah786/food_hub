@@ -45,10 +45,8 @@ User-Friendly Interface: The application is designed with a user-friendly interf
 - **Link to User Stories in GitHub Projects:**
 - I have used the MoSCoW technique to prioritize and complete my project requirements effectively. This technique helped me to categorize the features into Must-Have, Should-Have, and Could-Have, ensuring that the most critical functionalities were implemented first, while also considering additional enhancements for future development.
 
-- ![moscow ](https://github.com/user-attachments/assets/e969ecb8-ade7-4595-9e6e-c092b1b70e6a)
-
-  
-  - [Project Board](https://github.com/users/Zalakshah786/projects/10)
+- [Moscow](https://github.com/user-attachments/assets/e969ecb8-ade7-4595-9e6e-c092b1b70e6a)
+- [Project Board](https://github.com/users/Zalakshah786/projects/10)
 
 ### Wireframe:
   - [Wireframe Designs](https://balsamiq.cloud/shet7bv/pwveyaz/rD893)
@@ -59,8 +57,49 @@ User-Friendly Interface: The application is designed with a user-friendly interf
 ### Color Palette:
 [color Palette link](https://github.com/user-attachments/assets/ce863301-2bfb-4e43-b573-36fe09bf5629)
 
- 
- 
+Zcan you give me color details for this pallateEditHere's a detailed breakdown of the color palette:
+* Olive Green:
+  -  Hex: #656C12
+  -  RGB: 101, 108, 18
+  - A deep, earthy green reminiscent of olive leaves
+
+* Mustard Yellow:
+
+  - Hex: #D79A1F
+  - RGB: 215, 154, 31
+  - Warm, rich yellow typical of Indian spices like turmeric
+
+* Deep Burgundy:
+
+  - Hex: #900533
+  - RGB: 144, 5, 51
+  - A deep, wine-like red with rich intensity
+
+
+* Brown:
+
+  - Hex: #94571D
+  - RGB: 148, 87, 29
+  - Warm, earthy brown similar to roasted spices
+
+* Dark Red:
+
+  - Hex: #731314
+  - RGB: 115, 19, 20
+  - Deep, dark red reminiscent of chili peppers
+
+
+* Golden Yellow:
+
+  - Hex: #B18620
+  - RGB: 177, 134, 32
+  - A rich, warm golden tone
+    
+This palette beautifully captures the essence of Indian spicy food, with colors that evoke spices, warmth, and traditional cuisine. The combination suggests richness, depth, and the vibrant culinary culture of India.
+
+### Typography:
+[Embedded code for google fonts](https://github.com/user-attachments/assets/ff604833-0a9d-445e-a0ed-5d5f3012ab90)
+
 
 **1. Main Page (Homepage)**
  
@@ -197,7 +236,7 @@ Before you start, ensure you have the following:
 
 ### Step 1: Prepare Your Django Project
 
-1. **Install Dependencies**  
+    1. **Install Dependencies**  
    Ensure you have the following dependencies installed in your Django project:
    - `gunicorn` for serving the application
    - `psycopg2` for PostgreSQL database support (or any database you're using)
@@ -206,86 +245,86 @@ Before you start, ensure you have the following:
    ```bash
    pip install gunicorn psycopg2
 
-2.**Create a requirements.txt file**
-   Run the following command to generate the requirements.txt file which lists all 
+    2.**Create a requirements.txt file**
+         Run the following command to generate the requirements.txt file which lists all 
    
-** dependencies:**
-  ```pip freeze > requirements.txt```
+           ** dependencies:**
+            ```pip freeze > requirements.txt```
 
-3.**Create a Procfile**
-    In the root directory of your project, create a Procfile to tell Heroku how to run the         application. 
-    The content of this file should be:
+    3.**Create a Procfile**
+        In the root directory of your project, create a Procfile to tell Heroku how to run the         application. 
+        The content of this file should be:
     
-  ```web: gunicorn <your_project_name>.wsgi```
+          ```web: gunicorn <your_project_name>.wsgi```
   
-Replace <your_project_name> with the actual name of your Django project.
+              Replace <your_project_name> with the actual name of your Django project.
 
-    
-     https://food-hub-0b5046e8acf1.herokuapp.com/
+    [live view](https://food-hub-0b5046e8acf1.herokuapp.com/)
 
      
      
-4.Setup Database Configuration (Optional)
+      4.Setup Database Configuration (Optional)
 
-If you are using PostgreSQL or another database, make sure your project is configured to work with it. For PostgreSQL, update the DATABASES setting in 
+        If you are using PostgreSQL or another database, make sure your project is configured to work with it. For PostgreSQL, update the DATABASES setting in 
 
-settings.py:
+          settings.py:
 
-```DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
-        'PORT': '5432',
-    }
-}```
-
+        ```DATABASES = {
+                  'default': {
+                  'ENGINE': 'django.db.backends.postgresql',
+                  'NAME': os.environ.get('DB_NAME'),
+                  'USER': os.environ.get('DB_USER'),
+                  'PASSWORD': os.environ.get('DB_PASSWORD'),
+                  'HOST': os.environ.get('DB_HOST'),
+                  'PORT': '5432',
+                          }
+                    }``
 ### Step 2: Set Up Heroku
 
-1. Log in to Heroku CLI
+    1. Log in to Heroku CLI
      Open your terminal and run the following command:
 
-```heroku login```
+          ```heroku login```
 
-2. Create a Heroku App
+    2. Create a Heroku App
       Run the following command to create a new app on Heroku:
 
-   ```heroku create <your-app-name>```
-3. Set Environment Variables
+         ```heroku create <your-app-name>```
+    3. Set Environment Variables
 
-Set the required environment variables for your project, such as SECRET_KEY, DEBUG, and ALLOWED_HOSTS:
+          Set the required environment variables for your project, such as SECRET_KEY, DEBUG, and ALLOWED_HOSTS:
 
-```heroku config:set SECRET_KEY=<your-secret-key> DEBUG=False ALLOWED_HOSTS=<your-app-name>.herokuapp.com```
+          ```heroku config:set SECRET_KEY=<your-secret-key> DEBUG=False ALLOWED_HOSTS=<your-app-name>.herokuapp.com```
+
+
 
 ### Step 3: Deploy the Project
 
-1. Initialize Git Repository (if not already initialized)
-     If your project is not already a git repository, run:
+      1. Initialize Git Repository (if not already initialized)
+           If your project is not already a git repository, run:
 
-```git init```
+                ```git init```
 
 
-2.Commit Your Changes
-   Add all the files to Git and commit them:
-```git add .
-git commit -m "Initial commit"```
+      2.Commit Your Changes
+           Add all the files to Git and commit them:
+              ```git add .
+                 git commit -m "Initial commit"```
 
-3.Push to Heroku
- Push your project to Heroku:
+      3.Push to Heroku
+          Push your project to Heroku:
 
-```git push heroku master ```
+              ```git push heroku master ```
 
-4.Migrate Database
-  Once the project is deployed, run database migrations:
+      4.Migrate Database
+          Once the project is deployed, run database migrations:
 
-```heroku run python manage.py migrate```
+            ```heroku run python manage.py migrate```
 
-5.Open Your App
-    Finally, open your app in the browser:
+      5.Open Your App
+          Finally, open your app in the browser:
 
-```heroku open```
+            ```heroku open```
 
 
 
