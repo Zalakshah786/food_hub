@@ -1,5 +1,5 @@
-
 # Project Title
+
 
 ## Overview
 **Food Hub** is a web application designed to be the ultimate platform for discovering and sharing delicious Gujarati recipes. Whether you are a seasoned chef or a home cook, Food Hub provides a rich collection of authentic Gujarati recipes, cooking tips, and culinary delights to explore and enjoy.
@@ -13,7 +13,7 @@ Community Engagement: Many cooking enthusiasts lack a platform to share their re
 Collaboration: Collaborating on recipes and cooking projects can be difficult without a dedicated platform. Food Hub offers features that enable users to collaborate with others, share cooking tips, and improve their culinary skills.
 Food Hub is a web application designed to be the ultimate platform for discovering and sharing delicious Gujarati recipes. Whether you are a seasoned chef or a home cook, Food Hub provides a rich collection of authentic Gujarati recipes, cooking tips, and culinary delights to explore and enjoy.
 
-Purpose
+**Purpose**
 The primary purpose of Food Hub is to create a community-driven platform where users can find, share, and collaborate on Gujarati recipes. The application aims to preserve and promote the rich culinary heritage of Gujarat by providing a space for users to share their favorite recipes, discover new dishes, and connect with other food enthusiasts.
 
 **Problem It Solves**
@@ -29,18 +29,23 @@ Collaboration Opportunities: Food Hub provides a platform for users to collabora
 
 **Conclusion**
 Food Hub is more than just a recipe website; it is a vibrant community dedicated to celebrating and preserving the rich culinary traditions of Gujarat. By providing a platform for recipe discovery, community engagement, and collaboration, Food Hub offers immense value to users who are passionate about Gujarati cuisine.
-Authentic Recipes: Users gain access to a wide variety of authentic Gujarati recipes, ensuring they can recreate traditional dishes with confidence.
-User-Friendly Interface: The application is designed with a user-friendly interface, making it easy for users to search for recipes, submit their own, and interact with the community.
-Community Support: By joining Food Hub, users become part of a supportive community of food enthusiasts who share a passion for Gujarati cuisine. They can receive feedback on their recipes, discover new cooking techniques, and build connections with other users.
-Collaboration Opportunities: Food Hub provides a platform for users to collaborate on cooking projects, share their culinary knowledge, and learn from others. This collaborative environment enhances the overall cooking experience and helps users improve their skills.
-Conclusion
-Food Hub is more than just a recipe website; it is a vibrant community dedicated to celebrating and preserving the rich culinary traditions of Gujarat. By providing a platform for recipe discovery, community engagement, and collaboration, Food Hub offers immense value to users who are passionate about Gujarati cuisine.
 
-live View [https://food-hub-0b5046e8acf1.herokuapp.com/]
+**Authentic Recipes:** Users gain access to a wide variety of authentic Gujarati recipes, ensuring they can recreate traditional dishes with confidence.
+User-Friendly Interface: The application is designed with a user-friendly interface, making it easy for users to search for recipes, submit their own, and interact with the community.
+
+**Community Support:** By joining Food Hub, users become part of a supportive community of food enthusiasts who share a passion for Gujarati cuisine. They can receive feedback on their recipes, discover new cooking techniques, and build connections with other users.
+
+**Collaboration Opportunities:** Food Hub provides a platform for users to collaborate on cooking projects, share their culinary knowledge, and learn from others. This collaborative environment enhances the overall cooking experience and helps users improve their skills.
+
+[Live View](https://food-hub-0b5046e8acf1.herokuapp.com/)
+
+
 
 ## UX Design Process:
 - **Link to User Stories in GitHub Projects:**
-  - [(https://github.com/users/Zalakshah786/projects/10)]
+- I have used the MoSCoW technique to prioritize and complete my project requirements effectively. This technique helped me to categorize the features into Must-Have, Should-Have, and Could-Have, ensuring that the most critical functionalities were implemented first, while also considering additional enhancements for future development.
+  
+  - [Project Board](https://github.com/users/Zalakshah786/projects/10)]
 
  **Wireframes:**
   - [Wireframe Designs]https://balsamiq.cloud/shet7bv/pwveyaz/rD893
@@ -156,5 +161,116 @@ Feedback mechanism (e.g., “Like” or “Helpful” buttons) to engage users f
 * Lazy loading for images to improve page speed.
 * Efficient database queries to minimize loading times.
 * Optimized font and CSS choices for a lightweight experience.
+
+# Deployment:
+## 🚀 Step-by-Step Guide to Deploy Django Project on Heroku
+
+This guide will walk you through the steps to deploy your Django project on Heroku. Follow these steps carefully to get your project live.
+
+### Prerequisites
+Before you start, ensure you have the following:
+- A Heroku account: [Create a Heroku account](https://signup.heroku.com/)
+- Installed [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+- Python 3.x and Django installed on your local machine
+- Git installed on your local machine
+
+### Step 1: Prepare Your Django Project
+
+1. **Install Dependencies**  
+   Ensure you have the following dependencies installed in your Django project:
+   - `gunicorn` for serving the application
+   - `psycopg2` for PostgreSQL database support (or any database you're using)
+
+   Install them using pip:
+   ```bash
+   pip install gunicorn psycopg2
+
+2.**Create a requirements.txt file**
+   Run the following command to generate the requirements.txt file which lists all 
+   
+** dependencies:**
+  ```pip freeze > requirements.txt```
+
+3.**Create a Procfile**
+    In the root directory of your project, create a Procfile to tell Heroku how to run the         application. 
+    The content of this file should be:
+    
+  ```web: gunicorn <your_project_name>.wsgi```
+  
+Replace <your_project_name> with the actual name of your Django project.
+
+    
+     https://food-hub-0b5046e8acf1.herokuapp.com/
+
+     
+     
+4.Setup Database Configuration (Optional)
+
+If you are using PostgreSQL or another database, make sure your project is configured to work with it. For PostgreSQL, update the DATABASES setting in 
+
+settings.py:
+
+```DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': '5432',
+    }
+}```
+
+### Step 2: Set Up Heroku
+
+1. Log in to Heroku CLI
+     Open your terminal and run the following command:
+
+```heroku login```
+
+2. Create a Heroku App
+      Run the following command to create a new app on Heroku:
+
+   ```heroku create <your-app-name>```
+3. Set Environment Variables
+
+Set the required environment variables for your project, such as SECRET_KEY, DEBUG, and ALLOWED_HOSTS:
+
+```heroku config:set SECRET_KEY=<your-secret-key> DEBUG=False ALLOWED_HOSTS=<your-app-name>.herokuapp.com```
+
+### Step 3: Deploy the Project
+
+1. Initialize Git Repository (if not already initialized)
+     If your project is not already a git repository, run:
+
+```git init```
+
+
+2.Commit Your Changes
+   Add all the files to Git and commit them:
+```git add .
+git commit -m "Initial commit"```
+
+3.Push to Heroku
+ Push your project to Heroku:
+
+```git push heroku master ```
+
+4.Migrate Database
+  Once the project is deployed, run database migrations:
+
+```heroku run python manage.py migrate```
+
+5.Open Your App
+    Finally, open your app in the browser:
+
+```heroku open```
+
+
+
+
+
+
+
 
 
