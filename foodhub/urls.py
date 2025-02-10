@@ -1,5 +1,5 @@
 from . import views
-from django.urls import path
+from django.urls import path,include
 from .views import dashboard
 from .views import Home
 from .views import login_view
@@ -24,7 +24,7 @@ urlpatterns = [
     #path('register_chef/', views.register_chef_view, name='register_chef'),
     path('post_detail/<int:pk>/', views.post_detail, name='post_detail'),  # Post detail page
     path('dish_detail/<int:pk>/', views.dish_detail, name='dish_detail'),  # Dish detail page
-    
+    path('accounts/', include('allauth.urls')),  # Include Allauth URLs
     path('edit_comment/<int:pk>/<int:comment_id>/', views.edit_comment, name='edit_comment'),  # Edit comment page
     path('delete_comment/<int:pk>/<int:comment_id>/', views.delete_comment, name='delete_comment'),  # Delete comment action
 

@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 {% load crispy_forms_tags %}
-{% load custom_filters %}
 {% block title %}{{ post.title }}{% endblock %}
 
 {% block content %}
@@ -66,11 +65,12 @@
               {{ comment.text | linebreaks }}
             </div>
             <div class="rating" id="rating{{ comment.id }}">
-              {% for i in 1|times:comment.rating %}
-              <i class="fas fa-star text-warning"></i>
-              {% endfor %}
-              {% for i in comment.rating|add:1|times:5 %}
-              <i class="far fa-star text-warning"></i>
+              {% for i in "12345" %}
+                  {% if forloop.counter <= comment.rating %}
+                      <i class="fas fa-star text-warning"></i>  <!-- filled star -->
+                  {% else %}
+                      <i class="far fa-star"></i>  <!-- empty star -->
+                  {% endif %}
               {% endfor %}
             </div>
             {% if not comment.approved and comment.user == user %}
@@ -109,7 +109,7 @@
               <i class="far fa-star text-warning" data-rating="4"></i>
               <i class="far fa-star text-warning" data-rating="5"></i>
             </div>
-            <input type="hidden" name="rating" value="0">
+            <input type="hidden" id="new_comment_rating_value" name="rating" value="0">
             <button id="submitButton" type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
           </form>
           {% else %}
@@ -225,7 +225,7 @@ document.querySelectorAll('.btn-edit').forEach(item => {
 document.querySelectorAll('#new_comment_rating .fa-star').forEach(star => {
   star.addEventListener('click', function() {
     const rating = this.getAttribute('data-rating');
-    document.querySelector('#comment_form input[name="rating"]').value = rating;
+    document.querySelector('#new_comment_rating_value').value = rating;
     document.querySelectorAll('#new_comment_rating .fa-star').forEach(s => {
       s.classList.remove('fas');
       s.classList.add('far');
