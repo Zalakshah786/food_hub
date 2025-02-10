@@ -44,11 +44,23 @@ User-Friendly Interface: The application is designed with a user-friendly interf
 ## UX Design Process:
 - **Link to User Stories in GitHub Projects:**
 - I have used the MoSCoW technique to prioritize and complete my project requirements effectively. This technique helped me to categorize the features into Must-Have, Should-Have, and Could-Have, ensuring that the most critical functionalities were implemented first, while also considering additional enhancements for future development.
-  
-  - [Project Board](https://github.com/users/Zalakshah786/projects/10)]
 
- **Wireframes:**
-  - [Wireframe Designs]https://balsamiq.cloud/shet7bv/pwveyaz/rD893
+- ![moscow ](https://github.com/user-attachments/assets/e969ecb8-ade7-4595-9e6e-c092b1b70e6a)
+
+  
+  - [Project Board](https://github.com/users/Zalakshah786/projects/10)
+
+### Wireframe:
+  - [Wireframe Designs](https://balsamiq.cloud/shet7bv/pwveyaz/rD893)
+
+### logo:
+[logo](https://github.com/user-attachments/assets/8ba80947-02cf-4416-a75b-bc4dd46dcd33)
+
+### Color Palette:
+[color Palette link](https://github.com/user-attachments/assets/ce863301-2bfb-4e43-b573-36fe09bf5629)
+
+ 
+ 
 
 **1. Main Page (Homepage)**
  
@@ -56,6 +68,9 @@ User-Friendly Interface: The application is designed with a user-friendly interf
  * Users can click on a dish image or name to navigate to the detailed Dish Page.
  * Includes a section for chefs and their kitchens, where users can click to explore further
  * Navigation bar has clear categories (Food Hub, Recipes, Discover Us) with Login and Sign-up options.
+
+[Wireframe for main landing page ](https://github.com/user-attachments/assets/d8c2dca7-9b78-4878-8361-1dd4b6164fd6)
+
    
 **Usability & Accessibility:**
 * Large images and clickable elements ensure easy navigation.
@@ -71,13 +86,19 @@ User-Friendly Interface: The application is designed with a user-friendly interf
 * Simple and structured layout with clear separation between image and text.
 * Text-based instructions allow compatibility with screen readers.
 
+  [Wireframe for Dish Image ](https://github.com/user-attachments/assets/d3e36b4a-d615-4eb7-8a0c-030c028f49e2)
+
+
 
 **3. Chef's Kitchen Page**
 * Shows chef’s name, specialty, and social media links (YouTube, Facebook, Instagram).
 * Users can leave comments and ratings (Login required).
 * Display user comments with username, date, time, and rating.
 * Edit and Delete options for authorized users.
-  
+
+
+[wireframe for Chef's kitchen page ](https://github.com/user-attachments/assets/25b0b609-0db5-4af8-bc92-0a947f6c8c7b)
+
 **Usability & Accessibility:**
 * Clickable social media links allow users to explore the chef’s content externally.
 * Comments section promotes interaction while maintaining moderation control.
