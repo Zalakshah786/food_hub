@@ -62,39 +62,26 @@ Zcan you give me color details for this pallateEditHere's a detailed breakdown o
   -  Hex: #656C12
   -  RGB: 101, 108, 18
   - A deep, earthy green reminiscent of olive leaves
-
 * Mustard Yellow:
-
   - Hex: #D79A1F
   - RGB: 215, 154, 31
   - Warm, rich yellow typical of Indian spices like turmeric
-
 * Deep Burgundy:
-
   - Hex: #900533
   - RGB: 144, 5, 51
   - A deep, wine-like red with rich intensity
-
-
 * Brown:
-
   - Hex: #94571D
   - RGB: 148, 87, 29
   - Warm, earthy brown similar to roasted spices
-
 * Dark Red:
-
   - Hex: #731314
   - RGB: 115, 19, 20
   - Deep, dark red reminiscent of chili peppers
-
-
 * Golden Yellow:
-
   - Hex: #B18620
   - RGB: 177, 134, 32
   - A rich, warm golden tone
-    
 This palette beautifully captures the essence of Indian spicy food, with colors that evoke spices, warmth, and traditional cuisine. The combination suggests richness, depth, and the vibrant culinary culture of India.
 
 ### Typography:
@@ -236,7 +223,7 @@ Before you start, ensure you have the following:
 
 ### Step 1: Prepare Your Django Project
 
-    1. **Install Dependencies**  
+1. **Install Dependencies**  
    Ensure you have the following dependencies installed in your Django project:
    - `gunicorn` for serving the application
    - `psycopg2` for PostgreSQL database support (or any database you're using)
@@ -244,13 +231,12 @@ Before you start, ensure you have the following:
         Install them using pip:
           `pip install gunicorn psycopg2`
 
-    2.**Create a requirements.txt file**
+2.**Create a requirements.txt file**
          Run the following command to generate the requirements.txt file which lists all 
    
          dependencies:
          `pip freeze > requirements.txt`
-
-    3.**Create a Procfile**
+3.**Create a Procfile**
         In the root directory of your project, create a Procfile to tell Heroku how to run the application. 
         The content of this file should be:
     
@@ -258,7 +244,7 @@ Before you start, ensure you have the following:
            Replace <your_project_name> with the actual name of your Django project.
            [live view](https://food-hub-0b5046e8acf1.herokuapp.com/)
 
-      4.Setup Database Configuration (Optional)
+4.**Setup Database Configuration (Optional)**
          If you are using PostgreSQL or another database, make sure your project is configured to work with it. For PostgreSQL, update the DATABASES setting in 
            settings.py:
 
@@ -274,16 +260,16 @@ Before you start, ensure you have the following:
                     }``
 ### Step 2: Set Up Heroku
 
-    1. Log in to Heroku CLI
+1. Log in to Heroku CLI
      Open your terminal and run the following command:
 
           ```heroku login```
 
-    2. Create a Heroku App
+2. Create a Heroku App
       Run the following command to create a new app on Heroku:
 
          ```heroku create <your-app-name>```
-    3. Set Environment Variables
+3. Set Environment Variables
 
           Set the required environment variables for your project, such as SECRET_KEY, DEBUG, and ALLOWED_HOSTS:
 
@@ -293,28 +279,27 @@ Before you start, ensure you have the following:
 
 ### Step 3: Deploy the Project
 
-      1. Initialize Git Repository (if not already initialized)
+ 1. Initialize Git Repository (if not already initialized)
            If your project is not already a git repository, run:
 
                 ```git init```
 
 
-      2.Commit Your Changes
+ 2.Commit Your Changes
            Add all the files to Git and commit them:
               ```git add .
                  git commit -m "Initial commit"```
 
-      3.Push to Heroku
+3.Push to Heroku
           Push your project to Heroku:
 
               ```git push heroku master ```
-
-      4.Migrate Database
+4.Migrate Database
           Once the project is deployed, run database migrations:
 
             ```heroku run python manage.py migrate```
 
-      5.Open Your App
+5.Open Your App
           Finally, open your app in the browser:
 
             ```heroku open```
@@ -325,41 +310,65 @@ Before you start, ensure you have the following:
 
 1. **Test Core Features:** Verify key functionality like user registration, login/logout, and the ability to create and manage content (e.g., notices, dishes, chefs)
 
-✅ 1. User Authentication (Login, Logout, Register):
+ ### 1.User Authentication (Login, Logout, Register):
+✅1. **Sign Up Functinality:**
  - Tests to Perform: User Registration
         [Sign Up ](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/signup/)
 
   
 - Try registering a new user and check if the system successfully creates an account.
      [Register user with name xyz](https://github.com/user-attachments/assets/eb54341d-6403-40ae-a9a4-3daf7fb9284c)
-Confirm that an already registered email cannot be used again.
-  [confirm that user already register](https://github.com/user-attachments/assets/7b048ccd-2154-4aa2-aef2-9ee3f19f733c)
+     Confirm that an already registered email cannot be used again.
+      [confirm that user already register](https://github.com/user-attachments/assets/7b048ccd-2154-4aa2-aef2-9ee3f19f733c)
 
-[Login Page](https://github.com/user-attachments/assets/33181e7b-5534-4363-a14a-635251a19479)
-[Login page ](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/login/)
+✅2. **Login Functinality:**
 Log in with valid credentials and ensure access to restricted pages.
-Test invalid credentials (wrong password, non-existent email) and check if error messages are displayed.
-✔ Logout Functionality
+      - [Login Page](https://github.com/user-attachments/assets/33181e7b-5534-4363-a14a-635251a19479)
+      - [Login page ](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/login/)
 
-Log out and confirm that restricted pages are no longer accessible.
-Check if the user is redirected to the landing page after logging out.
-✅ 2. Chef Profile Management
-Tests to Perform:
-✔ Creating a Chef Profile
+      Test invalid credentials (wrong password, non-existent email) and check if error messages are displayed.
+      [Test with wrong password](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/login/)
 
-Verify that a logged-in user can create a chef profile with details such as name, description, specialty, and images.
-Check that required fields cannot be left blank.
-Confirm that image uploads (via Cloudinary) work properly.
-✔ Editing and Updating Profile
+It's not showing any message because I didn't set 
+- Add site ID
+   SITE_ID = 1
+- Allauth settings
+ . ACCOUNT_EMAIL_REQUIRED = True
+ . ACCOUNT_USERNAME_REQUIRED = False
+ . ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ . ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ . LOGIN_REDIRECT_URL = '/'
+ . LOGOUT_REDIRECT_URL = '/'
+- Email backend configuration
+  . EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+  . EMAIL_HOST = 'smtp.example.com'
+  . EMAIL_PORT = 587
+  . EMAIL_USE_TLS = True
+  . EMAIL_HOST_USER = 'your-email@example.com'
+  . EMAIL_HOST_PASSWORD = 'your-email-password'
+  . DEFAULT_FROM_EMAIL = 'webmaster@example.com'
 
-Ensure that chefs can edit and update their details (e.g., change profile image, update description).
-✔ Deleting Profile
+✅ 3.**Logout Functionality:**
 
-Confirm that a chef can delete their profile, and the associated data (e.g., dishes) is handled correctly.
-✔ Social Media Links
+  - [logout](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/logout/)
+    
 
-Test if the YouTube, Instagram, and Facebook links added in the chef profile open correctly.
-✅ 3. Dish Listings and Recipe Management
+### Chef Profile Management
+
+✅1.** Tests to Perform:**
+  ✔ Creating a Chef Profile
+    Verify that a logged-in user can create a chef profile with details such as name, description, specialty, and images.
+    Check that required fields cannot be left blank.
+    Confirm that image uploads (via Cloudinary) work properly.
+  ✔ Editing and Updating Profile
+  Ensure that chefs can edit and update their details (e.g., change profile image, update description).
+  ✔ Deleting Profile
+  Confirm that a chef can delete their profile, and the associated data (e.g., dishes) is handled correctly.
+  ✔ Social Media Links
+    Test if the YouTube, Instagram, and Facebook links added in the chef profile open correctly.
+    [Create chef's kitchen profile Management](http://127.0.0.1:8000/admin/foodhub/post/add/)
+
+✅**2. Dish Listings and Recipe Management**
 Tests to Perform:
 ✔ Adding a New Dish
 
@@ -369,19 +378,25 @@ Verify that a chef can assign a dish to a category (Snacks, Breakfast, Lunch, Di
 
 Check if all dishes are displayed correctly on the menu page.
 Ensure images load correctly via Cloudinary.
+
 ✔ Editing and Deleting Dishes
+[Adding new Dishes](http://127.0.0.1:8000/admin/foodhub/dish_receipe/add/)
 
-Confirm that only the chef who created a dish can edit or delete it.
-✔ Searching and Filtering
 
-Test if users can filter dishes based on categories.
-Verify if the search functionality works correctly when searching for a dish.
-✅ 4. Reviews and Comments on Chefs and Dishes
-Tests to Perform:
-✔ Adding a Comment and Rating
+**future Expantion User Stories:**
+✔ Searching and Filtering:
+- Test if users can filter dishes based on categories.
+- Verify if the search functionality works correctly when searching for a dish.
 
-Log in as a user and submit a comment on a chef’s profile.
-Ensure the comment appears under the chef’s profile with a star rating.
+
+✅**3. Reviews and Comments on Chef's Kitchen Profile:**
+     ** Tests to Perform:**
+    ✔ Adding a Comment and Rating
+    [login required to comment](https://github.com/user-attachments/assets/398f872e-c76d-4556-bd95-934d5883a3e5)
+
+ -  Log in as a user and submit a comment on a chef’s profile.
+ -  Ensure the comment appears under the chef’s profile with a rating.
+   
 ✔ Approving Comments
 
 Log in as an admin and approve/unapprove comments.
