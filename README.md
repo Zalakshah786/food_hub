@@ -36,6 +36,8 @@ Collaboration Opportunities: Food Hub provides a platform for users to collabora
 Conclusion
 Food Hub is more than just a recipe website; it is a vibrant community dedicated to celebrating and preserving the rich culinary traditions of Gujarat. By providing a platform for recipe discovery, community engagement, and collaboration, Food Hub offers immense value to users who are passionate about Gujarati cuisine.
 
+live View [https://food-hub-0b5046e8acf1.herokuapp.com/]
+
 ## UX Design Process:
 - **Link to User Stories in GitHub Projects:**
   - [(https://github.com/users/Zalakshah786/projects/10)]
