@@ -39,7 +39,38 @@ User-Friendly Interface: The application is designed with a user-friendly interf
 
 [Live View](https://food-hub-0b5046e8acf1.herokuapp.com/)
 
+## Responsive:
+The Gujarati Food Hub project is fully responsive, ensuring a seamless experience across various devices, including desktops, tablets, and mobile phones. The following features have been implemented to enhance responsiveness:
 
+✅ Mobile-Friendly Layout
+- The website adjusts dynamically to different screen sizes using Bootstrap 5.3 grid system and CSS media queries.
+- Elements such as images, text, and buttons resize and reposition appropriately for smaller screens.
+  
+✅ Navigation Adaptation
+- A dynamic navbar automatically collapses into a mobile-friendly hamburger menu on smaller screens.
+- The navigation bar is sticky to improve accessibility and user experience.
+
+  
+✅ Scalable Images & Fonts
+- High-quality responsive images and SVG icons are used to prevent distortion on different screen sizes.
+- Font sizes adjust dynamically using relative units (em, rem, %) for better readability.
+
+  
+✅ Touch-Friendly Interactions
+- Buttons, links, and interactive elements are optimized for touchscreens with adequate spacing.
+- Hover effects gracefully transition into tap-friendly actions on mobile.
+
+  
+✅ Parallax & Effects Optimization
+- The Parallax effect on the landing page is optimized for desktops but gracefully deactivates on mobile to ensure smooth scrolling.
+- Animations and overlays scale efficiently to avoid performance issues on low-end devices.
+
+  
+✅ Testing & Cross-Browser Compatibility
+- The website has been tested across major browsers (Chrome, Firefox, Edge, Safari) to ensure consistent performance.
+- Developer tools and mobile emulators were used to verify responsiveness.
+
+![Am I responsive ](https://github.com/user-attachments/assets/d2712591-64d1-41dd-871f-c2d46e14e478)
 
 ## UX Design Process:
 - **Link to User Stories in GitHub Projects:**
@@ -48,16 +79,13 @@ User-Friendly Interface: The application is designed with a user-friendly interf
 - [Moscow](https://github.com/user-attachments/assets/e969ecb8-ade7-4595-9e6e-c092b1b70e6a)
 - [Project Board](https://github.com/users/Zalakshah786/projects/10)
 
-### Wireframe:
-  - [Wireframe Designs](https://balsamiq.cloud/shet7bv/pwveyaz/rD893)
-
 ### logo:
 [logo](https://github.com/user-attachments/assets/8ba80947-02cf-4416-a75b-bc4dd46dcd33)
 
 ### Color Palette:
 [color Palette link](https://github.com/user-attachments/assets/ce863301-2bfb-4e43-b573-36fe09bf5629)
 
-Zcan you give me color details for this pallateEditHere's a detailed breakdown of the color palette:
+can you give me color details for this pallateEditHere's a detailed breakdown of the color palette:
 * Olive Green:
   -  Hex: #656C12
   -  RGB: 101, 108, 18
@@ -87,7 +115,9 @@ This palette beautifully captures the essence of Indian spicy food, with colors 
 ### Typography:
 [Embedded code for google fonts](https://github.com/user-attachments/assets/ff604833-0a9d-445e-a0ed-5d5f3012ab90)
 
-
+### Wireframe:
+  - [Wireframe Designs](https://balsamiq.cloud/shet7bv/pwveyaz/rD893)
+    
 **1. Main Page (Homepage)**
  
  * Displays dish images and names to grab user attention.
@@ -130,7 +160,11 @@ This palette beautifully captures the essence of Indian spicy food, with colors 
 * Comments section promotes interaction while maintaining moderation control.
 * Login requirement for commenting prevents spam and ensures engagement from real users.
 
+  [login](https://github.com/user-attachments/assets/28e352ec-7ce8-4b2f-9b8f-90ccbec19fb0)
 
+  [signout page](https://github.com/user-attachments/assets/d31095d3-77a7-46fe-8f98-c28450ec3686)
+
+  
 **Navigation Between Pages**
 * Clicking on a dish on the homepage redirects to the Dish Page for full details.
 * Clicking on a chef's name or kitchen redirects to the Chef's Kitchen Page.
@@ -157,11 +191,13 @@ Sticky navbar with clear labels enhances usability and helps users navigate easi
 * Bootstrap 5 grid system ensures the website adapts to different screen sizes.
 * Cards and images scale dynamically, preventing content from breaking on smaller screens.
 * Collapsible menu for mobile devices improves accessibility and usability.
+  [Am I responsive ](https://github.com/user-attachments/assets/d2712591-64d1-41dd-871f-c2d46e14e478)
   
 **4. User Engagement & Feedback**
 Comment section with ratings allows users to share their experiences with a chef’s kitchen.
 Login prompts for commenting ensure only registered users can interact, reducing spam.
 Feedback mechanism (e.g., “Like” or “Helpful” buttons) to engage users further.
+
 
 **5. Performance & Loading Optimization**
 * Lazy loading for images ensures that only visible content loads initially, improving speed.
@@ -179,6 +215,7 @@ Feedback mechanism (e.g., “Like” or “Helpful” buttons) to engage users f
 * The website is designed using Bootstrap 5, ensuring a fully responsive interface that adapts seamlessly across different screen sizes (desktop, tablet, mobile).
 * A sticky navbar provides easy navigation, helping users quickly access key sections like recipes, chefs, and reviews.
 * Large buttons and clear labels ensure easy interaction, benefiting users with motor impairments.
+  [Am I responsive ?](https://github.com/user-attachments/assets/952ff6b2-dfb1-4ea0-87e2-3c06667480eb)
   
 **2. Recipe & Chef Pages with Interactive Features**
 
@@ -186,6 +223,14 @@ Feedback mechanism (e.g., “Like” or “Helpful” buttons) to engage users f
 * The recipe page provides a step-by-step guide for preparing Gujarati dishes, ensuring clarity for all users, including those with cognitive impairments.
 * Each chef’s page includes social media links (YouTube, Facebook, Instagram) and a comment section for user engagement.
   
+  ![dish page](https://github.com/user-attachments/assets/50724d34-e09a-4200-bd83-8f8d45e94c85)
+  ![chef's kitchen page](https://github.com/user-attachments/assets/7d608059-b4f2-4d40-b22f-21c777c05472)
+  
+![social accout excess](https://github.com/user-attachments/assets/13147f72-37fc-46f1-bdf6-1f6f4fdae516)
+![required to login](https://github.com/user-attachments/assets/6f211881-dbbd-4ba9-a560-79dd76af4512)
+
+
+
 **3. Accessible Design for Diverse Users (Including SEND)**
 
 * Keyboard navigation support: Users can navigate all elements using the Tab key without needing a mouse.
@@ -198,16 +243,46 @@ Feedback mechanism (e.g., “Like” or “Helpful” buttons) to engage users f
 * Login & Registration System: Only registered users can comment, ensuring a secure and spam-free environment.
 * Login prompts are clearly displayed when users try to interact with restricted features.
 * Session-based authentication keeps users logged in while ensuring data security.
+  
+   ![login](https://github.com/user-attachments/assets/28e352ec-7ce8-4b2f-9b8f-90ccbec19fb0)
+
+  ![signout page](https://github.com/user-attachments/assets/d31095d3-77a7-46fe-8f98-c28450ec3686)
+
+  ![register user ](https://github.com/user-attachments/assets/c29e6add-4bc7-4446-8c68-a0b20908f779)
+
+  ![user already exit ](https://github.com/user-attachments/assets/6531bbd8-c7a3-4962-ad35-35916bc7691c)
 
 **5. Interactive Comments & Ratings System**
 * Users can leave reviews and ratings for chefs, helping others make informed decisions.
 * Edit & Delete options are available for authorized users, maintaining content quality.
 * Clear timestamp and username display enhance credibility and transparency.
-  
+
+![login required to comment](https://github.com/user-attachments/assets/f6262a83-82bd-4772-87d6-bad51f78d79c)
+
+![approve comment](https://github.com/user-attachments/assets/d7ca02b2-61cc-4f08-b633-487ab253a712)
+
+![admin can approve comment](https://github.com/user-attachments/assets/8e61b460-514b-47a1-9247-f999e2772cf5)
+
+![edit and delete comment](https://github.com/user-attachments/assets/7a807771-d9e5-47b9-a875-34f1149c858e)
+
+![comment added in chefs profile page ](https://github.com/user-attachments/assets/43c11962-249b-485a-94d2-7a3c664828e9)
+
+![edit comment sucessfully added](https://github.com/user-attachments/assets/f6eae0b0-297e-4d5f-a7bc-d2b588407b75)
+
+![sucessfully delete comment](https://github.com/user-attachments/assets/34f24b41-54b6-4de3-a087-55b014625cdb)
+
+
 **6. Performance & Optimization**
 * Lazy loading for images to improve page speed.
 * Efficient database queries to minimize loading times.
 * Optimized font and CSS choices for a lightweight experience.
+
+
+  ![desktop lighthouse Report](https://github.com/user-attachments/assets/bd53468b-6b8f-4a92-95da-10dfb7f76f38)
+
+  ![mobile lighthouse report](https://github.com/user-attachments/assets/9f3ccc3c-63e5-497a-86e3-4027643d37be)
+
+
 
 # Deployment:
 ## 🚀 Step-by-Step Guide to Deploy Django Project on Heroku
@@ -314,6 +389,7 @@ Before you start, ensure you have the following:
 ✅1. **Sign Up Functinality:**
  - Tests to Perform: User Registration
        -  [Sign Up ](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/signup/)
+   
 
   
 - Try registering a new user and check if the system successfully creates an account.
@@ -384,13 +460,16 @@ It's not showing any message because I didn't set
 
 
 **future Expantion User Stories:**
+
 ✔ Searching and Filtering:
 - Test if users can filter dishes based on categories.
 - Verify if the search functionality works correctly when searching for a dish.
 
 
 ### Reviews and Comments on Chef's Kitchen Profile:**
+
 ✅**3.Tests to Perform:**
+
  ✔ Adding a Comment and Rating
    -  [login required to comment](https://github.com/user-attachments/assets/398f872e-c76d-4556-bd95-934d5883a3e5)
 
@@ -429,20 +508,25 @@ It's not showing any message because I didn't set
 ✅Tests to Perform:
 ✔ Submitting a Collaboration Request
 [Collobration Form])(https://food-hub-0b5046e8acf1.herokuapp.com/collaborate_request/)
-[Collobration form Image](https://github.com/user-attachments/assets/5b6000ff-db91-4e9b-881a-7321b9f816ec)
+
+![Collobration form Image](https://github.com/user-attachments/assets/5b6000ff-db91-4e9b-881a-7321b9f816ec)
 
 Fill out the collaboration request form with a name, email, and message.
-[collobration request submit Message](https://github.com/user-attachments/assets/64cf0215-c6ed-4d89-8094-c00667f17144)
+
+![collobration request submit Message](https://github.com/user-attachments/assets/64cf0215-c6ed-4d89-8094-c00667f17144)
 
 Check if the request is successfully stored in the database.
-[Collobration request can view in database](https://github.com/user-attachments/assets/bd719f93-40ff-4387-99ac-a3cace3bf7c8)
+![Collobration request can view in database](https://github.com/user-attachments/assets/bd719f93-40ff-4387-99ac-a3cace3bf7c8)
 
 
 
 ✔ Viewing and Managing Requests
   - Log in as an admin and check if collaboration requests appear in the admin panel.
   - Ensure that can be updated to "Read" when viewed.
-  - [Collobration request can view and delet as well](http://127.0.0.1:8000/admin/foodhub/collaboraterequest/1/change/)
+    
+    ![Collobration request can view and delet as well](http://127.0.0.1:8000/admin/foodhub/collaboraterequest/1/change/)
+
+    
 ### Navbar and Page Navigation
 ✅Tests to Perform:
 ✔ Dynamic Navbar for Logged-in Users vs. Guests
@@ -451,6 +535,51 @@ Check if the request is successfully stored in the database.
 ✔ Navigation Links
  - Click on Home, Recipes, Menu, and Chefs to check if pages load correctly.
    [Navbar ](https://github.com/user-attachments/assets/ec11a305-6f02-49d3-8300-02edad4d3619)
+
+## Database
+- I used Code Institute's PostgreSQL database.
+- here is the link to view Database
+
+[ERD Diagram](https://github.com/user-attachments/assets/1b815370-9b00-4cbe-ab17-b8532057475e)
+
+![admin database](https://github.com/user-attachments/assets/8a0818fb-92d5-4313-9748-2bb4a6f8ffd0)
+
+
+
+# Validators for All Html,css,python files:
+
+![html validations](https://github.com/user-attachments/assets/5c640ba0-d47b-4228-b10a-434e23fe69e9)
+
+![login page validator](https://github.com/user-attachments/assets/ca04bc87-81f8-41e9-a048-6bd2b98965a7)
+![menulist html validator ](https://github.com/user-attachments/assets/719005d5-eb5f-478d-8987-391dec251de8)
+![dish detail html page validator](https://github.com/user-attachments/assets/0374fd96-e296-421f-964f-e0dd04a3dea1)
+![colobratations request form validators](https://github.com/user-attachments/assets/a9563da8-f094-4693-8d0e-73a562b0c666)
+![chef's kitchen html validator](https://github.com/user-attachments/assets/1e6b4d55-7c8c-49df-a07b-cc6993932628)
+![css validator](https://github.com/user-attachments/assets/3d6e8088-33af-4667-ab23-353ece013420)
+![forms py-validator](https://github.com/user-attachments/assets/b937ea0c-f3ed-4e4f-baf0-cd7587f6a312)
+![admin py-validator](https://github.com/user-attachments/assets/2fd2754e-1003-4daa-8be3-afee611d7d50)
+
+![models py-validator](https://github.com/user-attachments/assets/58b59697-6fd5-4211-9d36-a01b809afec0)
+![urls py-validator](https://github.com/user-attachments/assets/d7f98d65-3231-4227-8f3c-8cd19c5a521e)
+![views py-validator png-orig](https://github.com/user-attachments/assets/2bbdafcf-44e8-4771-99cd-40d9d753c408)
+![admin py-validator](https://github.com/user-attachments/assets/14bdb77d-d50a-4bf1-bf41-f84f908b4846)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
