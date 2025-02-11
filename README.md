@@ -84,18 +84,79 @@ Food Hub is a web application designed to be the ultimate platform for discoveri
 ## UX Design Process:
 **Agile Methodology**
 - Agile methodology was adopted for the Food Hub project to ensure a flexible, collaborative, and iterative approach to development.
-  
-**Link to User Stories in GitHub Projects:**
 - I have used the MoSCoW technique to prioritize and complete my project requirements effectively. This technique helped me to categorize the features into Must-Have, Should-Have, and Could-Have, ensuring that the most critical functionalities were implemented first, while also considering additional enhancements for future development.
+  
+## MoSCoW Prioritization
+
+### Must-Have
+1. **User Authentication (Login, Logout, Register)**
+   - Users must be able to register, log in, and log out.
+   - Only registered users can comment and rate dishes.
+
+2. **Recipe Discovery**
+   - Users must be able to search and browse a curated collection of authentic Gujarati recipes.
+
+3. **Chef Profile Management**
+   - Chefs must be able to create, edit, and delete their profiles.
+   - Profiles must include details such as name, description, specialty, and images.
+
+4. **Dish Listings Management**
+   - Chefs must be able to add, view, edit, and delete dishes.
+   - Dishes must be displayed with images and categorized appropriately.
+
+5. **Interactive Comments & Ratings System**
+   - Users must be able to leave reviews and ratings for chefs.
+   - Edit & Delete options must be available for authorized users.
+
+6. **Responsive & Intuitive Layout**
+   - The website must be fully responsive and adapt seamlessly across different screen sizes (desktop, tablet, mobile).
+
+7. **Secure & User-Friendly Authentication**
+   - Session-based authentication must keep users logged in while ensuring data security.
+
+### Should-Have
+1. **Collaboration Requests (Contact Us Feature)**
+   - Users should be able to submit collaboration requests through a form.
+   - Admins should be able to view and manage these requests in the admin panel.
+
+2. **Menu Management**
+   - Chefs should be able to create, view, edit, and delete menu items.
+   - Menu items should be categorized and displayed correctly under the appropriate categories.
+
+3. **Social Media Links**
+   - Chef profiles should include social media links (YouTube, Facebook, Instagram).
+
+4. **Accessibility Enhancements**
+   - Keyboard navigation support and ARIA attributes should be implemented to ensure accessibility for all users.
+
+### Could-Have
+1. **Weekly Recipe Recommendations**
+   - Offer users personalized weekly recipe recommendations based on their preferences.
+
+2. **Place an Order for Dishes**
+   - Allow users to place orders for dishes directly through the platform.
+
+3. **Chef Dashboard for Managing Orders**
+   - Provide chefs with a dashboard to manage orders and track their status.
+
+4. **Online Payment Integrations**
+   - Integrate online payment gateways for seamless transactions.
+
+5. **Parallax & Effects Optimization**
+   - Implement parallax effects and other visual enhancements for a more engaging user experience.
+
+     
+**Link to User Stories in GitHub Projects:**
 
 - [Moscow](https://github.com/user-attachments/assets/e969ecb8-ade7-4595-9e6e-c092b1b70e6a)
 - [Project Board](https://github.com/users/Zalakshah786/projects/10)
+- 
 
 ### logo:
-[logo](https://github.com/user-attachments/assets/8ba80947-02cf-4416-a75b-bc4dd46dcd33)
+  [logo](https://github.com/user-attachments/assets/8ba80947-02cf-4416-a75b-bc4dd46dcd33)
 
 ### Color Palette:
-[color Palette link](https://github.com/user-attachments/assets/ce863301-2bfb-4e43-b573-36fe09bf5629)
+  [color Palette link](https://github.com/user-attachments/assets/ce863301-2bfb-4e43-b573-36fe09bf5629)
 
 Detailed breakdown of the color palette:
 * Olive Green:
