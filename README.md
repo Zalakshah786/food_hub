@@ -304,100 +304,6 @@ Social media links are included in the profiles.
 - The navbar changes based on the user's login status.
 - Guests see Login and Register links, while logged-in users see Dashboard and Logout links.
 
-# Deployment:
-## 🚀 Step-by-Step Guide to Deploy Django Project on Heroku
-
-This guide will walk you through the steps to deploy your Django project on Heroku. Follow these steps carefully to get your project live.
-
-### Prerequisites
-Before you start, ensure you have the following:
-- A Heroku account: [Create a Heroku account](https://signup.heroku.com/)
-- Installed [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
-- Python 3.x and Django installed on your local machine
-- Git installed on your local machine
-
-### Step 1: Prepare Your Django Project
-
-1. **Install Dependencies**  
-   Ensure you have the following dependencies installed in your Django project:
-   - `gunicorn` for serving the application
-   - `psycopg2` for PostgreSQL database support (or any database you're using)
-
-        Install them using pip:
-          `pip install gunicorn psycopg2`
-
-2.**Create a requirements.txt file**
-         Run the following command to generate the requirements.txt file which lists all 
-   
-         dependencies:
-         `pip freeze > requirements.txt`
-3.**Create a Procfile**
-        In the root directory of your project, create a Procfile to tell Heroku how to run the application. 
-        The content of this file should be:
-    
-          ```web: gunicorn <your_project_name>.wsgi```
-           Replace <your_project_name> with the actual name of your Django project.
-           [live view](https://food-hub-0b5046e8acf1.herokuapp.com/)
-
-4.**Setup Database Configuration (Optional)**
-         If you are using PostgreSQL or another database, make sure your project is configured to work with it. For PostgreSQL, update the DATABASES setting in 
-           settings.py:
-
-        ```DATABASES = {
-                  'default': {
-                  'ENGINE': 'django.db.backends.postgresql',
-                  'NAME': os.environ.get('DB_NAME'),
-                  'USER': os.environ.get('DB_USER'),
-                  'PASSWORD': os.environ.get('DB_PASSWORD'),
-                  'HOST': os.environ.get('DB_HOST'),
-                  'PORT': '5432',
-                          }
-                    }``
-### Step 2: Set Up Heroku
-
-1. Log in to Heroku CLI
-     Open your terminal and run the following command:
-
-          ```heroku login```
-
-2. Create a Heroku App
-      Run the following command to create a new app on Heroku:
-
-         ```heroku create <your-app-name>```
-3. Set Environment Variables
-
-          Set the required environment variables for your project, such as SECRET_KEY, DEBUG, and ALLOWED_HOSTS:
-
-          ```heroku config:set SECRET_KEY=<your-secret-key> DEBUG=False ALLOWED_HOSTS=<your-app-name>.herokuapp.com```
-
-
-
-### Step 3: Deploy the Project
-
- 1. Initialize Git Repository (if not already initialized)
-           If your project is not already a git repository, run:
-
-                ```git init```
-
-
- 2.Commit Your Changes
-           Add all the files to Git and commit them:
-              ```git add .
-                 git commit -m "Initial commit"```
-
-3.Push to Heroku
-          Push your project to Heroku:
-
-              ```git push heroku master ```
-4.Migrate Database
-          Once the project is deployed, run database migrations:
-
-            ```heroku run python manage.py migrate```
-
-5.Open Your App
-          Finally, open your app in the browser:
-
-            ```heroku open```
 
 ## Verification and Validation
 
@@ -559,12 +465,115 @@ It's not showing any message because I didn't set
      [Navbar ](https://github.com/user-attachments/assets/ec11a305-6f02-49d3-8300-02edad4d3619)
 
 ## Database
-  - I used Code Institute's PostgreSQL database.
-  - here is the link to view Database
+### Creating a database
+  - Navigate to PostgreSQL from Code Institute.
+  - Enter your student email address in the input field provided.
+  - Click Submit.
+  - Wait while the database is created.
+  - Check your email.
+  -You now have a URL you can use to connect your app to your database.
+      - I used Code Institute's PostgreSQL database.
+      - here is the link to view Database
 
   [ERD Diagram](https://github.com/user-attachments/assets/1b815370-9b00-4cbe-ab17-b8532057475e)
 
   ![admin database](https://github.com/user-attachments/assets/8a0818fb-92d5-4313-9748-2bb4a6f8ffd0)
+
+
+# Deployment:
+## 🚀 Step-by-Step Guide to Deploy Django Project on Heroku
+
+This guide will walk you through the steps to deploy your Django project on Heroku. Follow these steps carefully to get your project live.
+
+### Prerequisites
+Before you start, ensure you have the following:
+- A Heroku account: [Create a Heroku account](https://signup.heroku.com/)
+- Installed [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+- Python 3.x and Django installed on your local machine
+- Git installed on your local machine
+
+### Step 1: Prepare Your Django Project
+
+1. **Install Dependencies**  
+   Ensure you have the following dependencies installed in your Django project:
+   - `gunicorn` for serving the application
+   - `psycopg2` for PostgreSQL database support (or any database you're using)
+
+        Install them using pip:
+          `pip install gunicorn psycopg2`
+
+2.**Create a requirements.txt file**
+         Run the following command to generate the requirements.txt file which lists all 
+   
+         dependencies:
+         `pip freeze > requirements.txt`
+3.**Create a Procfile**
+        In the root directory of your project, create a Procfile to tell Heroku how to run the application. 
+        The content of this file should be:
+    
+          ```web: gunicorn <your_project_name>.wsgi```
+           Replace <your_project_name> with the actual name of your Django project.
+           [live view](https://food-hub-0b5046e8acf1.herokuapp.com/)
+
+4.**Setup Database Configuration (Optional)**
+         If you are using PostgreSQL or another database, make sure your project is configured to work with it. For PostgreSQL, update the DATABASES setting in 
+           settings.py:
+
+        ```DATABASES = {
+                  'default': {
+                  'ENGINE': 'django.db.backends.postgresql',
+                  'NAME': os.environ.get('DB_NAME'),
+                  'USER': os.environ.get('DB_USER'),
+                  'PASSWORD': os.environ.get('DB_PASSWORD'),
+                  'HOST': os.environ.get('DB_HOST'),
+                  'PORT': '5432',
+                          }
+                    }``
+### Step 2: Set Up Heroku
+
+1. Log in to Heroku CLI
+     Open your terminal and run the following command:
+
+          ```heroku login```
+
+2. Create a Heroku App
+      Run the following command to create a new app on Heroku:
+
+         ```heroku create <your-app-name>```
+3. Set Environment Variables
+
+          Set the required environment variables for your project, such as SECRET_KEY, DEBUG, and ALLOWED_HOSTS:
+
+          ```heroku config:set SECRET_KEY=<your-secret-key> DEBUG=False ALLOWED_HOSTS=<your-app-name>.herokuapp.com```
+
+
+
+### Step 3: Deploy the Project
+
+ 1. Initialize Git Repository (if not already initialized)
+           If your project is not already a git repository, run:
+
+                ```git init```
+
+
+ 2.Commit Your Changes
+           Add all the files to Git and commit them:
+              ```git add .
+                 git commit -m "Initial commit"```
+
+3.Push to Heroku
+          Push your project to Heroku:
+
+              ```git push heroku master ```
+4.Migrate Database
+          Once the project is deployed, run database migrations:
+
+            ```heroku run python manage.py migrate```
+
+5.Open Your App
+          Finally, open your app in the browser:
+
+            ```heroku open```
 
 
 
@@ -589,6 +598,7 @@ It's not showing any message because I didn't set
 
 
 # Food Hub - Manual Testing Documentation
+## Testing Summary
 
 ## 1. User Authentication Testing
 
@@ -689,6 +699,39 @@ Test on:
 - Document any unexpected behavior
 
 
+## Technologies used
+- HTML was used to structure the content of the website.
+- CSS were used to design the layout of the website.
+- Bootstrap was used as a CSS framework to provide a grid structure and improve responsiveness.
+- Python and Django were used to build the backend review framework.
+- GitHub was used to host the repository and version control.
+- Heroku was the hosting platform.
+
+
+## Credits:
+### External Libraries and Tools
+- [Django](https://www.djangoproject.com/) - The web framework used for the project.
+- [Bootstrap](https://getbootstrap.com/) - For responsive design and styling.
+- [Cloudinary](https://cloudinary.com/) - For image storage and management.
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - For better form rendering.
+- [Font Awesome](https://fontawesome.com/) - For icons.
+- [Google Fonts](https://fonts.google.com/) - For typography.
+- [ChatGPT](https://openai.com/chatgpt) - For AI assistance and content generation.
+- [Gemini](https://gemini.com/) - For cryptocurrency tools and resources.
+- [Claude AI](https://claude.ai/) - For AI assistance and content generation.
+- Copilot- For search and AI tools.
+- Balsamiq was used to create the design wireframe.
+
+### Inspiration and References
+- [Django Documentation](https://docs.djangoproject.com/en/stable/) - For comprehensive guides and references.
+- [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/) - For design and layout inspiration.
+- [Real Python](https://realpython.com/) - For tutorials and articles on Django and Python.
+
+### Special Thanks:
+
+- Through the exhilarating world of hackathons, I've discovered more than just code – I've found true friendship. These amazing individuals have become my anchors during challenging times, turning stress into      smiles with every conversation. A special heartfelt thank you goes to Nrupay Shah, whose invaluable guidance and unwavering support have been the cornerstone of this project. His mentorship and expertise have     not only shaped this project but have also helped me grow as a developer. Their collective support and understanding remind me that I can overcome any obstacle. Because when my friends say "You can do it,        Zalak," those words carry the weight of genuine belief and heartfelt encouragement, making every challenge feel conquerable.
+
+- Thanks to the [**Code Institute Team **]**Emma_lamont_ci**,**Roo**,**Spencer** thank you so much for providing valuable resources and support.
 
 
 
@@ -705,18 +748,6 @@ Test on:
 
 
 
-
-2. **Cross-Browser and Device Testing:** Test across browsers and devices to ensure compatibility and responsiveness.
-3. **Verify Environment Configuration:** Ensure settings like `DEBUG = False` are set, and all environment variables are correct for production.
-4. **Test Error Handling and Debugging:** Ensure that error pages like 404 and 500 work and that errors are logged correctly in production.
-5. **Check Third-Party Integrations:** Verify that services such as Cloudinary, Stripe, or any third-party APIs work correctly in the deployed version.
-
-### Steps to Ensure Accessibility of the Deployed Application
-
-1. **Accessibility Testing:** Test the site for keyboard navigation, screen reader compatibility, and adequate color contrast.
-2. **Automated Accessibility Tests:** Use tools like **WAVE** or **Lighthouse** to identify and fix accessibility issues.
-3. **User Testing:** If possible, get feedback from users, especially those with disabilities, to ensure your site is accessible.
-4. **Compliance with WCAG:** Ensure your site complies with WCAG guidelines for better accessibility.
 
 
 
