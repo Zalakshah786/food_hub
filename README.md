@@ -79,9 +79,6 @@ The Gujarati Food Hub project is fully responsive, ensuring a seamless experienc
 - [Moscow](https://github.com/user-attachments/assets/e969ecb8-ade7-4595-9e6e-c092b1b70e6a)
 - [Project Board](https://github.com/users/Zalakshah786/projects/10)
 
-### Wireframe:
-  - [Wireframe Designs](https://balsamiq.cloud/shet7bv/pwveyaz/rD893)
-
 ### logo:
 [logo](https://github.com/user-attachments/assets/8ba80947-02cf-4416-a75b-bc4dd46dcd33)
 
@@ -118,7 +115,9 @@ This palette beautifully captures the essence of Indian spicy food, with colors 
 ### Typography:
 [Embedded code for google fonts](https://github.com/user-attachments/assets/ff604833-0a9d-445e-a0ed-5d5f3012ab90)
 
-
+### Wireframe:
+  - [Wireframe Designs](https://balsamiq.cloud/shet7bv/pwveyaz/rD893)
+    
 **1. Main Page (Homepage)**
  
  * Displays dish images and names to grab user attention.
@@ -161,7 +160,11 @@ This palette beautifully captures the essence of Indian spicy food, with colors 
 * Comments section promotes interaction while maintaining moderation control.
 * Login requirement for commenting prevents spam and ensures engagement from real users.
 
+  [login](https://github.com/user-attachments/assets/28e352ec-7ce8-4b2f-9b8f-90ccbec19fb0)
 
+  [signout page](https://github.com/user-attachments/assets/d31095d3-77a7-46fe-8f98-c28450ec3686)
+
+  
 **Navigation Between Pages**
 * Clicking on a dish on the homepage redirects to the Dish Page for full details.
 * Clicking on a chef's name or kitchen redirects to the Chef's Kitchen Page.
@@ -188,11 +191,13 @@ Sticky navbar with clear labels enhances usability and helps users navigate easi
 * Bootstrap 5 grid system ensures the website adapts to different screen sizes.
 * Cards and images scale dynamically, preventing content from breaking on smaller screens.
 * Collapsible menu for mobile devices improves accessibility and usability.
+  [Am I responsive ](https://github.com/user-attachments/assets/d2712591-64d1-41dd-871f-c2d46e14e478)
   
 **4. User Engagement & Feedback**
 Comment section with ratings allows users to share their experiences with a chef’s kitchen.
 Login prompts for commenting ensure only registered users can interact, reducing spam.
 Feedback mechanism (e.g., “Like” or “Helpful” buttons) to engage users further.
+
 
 **5. Performance & Loading Optimization**
 * Lazy loading for images ensures that only visible content loads initially, improving speed.
@@ -220,9 +225,11 @@ Feedback mechanism (e.g., “Like” or “Helpful” buttons) to engage users f
   
   ![dish page](https://github.com/user-attachments/assets/50724d34-e09a-4200-bd83-8f8d45e94c85)
   ![chef's kitchen page](https://github.com/user-attachments/assets/7d608059-b4f2-4d40-b22f-21c777c05472)
+  
+![social accout excess](https://github.com/user-attachments/assets/13147f72-37fc-46f1-bdf6-1f6f4fdae516)
+![required to login](https://github.com/user-attachments/assets/6f211881-dbbd-4ba9-a560-79dd76af4512)
 
-  
-  
+
 
 **3. Accessible Design for Diverse Users (Including SEND)**
 
@@ -236,6 +243,14 @@ Feedback mechanism (e.g., “Like” or “Helpful” buttons) to engage users f
 * Login & Registration System: Only registered users can comment, ensuring a secure and spam-free environment.
 * Login prompts are clearly displayed when users try to interact with restricted features.
 * Session-based authentication keeps users logged in while ensuring data security.
+  
+   ![login](https://github.com/user-attachments/assets/28e352ec-7ce8-4b2f-9b8f-90ccbec19fb0)
+
+  ![signout page](https://github.com/user-attachments/assets/d31095d3-77a7-46fe-8f98-c28450ec3686)
+
+  ![register user ](https://github.com/user-attachments/assets/c29e6add-4bc7-4446-8c68-a0b20908f779)
+
+
 
 **5. Interactive Comments & Ratings System**
 * Users can leave reviews and ratings for chefs, helping others make informed decisions.
