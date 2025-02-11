@@ -659,93 +659,14 @@ Before you start, ensure you have the following:
 ![views py-validator png-orig](https://github.com/user-attachments/assets/2bbdafcf-44e8-4771-99cd-40d9d753c408)
 ![admin py-validator](https://github.com/user-attachments/assets/14bdb77d-d50a-4bf1-bf41-f84f908b4846)
 
-
-
 # Food Hub - Manual Testing Documentation
 ## Testing Summary
 
 ## 1. User Authentication Testing
 
-### 1.1 Registration Testing
-| Test Case | Steps | Expected Result | Status |
-|-----------|-------|-----------------|--------|
-| Valid Registration | 1. Navigate to registration page<br>2. Enter valid username<br>3. Enter valid email<br>4. Enter valid password<br>5. Confirm password<br>6. Click "Sign Up" | • Account created successfully<br>• Redirect to login page<br>• Success message displayed | pass  |
-| Duplicate Email | 1. Attempt to register with existing email | • Error message indicating email already exists<br>• Registration form remains active | pass |
-| Invalid Email Format | 1. Enter invalid email format<br>2. Complete other fields<br>3. Submit form | • Form validation error<br>• Clear error message about invalid email | pass |
-| Password Mismatch | 1. Enter different passwords in password and confirm fields | • Error message about password mismatch<br>• Registration prevented |  pass|
+The detailed manual test cases are available in the following file:
 
-### 1.2 Login Testing
-| Test Case | Steps | Expected Result | Status |
-|-----------|-------|-----------------|--------|
-| Valid Login | 1. Enter correct email<br>2. Enter correct password<br>3. Click "Login" | • Successful login<br>• Redirect to dashboard<br>• Welcome message displayed | pass |
-| Invalid Credentials | 1. Enter incorrect email/password | • Error message displayed<br>• User remains on login page | pass |
-| Empty Fields | 1. Leave email/password empty<br>2. Click "Login" | • Form validation prevents submission<br>• Error messages for empty fields |  pass|
-
-### 1.3 Logout Testing
-| Test Case | Steps | Expected Result | Status |
-|-----------|-------|-----------------|--------|
-| Logout Function | 1. Click logout button<br>2. Confirm logout | • Session terminated<br>• Redirect to home page<br>• Success message displayed | pass |
-| Session Expiry | 1. Remain inactive for session timeout period | • Automatic logout<br>• Redirect to login page | pass |
-
-## 2. Chef Profile Management
-
-### 2.1 Profile Creation
-| Test Case | Steps | Expected Result | Status |
-|-----------|-------|-----------------|--------|
-| Create Basic Profile | 1. Navigate to profile creation<br>2. Fill mandatory fields:<br>   - Name<br>   - Description<br>   - Specialty<br>3. Upload profile image<br>4. Submit | • Profile created successfully<br>• Redirect to profile view<br>• Success message displayed | pass |
-| Social Media Links | 1. Add valid social media URLs:<br>   - YouTube<br>   - Instagram<br>   - Facebook<br>2. Save profile | • Links saved correctly<br>• Links open in new tab<br>• Valid URLs validated |  pass|
-
-### 2.2 Profile Editing
-| Test Case | Steps | Expected Result | Status |
-|-----------|-------|-----------------|--------|
-| Update Profile Info | 1. Navigate to edit profile<br>2. Modify fields<br>3. Save changes | • Changes saved successfully<br>• Updated info displayed correctly | pass |
-| Change Profile Image | 1. Click change image<br>2. Upload new image<br>3. Save | • New image uploaded<br>• Old image replaced<br>• Image displayed correctly | pass |
-
-## 3. Dish Management
-
-### 3.1 Dish Creation
-| Test Case | Steps | Expected Result | Status |
-|-----------|-------|-----------------|--------|
-| Add New Dish | 1. Navigate to dish creation<br>2. Enter:<br>   - Name<br>   - Description<br>   - Category<br>3. Upload image<br>4. Submit | • Dish created successfully<br>• Appears in menu listing<br>• Success message displayed | pass |
-| Required Fields | 1. Submit without required fields | • Form validation errors<br>• Clear error messages<br>• Form not submitted | pass |
-
-### 3.2 Dish Management
-| Test Case | Steps | Expected Result | Status |
-|-----------|-------|-----------------|--------|
-| Edit Dish | 1. Select dish to edit<br>2. Modify fields<br>3. Save changes | • Changes saved successfully<br>• Updated in menu listing | pass |
-| Delete Dish | 1. Select dish to delete<br>2. Confirm deletion | • Dish removed from listing<br>• Success message displayed | pass |
-
-## 4. Review System
-
-### 4.1 Comment Management
-| Test Case | Steps | Expected Result | Status |
-|-----------|-------|-----------------|--------|
-| Add Comment | 1. Navigate to chef profile<br>2. Enter comment<br>3. Select rating<br>4. Submit | • Comment pending approval<br>• Success message displayed |  pass|
-| Admin Approval | 1. Login as admin<br>2. View pending comments<br>3. Approve/reject | • Comment status updated<br>• Appears/hidden on profile |  pass|
-
-## 5. Menu Management
-
-### 5.1 Menu Operations
-| Test Case | Steps | Expected Result | Status |
-|-----------|-------|-----------------|--------|
-| Create Menu Item | 1. Add new menu item<br>2. Fill all fields<br>3. Select category<br>4. Submit | • Item created successfully<br>• Appears in correct category | pass |
-| Category Display | 1. View menu page<br>2. Check category sections | • Items grouped by category<br>• Correct sorting/display |  pass|
-
-## 6. Collaboration Requests
-
-### 6.1 Request Submission
-| Test Case | Steps | Expected Result | Status |
-|-----------|-------|-----------------|--------|
-| Submit Request | 1. Fill contact form<br>2. Submit request | • Request stored in database<br>• Confirmation message shown | pass|
-| Admin View | 1. Login as admin<br>2. Check requests panel | • All requests listed<br>• Details correctly displayed | pass |
-
-## 7. Navigation Testing
-
-### 7.1 Navbar Functionality
-| Test Case | Steps | Expected Result | Status |
-|-----------|-------|-----------------|--------|
-| Guest View | 1. Access site as guest<br>2. Check navbar options | • Show: Home, Login, Register<br>• Hide: Profile, Admin | pass |
-| Logged-in View | 1. Login<br>2. Check navbar options | • Show: Profile, Logout<br>• Hide: Login, Register | pass|
+📄 [View Manual Test Cases](test.md)
 
 ## Browser Compatibility
 Test on:
@@ -761,13 +682,6 @@ Test on:
 - Check responsive design on different screen sizes
 - Test with different user roles (Guest, User, Chef, Admin)
 - Document any unexpected behavior
-
-
-## 📌 Manual Test Cases
-
-The detailed manual test cases are available in the following file:
-
-📄 [View Manual Test Cases](test.md)
 
 ## AI Assistance in Development
 
