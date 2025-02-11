@@ -542,6 +542,10 @@ Check if the request is successfully stored in the database.
 
 [ERD Diagram](https://github.com/user-attachments/assets/1b815370-9b00-4cbe-ab17-b8532057475e)
 
+![admin database](https://github.com/user-attachments/assets/8a0818fb-92d5-4313-9748-2bb4a6f8ffd0)
+
+
+
 # Validators for All Html,css,python files:
 
 ![html validations](https://github.com/user-attachments/assets/5c640ba0-d47b-4228-b10a-434e23fe69e9)
