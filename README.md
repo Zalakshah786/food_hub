@@ -39,7 +39,10 @@
 
 
 ## UX Design Process:
-- **Link to User Stories in GitHub Projects:**
+**Agile Methodology**
+- Agile methodology was adopted for the Food Hub project to ensure a flexible, collaborative, and iterative approach to development.
+  
+**Link to User Stories in GitHub Projects:**
 - I have used the MoSCoW technique to prioritize and complete my project requirements effectively. This technique helped me to categorize the features into Must-Have, Should-Have, and Could-Have, ensuring that the most critical functionalities were implemented first, while also considering additional enhancements for future development.
 
 - [Moscow](https://github.com/user-attachments/assets/e969ecb8-ade7-4595-9e6e-c092b1b70e6a)
@@ -247,6 +250,15 @@ Feedback mechanism (e.g., “Like” or “Helpful” buttons) to engage users f
   ![desktop lighthouse Report](https://github.com/user-attachments/assets/bd53468b-6b8f-4a92-95da-10dfb7f76f38)
 
   ![mobile lighthouse report](https://github.com/user-attachments/assets/9f3ccc3c-63e5-497a-86e3-4027643d37be)
+
+  ![chefpage performance](https://github.com/user-attachments/assets/4702d37c-c005-40ad-9091-8e035e540e33)
+
+  ![dishpage performance](https://github.com/user-attachments/assets/2ce732b1-f98e-46aa-aa97-c957117553b5)
+  ![menulist performance](https://github.com/user-attachments/assets/abefe40e-7fe3-4fc9-9749-9883f375df7a)
+
+  
+
+
 
 ## Additional Features
 1.**Collaboration Requests (Contact Us Feature)**
@@ -651,7 +663,7 @@ Before you start, ensure you have the following:
 
 
 
-# Validators for All Html,css,python files:
+# Validators for All Html,css, java script,python files:
 
 ![html validations](https://github.com/user-attachments/assets/5c640ba0-d47b-4228-b10a-434e23fe69e9)
 
@@ -668,6 +680,10 @@ Before you start, ensure you have the following:
 ![urls py-validator](https://github.com/user-attachments/assets/d7f98d65-3231-4227-8f3c-8cd19c5a521e)
 ![views py-validator png-orig](https://github.com/user-attachments/assets/2bbdafcf-44e8-4771-99cd-40d9d753c408)
 ![admin py-validator](https://github.com/user-attachments/assets/14bdb77d-d50a-4bf1-bf41-f84f908b4846)
+![js file validator](https://github.com/user-attachments/assets/4b098f75-9151-472c-ba1e-09355e8b7655)
+
+
+
 
 # Food Hub - Manual Testing Documentation
 ## Testing Summary
