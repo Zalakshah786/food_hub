@@ -16,15 +16,36 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Dish_Receipe',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100, unique=True)),
-                ('description', models.TextField(default='No description provided', help_text='Short description of dish')),
-                ('small_image', models.ImageField(blank=True, null=True, upload_to='dish_images/')),
-                ('big_image', models.ImageField(blank=True, null=True, upload_to='dish_images/')),
-                ('chef', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('id',
+                 models.BigAutoField(
+                     auto_created=True,
+                     primary_key=True,
+                     serialize=False,
+                     verbose_name='ID')),
+                ('name',
+                 models.CharField(
+                     max_length=100,
+                     unique=True)),
+                ('description',
+                 models.TextField(
+                     default='No description provided',
+                     help_text='Short description of dish')),
+                ('small_image',
+                 models.ImageField(
+                     blank=True,
+                     null=True,
+                     upload_to='dish_images/')),
+                ('big_image',
+                 models.ImageField(
+                     blank=True,
+                     null=True,
+                     upload_to='dish_images/')),
+                ('chef',
+                 models.ForeignKey(
+                     on_delete=django.db.models.deletion.CASCADE,
+                     to=settings.AUTH_USER_MODEL)),
             ],
         ),
         migrations.DeleteModel(
             name='Comment',
-        )
-    ]
+        )]

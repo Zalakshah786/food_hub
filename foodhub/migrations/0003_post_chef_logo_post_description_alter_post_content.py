@@ -13,16 +13,22 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='post',
             name='chef_logo',
-            field=models.ImageField(blank=True, null=True, upload_to='chef_logo/'),
+            field=models.ImageField(
+                blank=True,
+                null=True,
+                upload_to='chef_logo/'),
         ),
         migrations.AddField(
             model_name='post',
             name='description',
-            field=models.TextField(default='No description provided', help_text='Short description of chef'),
+            field=models.TextField(
+                default='No description provided',
+                help_text='Short description of chef'),
         ),
         migrations.AlterField(
             model_name='post',
             name='content',
-            field=models.TextField(help_text='speciality of Chef.'),
+            field=models.TextField(
+                help_text='speciality of Chef.'),
         ),
     ]

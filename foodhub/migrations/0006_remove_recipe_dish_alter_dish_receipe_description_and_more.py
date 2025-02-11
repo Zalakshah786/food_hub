@@ -7,13 +7,12 @@ import django_summernote.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('foodhub', '0005_dish_receipe_remove_dish_post_remove_recipe_dish_and_more'),
-    ]
+        ('foodhub', '0005_dish_receipe_remove_dish_post_remove_recipe_dish_and_more'), ]
 
     operations = [
         migrations.AlterField(
             model_name='dish_receipe',
             name='description',
-            field=django_summernote.fields.SummernoteTextField(help_text='Short description of dish'),
-        )
-    ]
+            field=django_summernote.fields.SummernoteTextField(
+                help_text='Short description of dish'),
+        )]

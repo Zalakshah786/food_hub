@@ -13,16 +13,38 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='MenuItem',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('description', models.TextField()),
-                ('image', models.ImageField(upload_to='menu_images/')),
-                ('category', models.CharField(choices=[('snacks', 'Snacks'), ('breakfast', 'Breakfast'), ('lunch', 'Lunch'), ('dinner', 'Dinner')], max_length=50)),
+                ('id',
+                 models.BigAutoField(
+                     auto_created=True,
+                     primary_key=True,
+                     serialize=False,
+                     verbose_name='ID')),
+                ('name',
+                 models.CharField(
+                     max_length=100)),
+                ('description',
+                 models.TextField()),
+                ('image',
+                 models.ImageField(
+                     upload_to='menu_images/')),
+                ('category',
+                 models.CharField(
+                     choices=[
+                         ('snacks',
+                          'Snacks'),
+                         ('breakfast',
+                          'Breakfast'),
+                         ('lunch',
+                          'Lunch'),
+                         ('dinner',
+                          'Dinner')],
+                     max_length=50)),
             ],
         ),
         migrations.AlterField(
             model_name='dish_receipe',
             name='description',
-            field=models.TextField(help_text='Short description of dish'),
+            field=models.TextField(
+                help_text='Short description of dish'),
         ),
     ]

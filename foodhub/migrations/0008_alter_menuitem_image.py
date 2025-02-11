@@ -13,6 +13,9 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='menuitem',
             name='image',
-            field=models.ImageField(blank=True, null=True, upload_to='menu_images/'),
+            field=models.ImageField(
+                blank=True,
+                null=True,
+                upload_to='menu_images/'),
         ),
     ]

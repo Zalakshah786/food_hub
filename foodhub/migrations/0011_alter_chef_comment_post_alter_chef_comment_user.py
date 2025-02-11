@@ -16,11 +16,19 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='chef_comment',
             name='post',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, related_name='comments', to='foodhub.post'),
+            field=models.ForeignKey(
+                default=1,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name='comments',
+                to='foodhub.post'),
         ),
         migrations.AlterField(
             model_name='chef_comment',
             name='user',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, related_name='chef_comments', to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(
+                default=1,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name='chef_comments',
+                to=settings.AUTH_USER_MODEL),
         ),
     ]

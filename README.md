@@ -85,7 +85,7 @@ The Gujarati Food Hub project is fully responsive, ensuring a seamless experienc
 ### Color Palette:
 [color Palette link](https://github.com/user-attachments/assets/ce863301-2bfb-4e43-b573-36fe09bf5629)
 
-can you give me color details for this pallateEditHere's a detailed breakdown of the color palette:
+Detailed breakdown of the color palette:
 * Olive Green:
   -  Hex: #656C12
   -  RGB: 101, 108, 18
@@ -388,22 +388,27 @@ Before you start, ensure you have the following:
  ### 1.User Authentication (Login, Logout, Register):
 ✅1. **Sign Up Functinality:**
  - Tests to Perform: User Registration
-       -  [Sign Up ](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/signup/)
+ - Test user registration and ensure the system successfully creates an account.
+-  [Sign Up ](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/signup/)
    
 
   
 - Try registering a new user and check if the system successfully creates an account.
-     - [Register user with name xyz](https://github.com/user-attachments/assets/eb54341d-6403-40ae-a9a4-3daf7fb9284c)
-     Confirm that an already registered email cannot be used again.
-     -  [confirm that user already register](https://github.com/user-attachments/assets/7b048ccd-2154-4aa2-aef2-9ee3f19f733c)
+ [Register user with name xyz](https://github.com/user-attachments/assets/eb54341d-6403-40ae-a9a4-3daf7fb9284c)
+     
+- Confirm that an already registered email cannot be used again.
+- [confirm that user already register](https://github.com/user-attachments/assets/7b048ccd-2154-4aa2-aef2-9ee3f19f733c)
 
 ✅2. **Login Functinality:**
 Log in with valid credentials and ensure access to restricted pages.
-      - [Login Page](https://github.com/user-attachments/assets/33181e7b-5534-4363-a14a-635251a19479)
-      - [Login page ](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/login/)
 
-      Test invalid credentials (wrong password, non-existent email) and check if error messages are displayed.
-      [Test with wrong password](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/login/)
+ - [Login Page](https://github.com/user-attachments/assets/33181e7b-5534-4363-a14a-635251a19479)
+
+ - [Login page ](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/login/)
+
+- Test invalid credentials (wrong password, non-existent email) and check if error messages are displayed.
+     
+- [Test with wrong password](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/login/)
 
 It's not showing any message because I didn't set 
 - Add site ID
@@ -426,17 +431,23 @@ It's not showing any message because I didn't set
 
 ✅ 3.**Logout Functionality:**
 
-  - [logout](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/logout/)
+- Ensure users can log out successfully.
+
+- [logout](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/logout/)
     
 
-### Chef Profile Management
+### Chef Profile Management (Tests to Perform):
 
 ✅**Tests to Perform:**
 
-✔ Creating a Chef Profile
-  -  Verify that a logged-in user can create a chef profile with details such as name, description, specialty, and images.
-  -  Check that required fields cannot be left blank.
-  - Confirm that image uploads (via Cloudinary) work properly.
+-  Creating a Chef Profile
+
+-  Verify that a logged-in user can create a chef profile with details such as name, description, specialty, and images.
+
+-  Check that required fields cannot be left blank.
+
+- Confirm that image uploads (via Cloudinary) work properly.
+
 ✔ Editing and Updating Profile
  - Ensure that chefs can edit and update their details (e.g., change profile image, update description).
 ✔ Deleting Profile
@@ -507,7 +518,7 @@ It's not showing any message because I didn't set
 ### Collaboration Requests (Contact Us Feature)
 ✅Tests to Perform:
 ✔ Submitting a Collaboration Request
-[Collobration Form])(https://food-hub-0b5046e8acf1.herokuapp.com/collaborate_request/)
+[Collobration Form](https://food-hub-0b5046e8acf1.herokuapp.com/collaborate_request/)
 
 ![Collobration form Image](https://github.com/user-attachments/assets/5b6000ff-db91-4e9b-881a-7321b9f816ec)
 
