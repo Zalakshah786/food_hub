@@ -608,7 +608,7 @@ It's not showing any message because I didn't set
      ![Navbar ](https://github.com/user-attachments/assets/ec11a305-6f02-49d3-8300-02edad4d3619)
 
 
-### Security Measures
+## Security Measures
 
 1. **Environment Variables for Sensitive Data**
    - Use environment variables to store sensitive data such as `SECRET_KEY`, database credentials, and API keys.
@@ -621,7 +621,14 @@ It's not showing any message because I didn't set
 
 4. **Secure Authentication**
    - Use secure authentication methods and ensure that user passwords are hashed and stored securely.
-     
+
+5. **HTTPS**
+   - Ensure that your application is served over HTTPS to encrypt data transmitted between the server and clients.
+
+6. **CSRF Protection**
+   - Enable Cross-Site Request Forgery (CSRF) protection to prevent unauthorized actions on behalf of authenticated users.
+
+
 ## Responsive:
 The Gujarati Food Hub project is fully responsive, ensuring a seamless experience across various devices, including desktops, tablets, and mobile phones. The following features have been implemented to enhance responsiveness:
 
