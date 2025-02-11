@@ -282,7 +282,27 @@ Feedback mechanism (e.g., “Like” or “Helpful” buttons) to engage users f
 
   ![mobile lighthouse report](https://github.com/user-attachments/assets/9f3ccc3c-63e5-497a-86e3-4027643d37be)
 
+## Additional Features
+1.**Collaboration Requests (Contact Us Feature)**
 
+- Users can submit collaboration requests through a form.
+- Admins can view and manage these requests in the admin panel.
+2.**Menu Management**
+- Chefs can create, view, edit, and delete menu items.
+- Menu items are categorized and displayed correctly under the appropriate categories.
+3.**Dish Listings Management**
+- Chefs can add, view, edit, and delete dishes.
+- Dishes are displayed with images and categorized appropriately.
+4.**Chef Profile Management**
+Chefs can create, edit, and delete their profiles.
+Profiles include details such as name, description, specialty, and images.
+Social media links are included in the profiles.
+5.**User Authentication (Login, Logout, Register)**
+- Users can register, log in, and log out.
+- Only registered users can comment and rate dishes.
+6.**Dynamic Navbar**
+- The navbar changes based on the user's login status.
+- Guests see Login and Register links, while logged-in users see Dashboard and Logout links.
 
 # Deployment:
 ## 🚀 Step-by-Step Guide to Deploy Django Project on Heroku
@@ -436,67 +456,60 @@ It's not showing any message because I didn't set
 - [logout](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/logout/)
     
 
-### Chef Profile Management (Tests to Perform):
+## Chef Profile Management (Tests to Perform):
 
 ✅**Tests to Perform:**
 
--  Creating a Chef Profile
-
--  Verify that a logged-in user can create a chef profile with details such as name, description, specialty, and images.
-
--  Check that required fields cannot be left blank.
-
-- Confirm that image uploads (via Cloudinary) work properly.
-
-✔ Editing and Updating Profile
- - Ensure that chefs can edit and update their details (e.g., change profile image, update description).
-✔ Deleting Profile
- -  Confirm that a chef can delete their profile, and the associated data (e.g., dishes) is handled correctly.
-✔ Social Media Links
--  Test if the YouTube, Instagram, and Facebook links added in the chef profile open correctly.
+✅ **Creating a Chef Profile**:
+  - Verify that a logged-in user can create a chef profile with details such as name, description, specialty, and images.
+  - Check that required fields cannot be left blank.
+  - Confirm that image uploads (via Cloudinary) work properly.
+✅ **Editing and Updating Profile**
+   - Ensure that chefs can edit and update their details (e.g., change profile image, update description).
+✅ **Deleting Profile**
+   -  Confirm that a chef can delete their profile, and the associated data (e.g., dishes) is handled correctly.
+✅ **Social Media Links**
+  -  Test if the YouTube, Instagram, and Facebook links added in the chef profile open correctly.
   -  [Create chef's kitchen profile Management](http://127.0.0.1:8000/admin/foodhub/post/add/)
-
-          
-### Dish Listings Management**
+         
+## Dish Listings Management**
 ✅ **Tests to Perform:**
-✔ Adding a New Dish
+✅ Adding a New Dish
   -  Ensure that chefs can successfully add dishes with names, descriptions, images, and categories.
   -  Verify that a chef can assign a dish to a category (Snacks, Breakfast, Lunch, Dinner).
-✔ Viewing Dishes
+✅ Viewing Dishes
    - check if all dishes are displayed correctly on the menu page.
    - Ensure images load correctly via Cloudinary.
-✔ Editing and Deleting Dishes
+✅ Editing and Deleting Dishes
     -  [Adding new Dishes](http://127.0.0.1:8000/admin/foodhub/dish_receipe/add/)
     -  [Adding New Dishes](https://github.com/user-attachments/assets/fc673e9c-1d14-46a9-8732-8a7f35985213)
-
-
+     
 **future Expantion User Stories:**
-
 ✔ Searching and Filtering:
-- Test if users can filter dishes based on categories.
-- Verify if the search functionality works correctly when searching for a dish.
+  - Test if users can filter dishes based on categories.
+  - Verify if the search functionality works correctly when searching for a dish.
 
 
-### Reviews and Comments on Chef's Kitchen Profile:**
+## Reviews and Comments on Chef's Kitchen Profile:**
 
 ✅**3.Tests to Perform:**
 
- ✔ Adding a Comment and Rating
+ ✅ Adding a Comment and Rating
    -  [login required to comment](https://github.com/user-attachments/assets/398f872e-c76d-4556-bd95-934d5883a3e5)
 
--  Log in as a user and submit a comment on a chef’s profile.
--  Ensure the comment appears under the chef’s profile with a rating.
-   -  [required to login](https://github.com/user-attachments/assets/b541714c-0ea2-438f-a4be-c089c42266ca)
+      -  Log in as a user and submit a comment on a chef’s profile.
+      -  Ensure the comment appears under the chef’s profile with a rating.
+      -  [required to login](https://github.com/user-attachments/assets/b541714c-0ea2-438f-a4be-c089c42266ca)
 
    
-  ✔ Approving Comments:
+✅ Approving Comments:
     
  - Log in as an admin and approve/unapprove comments.
  - Confirm that unapproved comments are not visible on the website.
    - [approve comment](https://github.com/user-attachments/assets/d8200198-b932-44c2-acfb-6b67af272600)
    - [Approving Comment](https://food-hub-0b5046e8acf1.herokuapp.com/post_detail/7/)
       
-✔ Editing and Deleting Comments:
+✅ Editing and Deleting Comments:
 
   - Test if authorized users (Test and Zalak) can edit and delete comments.
   - Verify that regular users can only delete their own comments.
@@ -504,34 +517,32 @@ It's not showing any message because I didn't set
     - [Admin can approve comment](https://github.com/user-attachments/assets/3762dbcf-dbc5-40da-973a-147c7e9bdc6c)
     - [edit and delete comment](https://github.com/user-attachments/assets/bdf75773-6f05-4853-be29-4b83869681d6)
 
-    
- ### Menu Management
-✅**Tests to Perform:**
-✔ Creating a Menu Item
-  - Check that a menu item can be created with a name, description, chef name, image, and category.
-✔ Viewing the Menu
-  - Ensure that menu items display correctly under the correct categories.
-✔ Editing and Deleting Menu Items and only authorized users (admin or chef) can modify or remove menu items.
-  - [Menu Listing](https://github.com/user-attachments/assets/f4d32519-b91f-4c4b-bc44-daa8d23b16e5)
-  - [Editing and Deleting Menu Items](http://127.0.0.1:8000/admin/foodhub/menuitem/add/)
+## Menu Management
+  ✅**Tests to Perform:**
+  ✅ Creating a Menu Item
+    - Check that a menu item can be created with a name, description, chef name, image, and category.
+  ✅ Viewing the Menu
+    - Ensure that menu items display correctly under the correct categories.
+  ✅ Editing and Deleting Menu Items and only authorized users (admin or chef) can modify or remove menu items.
+    - [Menu Listing](https://github.com/user-attachments/assets/f4d32519-b91f-4c4b-bc44-daa8d23b16e5)
+    - [Editing and Deleting Menu Items](http://127.0.0.1:8000/admin/foodhub/menuitem/add/)
 
-### Collaboration Requests (Contact Us Feature)
-✅Tests to Perform:
-✔ Submitting a Collaboration Request
-[Collobration Form](https://food-hub-0b5046e8acf1.herokuapp.com/collaborate_request/)
+## Collaboration Requests (Contact Us Feature)
+  ✅**Tests to Perform**:
+  ✅ **Submitting a Collaboration Request**
+  
+  ![Collobration Form](https://food-hub-0b5046e8acf1.herokuapp.com/collaborate_request/)
 
-![Collobration form Image](https://github.com/user-attachments/assets/5b6000ff-db91-4e9b-881a-7321b9f816ec)
+  ![Collobration form Image](https://github.com/user-attachments/assets/5b6000ff-db91-4e9b-881a-7321b9f816ec)
 
-Fill out the collaboration request form with a name, email, and message.
+  - Fill out the collaboration request form with a name, email, and message.
 
-![collobration request submit Message](https://github.com/user-attachments/assets/64cf0215-c6ed-4d89-8094-c00667f17144)
+  ![collobration request submit Message](https://github.com/user-attachments/assets/64cf0215-c6ed-4d89-8094-c00667f17144)
 
-Check if the request is successfully stored in the database.
-![Collobration request can view in database](https://github.com/user-attachments/assets/bd719f93-40ff-4387-99ac-a3cace3bf7c8)
+  Check if the request is successfully stored in the database.
+  - ![Collobration request can view in database](https://github.com/user-attachments/assets/bd719f93-40ff-4387-99ac-a3cace3bf7c8)
 
-
-
-✔ Viewing and Managing Requests
+✅**Viewing and Managing Requests**
   - Log in as an admin and check if collaboration requests appear in the admin panel.
   - Ensure that can be updated to "Read" when viewed.
     
@@ -539,21 +550,21 @@ Check if the request is successfully stored in the database.
 
     
 ### Navbar and Page Navigation
-✅Tests to Perform:
-✔ Dynamic Navbar for Logged-in Users vs. Guests
-- Ensure the navbar changes based on login status.
-- Guests should see Login and Register links, while logged-in users see Dashboard and Logout.
-✔ Navigation Links
- - Click on Home, Recipes, Menu, and Chefs to check if pages load correctly.
-   [Navbar ](https://github.com/user-attachments/assets/ec11a305-6f02-49d3-8300-02edad4d3619)
+  ✅Tests to Perform:
+  ✅ Dynamic Navbar for Logged-in Users vs. Guests
+     - Ensure the navbar changes based on login status.
+     -  Guests should see Login and Register links, while logged-in users see Dashboard and Logout.
+  ✅ Navigation Links
+     - Click on Home, Recipes, Menu, and Chefs to check if pages load correctly.
+     [Navbar ](https://github.com/user-attachments/assets/ec11a305-6f02-49d3-8300-02edad4d3619)
 
 ## Database
-- I used Code Institute's PostgreSQL database.
-- here is the link to view Database
+  - I used Code Institute's PostgreSQL database.
+  - here is the link to view Database
 
-[ERD Diagram](https://github.com/user-attachments/assets/1b815370-9b00-4cbe-ab17-b8532057475e)
+  [ERD Diagram](https://github.com/user-attachments/assets/1b815370-9b00-4cbe-ab17-b8532057475e)
 
-![admin database](https://github.com/user-attachments/assets/8a0818fb-92d5-4313-9748-2bb4a6f8ffd0)
+  ![admin database](https://github.com/user-attachments/assets/8a0818fb-92d5-4313-9748-2bb4a6f8ffd0)
 
 
 
@@ -577,7 +588,105 @@ Check if the request is successfully stored in the database.
 
 
 
+# Food Hub - Manual Testing Documentation
 
+## 1. User Authentication Testing
+
+### 1.1 Registration Testing
+| Test Case | Steps | Expected Result | Status |
+|-----------|-------|-----------------|--------|
+| Valid Registration | 1. Navigate to registration page<br>2. Enter valid username<br>3. Enter valid email<br>4. Enter valid password<br>5. Confirm password<br>6. Click "Sign Up" | • Account created successfully<br>• Redirect to login page<br>• Success message displayed | pass  |
+| Duplicate Email | 1. Attempt to register with existing email | • Error message indicating email already exists<br>• Registration form remains active | pass |
+| Invalid Email Format | 1. Enter invalid email format<br>2. Complete other fields<br>3. Submit form | • Form validation error<br>• Clear error message about invalid email | pass |
+| Password Mismatch | 1. Enter different passwords in password and confirm fields | • Error message about password mismatch<br>• Registration prevented |  pass|
+
+### 1.2 Login Testing
+| Test Case | Steps | Expected Result | Status |
+|-----------|-------|-----------------|--------|
+| Valid Login | 1. Enter correct email<br>2. Enter correct password<br>3. Click "Login" | • Successful login<br>• Redirect to dashboard<br>• Welcome message displayed | pass |
+| Invalid Credentials | 1. Enter incorrect email/password | • Error message displayed<br>• User remains on login page | pass |
+| Empty Fields | 1. Leave email/password empty<br>2. Click "Login" | • Form validation prevents submission<br>• Error messages for empty fields |  pass|
+
+### 1.3 Logout Testing
+| Test Case | Steps | Expected Result | Status |
+|-----------|-------|-----------------|--------|
+| Logout Function | 1. Click logout button<br>2. Confirm logout | • Session terminated<br>• Redirect to home page<br>• Success message displayed | pass |
+| Session Expiry | 1. Remain inactive for session timeout period | • Automatic logout<br>• Redirect to login page | pass |
+
+## 2. Chef Profile Management
+
+### 2.1 Profile Creation
+| Test Case | Steps | Expected Result | Status |
+|-----------|-------|-----------------|--------|
+| Create Basic Profile | 1. Navigate to profile creation<br>2. Fill mandatory fields:<br>   - Name<br>   - Description<br>   - Specialty<br>3. Upload profile image<br>4. Submit | • Profile created successfully<br>• Redirect to profile view<br>• Success message displayed | pass |
+| Social Media Links | 1. Add valid social media URLs:<br>   - YouTube<br>   - Instagram<br>   - Facebook<br>2. Save profile | • Links saved correctly<br>• Links open in new tab<br>• Valid URLs validated |  pass|
+
+### 2.2 Profile Editing
+| Test Case | Steps | Expected Result | Status |
+|-----------|-------|-----------------|--------|
+| Update Profile Info | 1. Navigate to edit profile<br>2. Modify fields<br>3. Save changes | • Changes saved successfully<br>• Updated info displayed correctly | pass |
+| Change Profile Image | 1. Click change image<br>2. Upload new image<br>3. Save | • New image uploaded<br>• Old image replaced<br>• Image displayed correctly | pass |
+
+## 3. Dish Management
+
+### 3.1 Dish Creation
+| Test Case | Steps | Expected Result | Status |
+|-----------|-------|-----------------|--------|
+| Add New Dish | 1. Navigate to dish creation<br>2. Enter:<br>   - Name<br>   - Description<br>   - Category<br>3. Upload image<br>4. Submit | • Dish created successfully<br>• Appears in menu listing<br>• Success message displayed | pass |
+| Required Fields | 1. Submit without required fields | • Form validation errors<br>• Clear error messages<br>• Form not submitted | pass |
+
+### 3.2 Dish Management
+| Test Case | Steps | Expected Result | Status |
+|-----------|-------|-----------------|--------|
+| Edit Dish | 1. Select dish to edit<br>2. Modify fields<br>3. Save changes | • Changes saved successfully<br>• Updated in menu listing | pass |
+| Delete Dish | 1. Select dish to delete<br>2. Confirm deletion | • Dish removed from listing<br>• Success message displayed | pass |
+
+## 4. Review System
+
+### 4.1 Comment Management
+| Test Case | Steps | Expected Result | Status |
+|-----------|-------|-----------------|--------|
+| Add Comment | 1. Navigate to chef profile<br>2. Enter comment<br>3. Select rating<br>4. Submit | • Comment pending approval<br>• Success message displayed |  pass|
+| Admin Approval | 1. Login as admin<br>2. View pending comments<br>3. Approve/reject | • Comment status updated<br>• Appears/hidden on profile |  pass|
+
+## 5. Menu Management
+
+### 5.1 Menu Operations
+| Test Case | Steps | Expected Result | Status |
+|-----------|-------|-----------------|--------|
+| Create Menu Item | 1. Add new menu item<br>2. Fill all fields<br>3. Select category<br>4. Submit | • Item created successfully<br>• Appears in correct category | pass |
+| Category Display | 1. View menu page<br>2. Check category sections | • Items grouped by category<br>• Correct sorting/display |  pass|
+
+## 6. Collaboration Requests
+
+### 6.1 Request Submission
+| Test Case | Steps | Expected Result | Status |
+|-----------|-------|-----------------|--------|
+| Submit Request | 1. Fill contact form<br>2. Submit request | • Request stored in database<br>• Confirmation message shown | pass|
+| Admin View | 1. Login as admin<br>2. Check requests panel | • All requests listed<br>• Details correctly displayed | pass |
+
+## 7. Navigation Testing
+
+### 7.1 Navbar Functionality
+| Test Case | Steps | Expected Result | Status |
+|-----------|-------|-----------------|--------|
+| Guest View | 1. Access site as guest<br>2. Check navbar options | • Show: Home, Login, Register<br>• Hide: Profile, Admin | pass |
+| Logged-in View | 1. Login<br>2. Check navbar options | • Show: Profile, Logout<br>• Hide: Login, Register | pass|
+
+## Browser Compatibility
+Test on:
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS/Android)
+
+## Notes for Testers
+- Test both positive and negative scenarios
+- Verify all success/error messages
+- Check responsive design on different screen sizes
+- Test with different user roles (Guest, User, Chef, Admin)
+- Document any unexpected behavior
 
 
 
