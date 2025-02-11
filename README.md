@@ -763,6 +763,12 @@ Test on:
 - Document any unexpected behavior
 
 
+## 📌 Manual Test Cases
+
+The detailed manual test cases are available in the following file:
+
+📄 [View Manual Test Cases](test.md)
+
 ## AI Assistance in Development
 
 - During the development of food Hub , I strategically used GitHub Copilot to assist in various aspects of the code creation process. They were utilized to enhance productivity and code quality:
