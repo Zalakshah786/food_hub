@@ -42,6 +42,43 @@ Food Hub is a web application designed to be the ultimate platform for discoveri
 
 [Live View](https://food-hub-0b5046e8acf1.herokuapp.com/)
 
+## Table of Contents
+
+- [Food Hub](#food-hub)
+  - [Overview](#overview)
+- [UX Design Process](#ux-design-process)
+  - [Logo](#logo)
+  - [Color Palette](#color-palette)
+  - [Typography](#typography)
+  - [Wireframe](#wireframe)
+  - [Design Rationale](#design-rationale)
+- [Key Features](#key-features)
+- [Additional Features](#additional-features)
+- [Future Expansion](#future-expansion)
+- [Usage Application](#usage-application)
+- [Verification and Validation](#verification-and-validation)
+  - [User Authentication (Login, Logout, Register)](#user-authentication-login-logout-register)
+  - [Chef Profile Management](#chef-profile-management)
+  - [Dish Listings Management](#dish-listings-management)
+  - [Reviews and Comments on Chef's Kitchen Profile](#reviews-and-comments-on-chefs-kitchen-profile)
+  - [Menu Management](#menu-management)
+  - [Collaboration Requests (Contact Us Feature)](#collaboration-requests-contact-us-feature)
+  - [Navbar and Page Navigation](#navbar-and-page-navigation)
+- [Security Measures](#security-measures)
+- [Responsive](#responsive)
+- [Database](#database)
+  - [Creating a Database](#creating-a-database)
+- [Deployment](#deployment)
+- [Validators for All HTML, CSS, JavaScript, Python Files](#validators-for-all-html-css-javascript-python-files)
+- [Food Hub - Manual Testing Documentation](#food-hub---manual-testing-documentation)
+  - [Testing Summary](#testing-summary)
+- [AI Assistance in Development](#ai-assistance-in-development)
+- [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
+- [Credits](#credits)
+  - [External Libraries and Tools](#external-libraries-and-tools)
+  - [Inspiration and References](#inspiration-and-references)
+  - [Acknowledgements](#acknowledgements)
+
 
 
 ## UX Design Process:
@@ -327,21 +364,21 @@ Feedback mechanism (e.g., “Like” or “Helpful” buttons) to engage users f
 5. **Submit Collaboration Requests**
    - Users can submit collaboration requests through the contact form.
    - 
-## Verification and Validation
+# Verification and Validation
 
 ### Steps to Verify the Deployed Version Matches the Development Version
 
  **Test Core Features:** Verify key functionality like user registration, login/logout, and the ability to create and manage content (e.g., notices, dishes, chefs)
-
- ### 1.User Authentication (Login, Logout, Register):
-✅1. **Sign Up Functinality:**
- - Tests to Perform: User Registration
- - Test user registration and ensure the system successfully creates an account.
--  [Sign Up ](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/signup/)
-- Try registering a new user and check if the system successfully creates an account.
- [Register user with name xyz](https://github.com/user-attachments/assets/eb54341d-6403-40ae-a9a4-3daf7fb9284c)  
-- Confirm that an already registered email cannot be used again.
-- [confirm that user already register](https://github.com/user-attachments/assets/7b048ccd-2154-4aa2-aef2-9ee3f19f733c)
+ 
+ ## 1.User Authentication (Login, Logout, Register):
+  ✅1. **Sign Up Functinality:**
+   - Tests to Perform: User Registration
+   - Test user registration and ensure the system successfully creates an account.
+  -  [Sign Up ](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/signup/)
+  - Try registering a new user and check if the system successfully creates an account.
+     [Register user with name xyz](https://github.com/user-attachments/assets/eb54341d-6403-40ae-a9a4-3daf7fb9284c)  
+  - Confirm that an already registered email cannot be used again.
+    [confirm that user already register](https://github.com/user-attachments/assets/7b048ccd-2154-4aa2-aef2-9ee3f19f733c)
 
 ✅2. **Login Functinality:**
 Log in with valid credentials and ensure access to restricted pages.
@@ -383,7 +420,6 @@ It's not showing any message because I didn't set
 
   - [logout](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/logout/)
     
-
 ## Chef Profile Management (Tests to Perform):
 
 ✅**Tests to Perform:**
@@ -674,22 +710,22 @@ Before you start, ensure you have the following:
 
 # Validators for All Html,css, java script,python files:
 
-![html validations](https://github.com/user-attachments/assets/5c640ba0-d47b-4228-b10a-434e23fe69e9)
+  ![html validations](https://github.com/user-attachments/assets/5c640ba0-d47b-4228-b10a-434e23fe69e9)
 
-![login page validator](https://github.com/user-attachments/assets/ca04bc87-81f8-41e9-a048-6bd2b98965a7)
-![menulist html validator ](https://github.com/user-attachments/assets/719005d5-eb5f-478d-8987-391dec251de8)
-![dish detail html page validator](https://github.com/user-attachments/assets/0374fd96-e296-421f-964f-e0dd04a3dea1)
-![colobratations request form validators](https://github.com/user-attachments/assets/a9563da8-f094-4693-8d0e-73a562b0c666)
-![chef's kitchen html validator](https://github.com/user-attachments/assets/1e6b4d55-7c8c-49df-a07b-cc6993932628)
-![css validator](https://github.com/user-attachments/assets/3d6e8088-33af-4667-ab23-353ece013420)
-![forms py-validator](https://github.com/user-attachments/assets/b937ea0c-f3ed-4e4f-baf0-cd7587f6a312)
-![admin py-validator](https://github.com/user-attachments/assets/2fd2754e-1003-4daa-8be3-afee611d7d50)
+  ![login page validator](https://github.com/user-attachments/assets/ca04bc87-81f8-41e9-a048-6bd2b98965a7)
+  ![menulist html validator ](https://github.com/user-attachments/assets/719005d5-eb5f-478d-8987-391dec251de8)
+  ![dish detail html page validator](https://github.com/user-attachments/assets/0374fd96-e296-421f-964f-e0dd04a3dea1)
+  ![colobratations request form validators](https://github.com/user-attachments/assets/a9563da8-f094-4693-8d0e-73a562b0c666)
+  ![chef's kitchen html validator](https://github.com/user-attachments/assets/1e6b4d55-7c8c-49df-a07b-cc6993932628)
+  ![css validator](https://github.com/user-attachments/assets/3d6e8088-33af-4667-ab23-353ece013420)
+  ![forms py-validator](https://github.com/user-attachments/assets/b937ea0c-f3ed-4e4f-baf0-cd7587f6a312)
+  ![admin py-validator](https://github.com/user-attachments/assets/2fd2754e-1003-4daa-8be3-afee611d7d50)
 
-![models py-validator](https://github.com/user-attachments/assets/58b59697-6fd5-4211-9d36-a01b809afec0)
-![urls py-validator](https://github.com/user-attachments/assets/d7f98d65-3231-4227-8f3c-8cd19c5a521e)
-![views py-validator png-orig](https://github.com/user-attachments/assets/2bbdafcf-44e8-4771-99cd-40d9d753c408)
-![admin py-validator](https://github.com/user-attachments/assets/14bdb77d-d50a-4bf1-bf41-f84f908b4846)
-![js file validator](https://github.com/user-attachments/assets/4b098f75-9151-472c-ba1e-09355e8b7655)
+  ![models py-validator](https://github.com/user-attachments/assets/58b59697-6fd5-4211-9d36-a01b809afec0)
+  ![urls py-validator](https://github.com/user-attachments/assets/d7f98d65-3231-4227-8f3c-8cd19c5a521e)
+  ![views py-validator png-orig](https://github.com/user-attachments/assets/2bbdafcf-44e8-4771-99cd-40d9d753c408)
+  ![admin py-validator](https://github.com/user-attachments/assets/14bdb77d-d50a-4bf1-bf41-f84f908b4846)
+  ![js file validator](https://github.com/user-attachments/assets/4b098f75-9151-472c-ba1e-09355e8b7655)
 
 
 
