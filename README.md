@@ -1,76 +1,42 @@
-# Project Title
-
-
-## Overview
-**Food Hub** is a web application designed to be the ultimate platform for discovering and sharing delicious Gujarati recipes. Whether you are a seasoned chef or a home cook, Food Hub provides a rich collection of authentic Gujarati recipes, cooking tips, and culinary delights to explore and enjoy.
+# Food Hub
+### Food Hub is a web application designed to be the ultimate platform for discovering and sharing delicious Gujarati recipes. Whether you are a seasoned chef or a home cook, Food Hub provides a rich collection of authentic Gujarati recipes, cooking tips, and culinary delights to explore and enjoy.
 
 **Purpose**
-The primary purpose of Food Hub is to create a community-driven platform where users can find, share, and collaborate on Gujarati recipes. The application aims to preserve and promote the rich culinary heritage of Gujarat by providing a space for users to share their favorite recipes, discover new dishes, and connect with other food enthusiasts.
+  -  The primary purpose of Food Hub is to create a community-driven platform where users can find, share, and collaborate on Gujarati recipes. The application aims to preserve and promote the rich culinary 
+    heritage of Gujarat by providing a space for users to share their favorite recipes, discover new dishes, and connect with other food enthusiasts.
 
-**Problem It Solves**
-Recipe Discovery: Finding authentic Gujarati recipes can be challenging, especially for those who are not familiar with the cuisine. Food Hub solves this problem by providing a curated collection of recipes that are easy to search and browse.
-Community Engagement: Many cooking enthusiasts lack a platform to share their recipes and connect with like-minded individuals. Food Hub fosters a sense of community by allowing users to submit their recipes, leave comments, and rate dishes.
-Collaboration: Collaborating on recipes and cooking projects can be difficult without a dedicated platform. Food Hub offers features that enable users to collaborate with others, share cooking tips, and improve their culinary skills.
-Food Hub is a web application designed to be the ultimate platform for discovering and sharing delicious Gujarati recipes. Whether you are a seasoned chef or a home cook, Food Hub provides a rich collection of authentic Gujarati recipes, cooking tips, and culinary delights to explore and enjoy.
+**Recipe Discovery:** 
+  - Finding authentic Gujarati recipes can be challenging, especially for those who are not familiar with the cuisine. Food Hub solves this problem by providing a curated collection of recipes that are easy to 
+   search and browse.
 
-**Purpose**
-The primary purpose of Food Hub is to create a community-driven platform where users can find, share, and collaborate on Gujarati recipes. The application aims to preserve and promote the rich culinary heritage of Gujarat by providing a space for users to share their favorite recipes, discover new dishes, and connect with other food enthusiasts.
+**Community Engagement:**
 
-**Problem It Solves**
-Recipe Discovery: Finding authentic Gujarati recipes can be challenging, especially for those who are not familiar with the cuisine. Food Hub solves this problem by providing a curated collection of recipes that are easy to search and browse.
-Community Engagement: Many cooking enthusiasts lack a platform to share their recipes and connect with like-minded individuals. Food Hub fosters a sense of community by allowing users to submit their recipes, leave comments, and rate dishes.
-Collaboration: Collaborating on recipes and cooking projects can be difficult without a dedicated platform. Food Hub offers features that enable users to collaborate with others, share cooking tips, and improve their culinary skills.
+  - Many cooking enthusiasts lack a platform to share their recipes and connect with like-minded individuals. Food Hub fosters a sense of community by allowing users to submit their recipes, leave comments, and 
+  rate dishes.
 
+**Collaboration:**
+
+  - Collaborating on recipes and cooking projects can be difficult without a dedicated platform. Food Hub offers features that enable users to collaborate with others, share cooking tips, and improve their 
+   culinary skills.By joining Food Hub, users become part of a supportive community of food enthusiasts who share a passion for Gujarati cuisine. They can receive feedback on their recipes, discover new cooking 
+    techniques, and build connections with other users.
+    
 **Value to Users**
-Authentic Recipes: Users gain access to a wide variety of authentic Gujarati recipes, ensuring they can recreate traditional dishes with confidence.
-User-Friendly Interface: The application is designed with a user-friendly interface, making it easy for users to search for recipes, submit their own, and interact with the community.
-Community Support: By joining Food Hub, users become part of a supportive community of food enthusiasts who share a passion for Gujarati cuisine. They can receive feedback on their recipes, discover new cooking techniques, and build connections with other users.
-Collaboration Opportunities: Food Hub provides a platform for users to collaborate on cooking projects, share their culinary knowledge, and learn from others. This collaborative environment enhances the overall cooking experience and helps users improve their skills.
 
+  - Authentic Recipes: Users gain access to a wide variety of authentic Gujarati recipes, ensuring they can recreate traditional dishes with confidence.
+    
+**User-Friendly Interface:**
+
+  - The application is designed with a user-friendly interface, making it easy for users to search for recipes, submit their own, and interact with the community.
+    
 **Conclusion**
-Food Hub is more than just a recipe website; it is a vibrant community dedicated to celebrating and preserving the rich culinary traditions of Gujarat. By providing a platform for recipe discovery, community engagement, and collaboration, Food Hub offers immense value to users who are passionate about Gujarati cuisine.
 
-**Authentic Recipes:** Users gain access to a wide variety of authentic Gujarati recipes, ensuring they can recreate traditional dishes with confidence.
-User-Friendly Interface: The application is designed with a user-friendly interface, making it easy for users to search for recipes, submit their own, and interact with the community.
-
-**Community Support:** By joining Food Hub, users become part of a supportive community of food enthusiasts who share a passion for Gujarati cuisine. They can receive feedback on their recipes, discover new cooking techniques, and build connections with other users.
-
-**Collaboration Opportunities:** Food Hub provides a platform for users to collaborate on cooking projects, share their culinary knowledge, and learn from others. This collaborative environment enhances the overall cooking experience and helps users improve their skills.
+  - Food Hub is more than just a recipe website; it is a vibrant community dedicated to celebrating and preserving the rich culinary traditions of Gujarat. By providing a platform for recipe discovery, community 
+    engagement, and collaboration, Food Hub offers immense value to users who are passionate about Gujarati cuisine.
+    
 
 [Live View](https://food-hub-0b5046e8acf1.herokuapp.com/)
 
-## Responsive:
-The Gujarati Food Hub project is fully responsive, ensuring a seamless experience across various devices, including desktops, tablets, and mobile phones. The following features have been implemented to enhance responsiveness:
 
-✅ Mobile-Friendly Layout
-- The website adjusts dynamically to different screen sizes using Bootstrap 5.3 grid system and CSS media queries.
-- Elements such as images, text, and buttons resize and reposition appropriately for smaller screens.
-  
-✅ Navigation Adaptation
-- A dynamic navbar automatically collapses into a mobile-friendly hamburger menu on smaller screens.
-- The navigation bar is sticky to improve accessibility and user experience.
-
-  
-✅ Scalable Images & Fonts
-- High-quality responsive images and SVG icons are used to prevent distortion on different screen sizes.
-- Font sizes adjust dynamically using relative units (em, rem, %) for better readability.
-
-  
-✅ Touch-Friendly Interactions
-- Buttons, links, and interactive elements are optimized for touchscreens with adequate spacing.
-- Hover effects gracefully transition into tap-friendly actions on mobile.
-
-  
-✅ Parallax & Effects Optimization
-- The Parallax effect on the landing page is optimized for desktops but gracefully deactivates on mobile to ensure smooth scrolling.
-- Animations and overlays scale efficiently to avoid performance issues on low-end devices.
-
-  
-✅ Testing & Cross-Browser Compatibility
-- The website has been tested across major browsers (Chrome, Firefox, Edge, Safari) to ensure consistent performance.
-- Developer tools and mobile emulators were used to verify responsiveness.
-
-![Am I responsive ](https://github.com/user-attachments/assets/d2712591-64d1-41dd-871f-c2d46e14e478)
 
 ## UX Design Process:
 - **Link to User Stories in GitHub Projects:**
@@ -231,7 +197,7 @@ Feedback mechanism (e.g., “Like” or “Helpful” buttons) to engage users f
 
 
 
-**3. Accessible Design for Diverse Users (Including SEND)**
+**3. Accessible Design for Diverse Users**
 
 * Keyboard navigation support: Users can navigate all elements using the Tab key without needing a mouse.
 * ARIA attributes & screen reader support: Elements like buttons, images, and forms include ARIA roles and labels, making the website readable for visually impaired users.
@@ -287,20 +253,30 @@ Feedback mechanism (e.g., “Like” or “Helpful” buttons) to engage users f
 
 - Users can submit collaboration requests through a form.
 - Admins can view and manage these requests in the admin panel.
+  
 2.**Menu Management**
+
 - Chefs can create, view, edit, and delete menu items.
 - Menu items are categorized and displayed correctly under the appropriate categories.
+  
 3.**Dish Listings Management**
+
 - Chefs can add, view, edit, and delete dishes.
 - Dishes are displayed with images and categorized appropriately.
+  
 4.**Chef Profile Management**
-Chefs can create, edit, and delete their profiles.
-Profiles include details such as name, description, specialty, and images.
-Social media links are included in the profiles.
+
+- Chefs can create, edit, and delete their profiles.
+- Profiles include details such as name, description, specialty, and images.
+- Social media links are included in the profiles.
+
 5.**User Authentication (Login, Logout, Register)**
+
 - Users can register, log in, and log out.
 - Only registered users can comment and rate dishes.
+  
 6.**Dynamic Navbar**
+
 - The navbar changes based on the user's login status.
 - Guests see Login and Register links, while logged-in users see Dashboard and Logout links.
 
@@ -316,12 +292,8 @@ Social media links are included in the profiles.
  - Tests to Perform: User Registration
  - Test user registration and ensure the system successfully creates an account.
 -  [Sign Up ](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/signup/)
-   
-
-  
 - Try registering a new user and check if the system successfully creates an account.
- [Register user with name xyz](https://github.com/user-attachments/assets/eb54341d-6403-40ae-a9a4-3daf7fb9284c)
-     
+ [Register user with name xyz](https://github.com/user-attachments/assets/eb54341d-6403-40ae-a9a4-3daf7fb9284c)  
 - Confirm that an already registered email cannot be used again.
 - [confirm that user already register](https://github.com/user-attachments/assets/7b048ccd-2154-4aa2-aef2-9ee3f19f733c)
 
@@ -338,28 +310,32 @@ Log in with valid credentials and ensure access to restricted pages.
 
 It's not showing any message because I didn't set 
 - Add site ID
-   SITE_ID = 1
-- Allauth settings
- . ACCOUNT_EMAIL_REQUIRED = True
- . ACCOUNT_USERNAME_REQUIRED = False
- . ACCOUNT_AUTHENTICATION_METHOD = 'email'
- . ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
- . LOGIN_REDIRECT_URL = '/'
- . LOGOUT_REDIRECT_URL = '/'
-- Email backend configuration
-  . EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-  . EMAIL_HOST = 'smtp.example.com'
-  . EMAIL_PORT = 587
-  . EMAIL_USE_TLS = True
-  . EMAIL_HOST_USER = 'your-email@example.com'
-  . EMAIL_HOST_PASSWORD = 'your-email-password'
-  . DEFAULT_FROM_EMAIL = 'webmaster@example.com'
+-  SITE_ID = 1
+  
+   `` Allauth settings
+     ACCOUNT_EMAIL_REQUIRED = True
+     ACCOUNT_USERNAME_REQUIRED = False
+     ACCOUNT_AUTHENTICATION_METHOD = 'email'
+     ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+     LOGIN_REDIRECT_URL = '/'
+     LOGOUT_REDIRECT_URL = '/' ``
+   
+ - Email backend configuration
+   
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'smtp.example.com'
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    EMAIL_HOST_USER = 'your-email@example.com'
+    EMAIL_HOST_PASSWORD = 'your-email-password'
+    DEFAULT_FROM_EMAIL = 'webmaster@example.com'`
+  
 
 ✅ 3.**Logout Functionality:**
 
-- Ensure users can log out successfully.
+  - Ensure users can log out successfully.
 
-- [logout](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/logout/)
+  - [logout](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/logout/)
     
 
 ## Chef Profile Management (Tests to Perform):
@@ -367,25 +343,36 @@ It's not showing any message because I didn't set
 ✅**Tests to Perform:**
 
 ✅ **Creating a Chef Profile**:
+
   - Verify that a logged-in user can create a chef profile with details such as name, description, specialty, and images.
   - Check that required fields cannot be left blank.
   - Confirm that image uploads (via Cloudinary) work properly.
+    
 ✅ **Editing and Updating Profile**
+
    - Ensure that chefs can edit and update their details (e.g., change profile image, update description).
+     
 ✅ **Deleting Profile**
    -  Confirm that a chef can delete their profile, and the associated data (e.g., dishes) is handled correctly.
+     
 ✅ **Social Media Links**
+
   -  Test if the YouTube, Instagram, and Facebook links added in the chef profile open correctly.
   -  [Create chef's kitchen profile Management](http://127.0.0.1:8000/admin/foodhub/post/add/)
+    
          
 ## Dish Listings Management**
+
 ✅ **Tests to Perform:**
+
 ✅ Adding a New Dish
   -  Ensure that chefs can successfully add dishes with names, descriptions, images, and categories.
   -  Verify that a chef can assign a dish to a category (Snacks, Breakfast, Lunch, Dinner).
+    
 ✅ Viewing Dishes
    - check if all dishes are displayed correctly on the menu page.
    - Ensure images load correctly via Cloudinary.
+     
 ✅ Editing and Deleting Dishes
     -  [Adding new Dishes](http://127.0.0.1:8000/admin/foodhub/dish_receipe/add/)
     -  [Adding New Dishes](https://github.com/user-attachments/assets/fc673e9c-1d14-46a9-8732-8a7f35985213)
@@ -463,6 +450,39 @@ It's not showing any message because I didn't set
   ✅ Navigation Links
      - Click on Home, Recipes, Menu, and Chefs to check if pages load correctly.
      [Navbar ](https://github.com/user-attachments/assets/ec11a305-6f02-49d3-8300-02edad4d3619)
+
+## Responsive:
+The Gujarati Food Hub project is fully responsive, ensuring a seamless experience across various devices, including desktops, tablets, and mobile phones. The following features have been implemented to enhance responsiveness:
+
+✅ Mobile-Friendly Layout
+- The website adjusts dynamically to different screen sizes using Bootstrap 5.3 grid system and CSS media queries.
+- Elements such as images, text, and buttons resize and reposition appropriately for smaller screens.
+  
+✅ Navigation Adaptation
+- A dynamic navbar automatically collapses into a mobile-friendly hamburger menu on smaller screens.
+- The navigation bar is sticky to improve accessibility and user experience.
+
+  
+✅ Scalable Images & Fonts
+- High-quality responsive images and SVG icons are used to prevent distortion on different screen sizes.
+- Font sizes adjust dynamically using relative units (em, rem, %) for better readability.
+
+  
+✅ Touch-Friendly Interactions
+- Buttons, links, and interactive elements are optimized for touchscreens with adequate spacing.
+- Hover effects gracefully transition into tap-friendly actions on mobile.
+
+  
+✅ Parallax & Effects Optimization
+- The Parallax effect on the landing page is optimized for desktops but gracefully deactivates on mobile to ensure smooth scrolling.
+- Animations and overlays scale efficiently to avoid performance issues on low-end devices.
+
+  
+✅ Testing & Cross-Browser Compatibility
+- The website has been tested across major browsers (Chrome, Firefox, Edge, Safari) to ensure consistent performance.
+- Developer tools and mobile emulators were used to verify responsiveness.
+
+![Am I responsive ](https://github.com/user-attachments/assets/d2712591-64d1-41dd-871f-c2d46e14e478)
 
 ## Database
 ### Creating a database
