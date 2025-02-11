@@ -763,15 +763,126 @@ Test on:
 - Document any unexpected behavior
 
 
-## Technologies used
-- HTML was used to structure the content of the website.
-- CSS were used to design the layout of the website.
-- Bootstrap was used as a CSS framework to provide a grid structure and improve responsiveness.
-- Python and Django were used to build the backend review framework.
-- GitHub was used to host the repository and version control.
-- Heroku was the hosting platform.
+## AI Assistance in Development
+
+- During the development of food Hub , I strategically used GitHub Copilot to assist in various aspects of the code creation process. They were utilized to enhance productivity and code quality:
+**Code Suggestions**:
+ -  Copilot helped in writing efficient and error-free code by suggesting relevant code snippets and functions. It also assisted in refining classes and optimizing the CSS for better organization.
 
 
+**Debugging:**
+- I encountered several bugs in the code, which were identified and corrected with the help of AI. Copilot played crucial role to identify and fix issues and semantic errors quickly, ensuring a smooth 
+   development process.
+
+**AI Assistance in Development**
+- During the development of Food Hub, I strategically used GitHub Copilot to assist in various aspects of the code creation process. They were utilized to enhance productivity and code quality:
+
+**Code Suggestions:**
+- Copilot helped in writing efficient and error-free code by suggesting relevant code snippets and functions. It also assisted in refining classes and optimizing the CSS for better organization.
+
+**Debugging:**
+- I encountered several bugs in the code, which were identified and corrected with the help of AI. Copilot played crucial role to identify and fix issues and semantic errors quickly, ensuring a smooth development process.
+
+**Documentation:**
+- AI tools facilitated the creation of comprehensive documentation by generating markdown templates and content suggestions for the website.
+
+**Design:**
+- AI-based design tools provided inspiration and suggestions for UI/UX improvements, contributing to a more polished and user-friendly application.
+
+**Productivity**
+- Copilot significantly boosted productivity by automating repetitive tasks and providing intelligent code completions. This allowed me to focus more on the core functionality and design aspects of the application, ultimately leading to a more robust and feature-rich product.
+
+**Reflection:**
+- One of my proudest moments came when I used Copilot to refine the Bootstrap styling. I wasn’t very confident in front-end design, but the AI helped bridge that gap. It suggested small, impactful changes, like 
+   improving button alignment and tweaking breakpoints, that made the application feel polished and professional. These adjustments also ensured that the app was truly responsive, which was a priority for me.
+
+**Overall Impact:**
+- Working with Copilot transformed my workflow. It allowed me to focus on higher-level decisions while handling repetitive tasks efficiently. However, it wasn’t always perfect—some suggestions required 
+   significant tweaking to fit my specific needs. Those moments were valuable reminders that the AI wasn’t a replacement for my skills but a tool to enhance them.
+
+- Looking back, I feel this experience not only improved my technical abilities but also my problem-solving skills. It pushed me to articulate my ideas clearly (both to the AI and myself) and made me more 
+  mindful of inclusivity and accessibility in software design. Above all, it taught me the importance of embracing new technologies as partners in the creative process.
+
+## Frameworks, Libraries & Programs Used
+- HTML5: The standard markup language for creating web pages, providing the structure and content of the site.
+
+- CSS3: A style sheet language used for describing the presentation of a document written in HTML, enabling responsive and visually appealing designs.
+
+- JavaScript: A programming language that enables interactive web pages, enhancing user experience with dynamic content and features.
+
+- GitHub: A platform for version control and collaboration, allowing multiple developers to work on projects simultaneously and manage code changes.
+
+- Heroku: A cloud platform as a service (PaaS) supporting several programming languages, used for deploying, managing, and scaling web applications.
+
+- Pexels: A free stock photo and video website, providing high-quality images used within the application for visual enhancement.
+
+- Cloudinary: Media management service that allows uploading, storing, manipulating, and delivering images and videos.
+
+- Crispy-bootstrap5: Django package that integrates Django forms with Bootstrap 5, allowing for easy and consistent form rendering.
+
+-  Dj-database-url: Utility for configuring database URLs in Django.
+
+- Dj3-cloudinary-storage: Django package that integrates Django media storage with the Cloudinary service.
+
+- Django: High-level web framework for Python that enables rapid and clean development of web applications.
+
+- Django-summernote: WYSIWYG editor based on Summernote for integration with Django. summernote==0.8.20.0
+- Django-allauth: Django application for authentication, registration, and account management. allauth==0.57.2
+- Django-crispy-forms: Django package that makes it easy to create elegant and reusable forms. crispy-forms==2.3
+- Gunicorn: WSGI HTTP server for Python applications, used to deploy Django applications.
+
+- Pillow: Image processing library for Python.
+
+- Psycopg2: PostgreSQL database adapter for Python.
+
+- Python3-openid: Library for supporting the OpenID protocol.
+
+- Tzdata: Time zone database.
+
+- Whitenoise: Library for serving static files in Django applications.
+
+- Python
+asgiref==3.8.1
+bleach==6.2.0
+certifi==2025.1.31
+cffi==1.17.1
+charset-normalizer==3.4.1
+cloudinary==1.42.2
+crispy-bootstrap5==0.7
+cryptography==44.0.0
+defusedxml==0.7.1
+dj-database-url==0.5.0
+Django==4.2.18
+django-allauth==0.57.2
+django-cloudinary-storage==0.3.0
+django-crispy-forms==2.3
+django-heroku==0.3.1
+django-storages==1.14.4
+django-summernote==0.8.20.0
+gunicorn==20.1.0
+idna==3.10
+oauthlib==3.2.2
+pillow==11.1.0
+psycopg2==2.9.10
+pycparser==2.22
+PyJWT==2.10.1
+python3-openid==3.2.0
+requests==2.32.3
+requests-oauthlib==2.0.0
+setuptools==75.8.0
+six==1.17.0
+sqlparse==0.5.3
+typing_extensions==4.12.2
+tzdata==2025.1
+urllib3==2.3.0
+webencodings==0.5.1
+whitenoise==6.8.2
+
+### Tools
+
+- **Visual Studio Code:** For code editing and development.
+- **Git and GitHub**: For version control and repository management.
+  
 ## Credits:
 ### External Libraries and Tools
 - [Django](https://www.djangoproject.com/) - The web framework used for the project.
