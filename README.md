@@ -442,14 +442,20 @@ It's not showing any message because I didn't set
   ✅**Tests to Perform:**
   ✅ Creating a Menu Item
     - Check that a menu item can be created with a name, description, chef name, image, and category.
+    
   ✅ Viewing the Menu
     - Ensure that menu items display correctly under the correct categories.
+    
   ✅ Editing and Deleting Menu Items and only authorized users (admin or chef) can modify or remove menu items.
+  
     - [Menu Listing](https://github.com/user-attachments/assets/f4d32519-b91f-4c4b-bc44-daa8d23b16e5)
     - [Editing and Deleting Menu Items](http://127.0.0.1:8000/admin/foodhub/menuitem/add/)
 
+
 ## Collaboration Requests (Contact Us Feature)
+
   ✅**Tests to Perform**:
+  
   ✅ **Submitting a Collaboration Request**
   
   ![Collobration Form](https://food-hub-0b5046e8acf1.herokuapp.com/collaborate_request/)
@@ -472,11 +478,15 @@ It's not showing any message because I didn't set
     
 ### Navbar and Page Navigation
   ✅Tests to Perform:
+  
   ✅ Dynamic Navbar for Logged-in Users vs. Guests
+  
      - Ensure the navbar changes based on login status.
      -  Guests should see Login and Register links, while logged-in users see Dashboard and Logout.
+     
   ✅ Navigation Links
      - Click on Home, Recipes, Menu, and Chefs to check if pages load correctly.
+     
      [Navbar ](https://github.com/user-attachments/assets/ec11a305-6f02-49d3-8300-02edad4d3619)
 
 
@@ -668,20 +678,9 @@ The detailed manual test cases are available in the following file:
 
 📄 [View Manual Test Cases](test.md)
 
-## Browser Compatibility
-Test on:
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS/Android)
+![Ai testcase done](https://github.com/user-attachments/assets/7b9daf4e-66a5-4f18-959c-68ff522253dd)
 
-## Notes for Testers
-- Test both positive and negative scenarios
-- Verify all success/error messages
-- Check responsive design on different screen sizes
-- Test with different user roles (Guest, User, Chef, Admin)
-- Document any unexpected behavior
+
 
 ## AI Assistance in Development
 
