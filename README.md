@@ -250,17 +250,39 @@ Feedback mechanism (e.g., “Like” or “Helpful” buttons) to engage users f
 
   ![register user ](https://github.com/user-attachments/assets/c29e6add-4bc7-4446-8c68-a0b20908f779)
 
-
+  ![user already exit ](https://github.com/user-attachments/assets/6531bbd8-c7a3-4962-ad35-35916bc7691c)
 
 **5. Interactive Comments & Ratings System**
 * Users can leave reviews and ratings for chefs, helping others make informed decisions.
 * Edit & Delete options are available for authorized users, maintaining content quality.
 * Clear timestamp and username display enhance credibility and transparency.
-  
+
+![login required to comment](https://github.com/user-attachments/assets/f6262a83-82bd-4772-87d6-bad51f78d79c)
+
+![approve comment](https://github.com/user-attachments/assets/d7ca02b2-61cc-4f08-b633-487ab253a712)
+
+![admin can approve comment](https://github.com/user-attachments/assets/8e61b460-514b-47a1-9247-f999e2772cf5)
+
+![edit and delete comment](https://github.com/user-attachments/assets/7a807771-d9e5-47b9-a875-34f1149c858e)
+
+![comment added in chefs profile page ](https://github.com/user-attachments/assets/43c11962-249b-485a-94d2-7a3c664828e9)
+
+![edit comment sucessfully added](https://github.com/user-attachments/assets/f6eae0b0-297e-4d5f-a7bc-d2b588407b75)
+
+![sucessfully delete comment](https://github.com/user-attachments/assets/34f24b41-54b6-4de3-a087-55b014625cdb)
+
+
 **6. Performance & Optimization**
 * Lazy loading for images to improve page speed.
 * Efficient database queries to minimize loading times.
 * Optimized font and CSS choices for a lightweight experience.
+
+
+  ![desktop lighthouse Report](https://github.com/user-attachments/assets/bd53468b-6b8f-4a92-95da-10dfb7f76f38)
+
+  ![mobile lighthouse report](https://github.com/user-attachments/assets/9f3ccc3c-63e5-497a-86e3-4027643d37be)
+
+
 
 # Deployment:
 ## 🚀 Step-by-Step Guide to Deploy Django Project on Heroku
@@ -367,6 +389,7 @@ Before you start, ensure you have the following:
 ✅1. **Sign Up Functinality:**
  - Tests to Perform: User Registration
        -  [Sign Up ](https://food-hub-0b5046e8acf1.herokuapp.com/accounts/signup/)
+   
 
   
 - Try registering a new user and check if the system successfully creates an account.
@@ -437,13 +460,16 @@ It's not showing any message because I didn't set
 
 
 **future Expantion User Stories:**
+
 ✔ Searching and Filtering:
 - Test if users can filter dishes based on categories.
 - Verify if the search functionality works correctly when searching for a dish.
 
 
 ### Reviews and Comments on Chef's Kitchen Profile:**
+
 ✅**3.Tests to Perform:**
+
  ✔ Adding a Comment and Rating
    -  [login required to comment](https://github.com/user-attachments/assets/398f872e-c76d-4556-bd95-934d5883a3e5)
 
@@ -482,20 +508,25 @@ It's not showing any message because I didn't set
 ✅Tests to Perform:
 ✔ Submitting a Collaboration Request
 [Collobration Form])(https://food-hub-0b5046e8acf1.herokuapp.com/collaborate_request/)
-[Collobration form Image](https://github.com/user-attachments/assets/5b6000ff-db91-4e9b-881a-7321b9f816ec)
+
+![Collobration form Image](https://github.com/user-attachments/assets/5b6000ff-db91-4e9b-881a-7321b9f816ec)
 
 Fill out the collaboration request form with a name, email, and message.
-[collobration request submit Message](https://github.com/user-attachments/assets/64cf0215-c6ed-4d89-8094-c00667f17144)
+
+![collobration request submit Message](https://github.com/user-attachments/assets/64cf0215-c6ed-4d89-8094-c00667f17144)
 
 Check if the request is successfully stored in the database.
-[Collobration request can view in database](https://github.com/user-attachments/assets/bd719f93-40ff-4387-99ac-a3cace3bf7c8)
+![Collobration request can view in database](https://github.com/user-attachments/assets/bd719f93-40ff-4387-99ac-a3cace3bf7c8)
 
 
 
 ✔ Viewing and Managing Requests
   - Log in as an admin and check if collaboration requests appear in the admin panel.
   - Ensure that can be updated to "Read" when viewed.
-  - [Collobration request can view and delet as well](http://127.0.0.1:8000/admin/foodhub/collaboraterequest/1/change/)
+    
+    ![Collobration request can view and delet as well](http://127.0.0.1:8000/admin/foodhub/collaboraterequest/1/change/)
+
+    
 ### Navbar and Page Navigation
 ✅Tests to Perform:
 ✔ Dynamic Navbar for Logged-in Users vs. Guests
@@ -510,6 +541,43 @@ Check if the request is successfully stored in the database.
 - here is the link to view Database
 
 [ERD Diagram](https://github.com/user-attachments/assets/1b815370-9b00-4cbe-ab17-b8532057475e)
+
+# Validators for All Html,css,python files:
+
+![html validations](https://github.com/user-attachments/assets/5c640ba0-d47b-4228-b10a-434e23fe69e9)
+
+![login page validator](https://github.com/user-attachments/assets/ca04bc87-81f8-41e9-a048-6bd2b98965a7)
+![menulist html validator ](https://github.com/user-attachments/assets/719005d5-eb5f-478d-8987-391dec251de8)
+![dish detail html page validator](https://github.com/user-attachments/assets/0374fd96-e296-421f-964f-e0dd04a3dea1)
+![colobratations request form validators](https://github.com/user-attachments/assets/a9563da8-f094-4693-8d0e-73a562b0c666)
+![chef's kitchen html validator](https://github.com/user-attachments/assets/1e6b4d55-7c8c-49df-a07b-cc6993932628)
+![css validator](https://github.com/user-attachments/assets/3d6e8088-33af-4667-ab23-353ece013420)
+![forms py-validator](https://github.com/user-attachments/assets/b937ea0c-f3ed-4e4f-baf0-cd7587f6a312)
+![admin py-validator](https://github.com/user-attachments/assets/2fd2754e-1003-4daa-8be3-afee611d7d50)
+
+![models py-validator](https://github.com/user-attachments/assets/58b59697-6fd5-4211-9d36-a01b809afec0)
+![urls py-validator](https://github.com/user-attachments/assets/d7f98d65-3231-4227-8f3c-8cd19c5a521e)
+![views py-validator png-orig](https://github.com/user-attachments/assets/2bbdafcf-44e8-4771-99cd-40d9d753c408)
+![admin py-validator](https://github.com/user-attachments/assets/14bdb77d-d50a-4bf1-bf41-f84f908b4846)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
