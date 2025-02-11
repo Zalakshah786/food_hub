@@ -1,5 +1,11 @@
 # Food Hub
-### Food Hub is a web application designed to be the ultimate platform for discovering and sharing delicious Gujarati recipes. Whether you are a seasoned chef or a home cook, Food Hub provides a rich collection of authentic Gujarati recipes, cooking tips, and culinary delights to explore and enjoy.
+
+![mainpage](https://github.com/user-attachments/assets/35397cfd-f83a-4831-b465-cbb60f10b627)
+
+
+
+### Overview 
+Food Hub is a web application designed to be the ultimate platform for discovering and sharing delicious Gujarati recipes. Whether you are a seasoned chef or a home cook, Food Hub provides a rich collection of authentic Gujarati recipes, cooking tips, and culinary delights to explore and enjoy.
 
 **Purpose**
   -  The primary purpose of Food Hub is to create a community-driven platform where users can find, share, and collaborate on Gujarati recipes. The application aims to preserve and promote the rich culinary 
@@ -470,7 +476,7 @@ It's not showing any message because I didn't set
   
   ✅ **Submitting a Collaboration Request**
   
-  ![Collobration Form](https://food-hub-0b5046e8acf1.herokuapp.com/collaborate_request/)
+  [Collobration Form](https://food-hub-0b5046e8acf1.herokuapp.com/collaborate_request/)
 
   ![Collobration form Image](https://github.com/user-attachments/assets/5b6000ff-db91-4e9b-881a-7321b9f816ec)
 
@@ -484,8 +490,11 @@ It's not showing any message because I didn't set
 ✅**Viewing and Managing Requests**
   - Log in as an admin and check if collaboration requests appear in the admin panel.
   - Ensure that can be updated to "Read" when viewed.
+    ![collobration request can view in database](https://github.com/user-attachments/assets/63a7fc54-f8bb-4964-9c55-31d8f51d910c)
+
+   ![collobration request edit and delet](https://github.com/user-attachments/assets/7c1df680-18ce-41cc-9e0f-fae3f26033a7)
+
     
-    ![Collobration request can view and delet as well](http://127.0.0.1:8000/admin/foodhub/collaboraterequest/1/change/)
 
     
 ### Navbar and Page Navigation
@@ -499,7 +508,7 @@ It's not showing any message because I didn't set
   ✅ Navigation Links
      - Click on Home, Recipes, Menu, and Chefs to check if pages load correctly.
      
-     [Navbar ](https://github.com/user-attachments/assets/ec11a305-6f02-49d3-8300-02edad4d3619)
+     ![Navbar ](https://github.com/user-attachments/assets/ec11a305-6f02-49d3-8300-02edad4d3619)
 
 
 ### Security Measures
