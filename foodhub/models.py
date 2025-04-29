@@ -57,10 +57,7 @@ class Chef_Comment(models.Model):
     approved = models.BooleanField(default=False)
 
     def __str__(self):
-        return f" comment By{
-            self.user.username} on {
-            self.post.title} ({
-            self.rating}⭐)"
+        return f"Comment By {self.user.username} on {self.post.title} ({self.rating}⭐)"
 
 
 class Dish_Receipe(models.Model):
