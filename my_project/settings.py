@@ -21,7 +21,7 @@ if os.path.exists(os.path.join(BASE_DIR, 'env.py')):
     import env
 
 SECRET_KEY = os.getenv('SECRET_KEY')
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
