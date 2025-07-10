@@ -1,4 +1,4 @@
-# Test Results### 2.1 Profile Creation
+# Test Results 2.1 Profile Creation
 | Test Case | Steps | Expected Result | Status |
 |-----------|-------|-----------------|--------|
 | Create Basic Profile | 1. Navigate to profile creation<br>2. Fill mandatory fields:<br>   - Name<br>   - Description<br>   - Specialty<br>3. Upload profile image<br>4. Submit | • Profile created successfully<br>• Redirect to profile view<br>• Success message displayed | pass |
@@ -70,3 +70,5 @@ Test on:
 - Check responsive design on different screen sizes
 - Test with different user roles (Guest, User, Chef, Admin)
 - Document any unexpected behavior
+
+

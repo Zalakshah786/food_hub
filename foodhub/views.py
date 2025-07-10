@@ -117,18 +117,27 @@ def edit_comment(request, pk, comment_id):
     comment = get_object_or_404(
         Chef_Comment, pk=comment_id, post_id=pk, approved=True
     )
+    
+    # Check if user owns the comment
+    if request.user != comment.user:
+        return JsonResponse({"success": False, "message": "You can only edit your own comments"})
+    
     if request.method == "POST":
         form = ChefCommentForm(request.POST, instance=comment)
         if form.is_valid():
-            form.save()
+            # Set approved to False after editing to require re-approval
+            comment = form.save(commit=False)
+            comment.approved = False
+            comment.save()
             messages.add_message(
-                request, messages.SUCCESS, "Comment updated successfully"
+                request, messages.SUCCESS, "Comment updated successfully and is awaiting approval"
             )
             return JsonResponse(
                 {
                     "success": True,
                     "text": form.cleaned_data["text"],
                     "rating": form.cleaned_data["rating"],
+                    "message": "Comment updated and awaiting approval"
                 }
             )
         else:
@@ -145,15 +154,22 @@ def delete_comment(request, pk, comment_id):
     )
 
     if request.user == comment.user:
-        comment.delete()
-        messages.add_message(
-            request, messages.SUCCESS, "Comment deleted successfully"
-        )
+        if request.method == "POST":
+            comment.delete()
+            messages.add_message(
+                request, messages.SUCCESS, "Comment deleted successfully"
+            )
+        else:
+            messages.add_message(
+                request,
+                messages.ERROR,
+                "Invalid request method"
+            )
     else:
         messages.add_message(
             request,
             messages.ERROR,
-            "You must be logged in to delete a comment"
+            "You can only delete your own comments"
         )
     return HttpResponseRedirect(reverse("post_detail", args=[pk]))
 
