@@ -1,6 +1,8 @@
 # Food Hub
 
-[![mainpage](https://github.com/user-attachments/assets/35397cfd-f83a-4831-b465-cbb60f10b627)](https://github.com/user-attachments/assets/35397cfd-f83a-4831-b465-cbb60f10b627){:target="_blank"}
+<a href="https://github.com/user-attachments/assets/35397cfd-f83a-4831-b465-cbb60f10b627" target="_blank">
+<img src="https://github.com/user-attachments/assets/35397cfd-f83a-4831-b465-cbb60f10b627" alt="mainpage">
+</a>
 
 
 
@@ -148,15 +150,15 @@ Food Hub is a web application designed to be the ultimate platform for discoveri
      
 **Link to User Stories in GitHub Projects:**
 
-- [Moscow](https://github.com/user-attachments/assets/e969ecb8-ade7-4595-9e6e-c092b1b70e6a){:target="_blank"}
+- <a href="https://github.com/user-attachments/assets/e969ecb8-ade7-4595-9e6e-c092b1b70e6a" target="_blank">Moscow</a>
 - [Project Board](https://github.com/users/Zalakshah786/projects/10)
 - 
 
 ### logo:
-  [logo](https://github.com/user-attachments/assets/8ba80947-02cf-4416-a75b-bc4dd46dcd33){:target="_blank"}
+  <a href="https://github.com/user-attachments/assets/8ba80947-02cf-4416-a75b-bc4dd46dcd33" target="_blank">logo</a>
 
 ### Color Palette:
-  [color Palette link](https://github.com/user-attachments/assets/ce863301-2bfb-4e43-b573-36fe09bf5629){:target="_blank"}
+  <a href="https://github.com/user-attachments/assets/ce863301-2bfb-4e43-b573-36fe09bf5629" target="_blank">color Palette link</a>
 
 Detailed breakdown of the color palette:
 * Olive Green:
@@ -186,7 +188,7 @@ Detailed breakdown of the color palette:
 This palette beautifully captures the essence of Indian spicy food, with colors that evoke spices, warmth, and traditional cuisine. The combination suggests richness, depth, and the vibrant culinary culture of India.
 
 ### Typography:
-[Embedded code for google fonts](https://github.com/user-attachments/assets/ff604833-0a9d-445e-a0ed-5d5f3012ab90){:target="_blank"}
+<a href="https://github.com/user-attachments/assets/ff604833-0a9d-445e-a0ed-5d5f3012ab90" target="_blank">Embedded code for google fonts</a>
 
 ### Wireframe:
   - [Wireframe Designs](https://balsamiq.cloud/shet7bv/pwveyaz/rD893)
@@ -199,7 +201,7 @@ This palette beautifully captures the essence of Indian spicy food, with colors 
  * Includes a section for chefs and their kitchens, where users can click to explore further
  * Navigation bar has clear categories (Food Hub, Recipes, Discover Us) with Login and Sign-up options.
 
-[Wireframe for main landing page ](https://github.com/user-attachments/assets/d8c2dca7-9b78-4878-8361-1dd4b6164fd6){:target="_blank"}
+<a href="https://github.com/user-attachments/assets/d8c2dca7-9b78-4878-8361-1dd4b6164fd6" target="_blank">Wireframe for main landing page</a>
 
    
 **Usability & Accessibility:**
@@ -216,7 +218,7 @@ This palette beautifully captures the essence of Indian spicy food, with colors 
 * Simple and structured layout with clear separation between image and text.
 * Text-based instructions allow compatibility with screen readers.
 
-  [Wireframe for Dish Image ](https://github.com/user-attachments/assets/d3e36b4a-d615-4eb7-8a0c-030c028f49e2){:target="_blank"}
+  <a href="https://github.com/user-attachments/assets/d3e36b4a-d615-4eb7-8a0c-030c028f49e2" target="_blank">Wireframe for Dish Image</a>
 
 
 
@@ -227,16 +229,16 @@ This palette beautifully captures the essence of Indian spicy food, with colors 
 * Edit and Delete options for authorized users.
 
 
-[wireframe for Chef's kitchen page ](https://github.com/user-attachments/assets/25b0b609-0db5-4af8-bc92-0a947f6c8c7b){:target="_blank"}
+<a href="https://github.com/user-attachments/assets/25b0b609-0db5-4af8-bc92-0a947f6c8c7b" target="_blank">wireframe for Chef's kitchen page</a>
 
 **Usability & Accessibility:**
 * Clickable social media links allow users to explore the chef’s content externally.
 * Comments section promotes interaction while maintaining moderation control.
 * Login requirement for commenting prevents spam and ensures engagement from real users.
 
-  [login](https://github.com/user-attachments/assets/28e352ec-7ce8-4b2f-9b8f-90ccbec19fb0){:target="_blank"}
+  <a href="https://github.com/user-attachments/assets/28e352ec-7ce8-4b2f-9b8f-90ccbec19fb0" target="_blank">login</a>
 
-  [signout page](https://github.com/user-attachments/assets/d31095d3-77a7-46fe-8f98-c28450ec3686){:target="_blank"}
+  <a href="https://github.com/user-attachments/assets/d31095d3-77a7-46fe-8f98-c28450ec3686" target="_blank">signout page</a>
 
   
 **Navigation Between Pages**
