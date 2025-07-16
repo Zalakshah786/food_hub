@@ -1,0 +1,12 @@
+# Local development settings
+# This file should NOT be committed to git
+# Use this for local development only
+
+import os
+
+# Set DEBUG to True for local development
+os.environ['DEBUG'] = 'True'
+
+# You can also override other settings here for local development
+# For example:
+# os.environ['DATABASE_URL'] = 'sqlite:///db.sqlite3'  # Use SQLite for local dev

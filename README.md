@@ -191,8 +191,8 @@ This palette beautifully captures the essence of Indian spicy food, with colors 
 <a href="https://github.com/user-attachments/assets/ff604833-0a9d-445e-a0ed-5d5f3012ab90" target="_blank">Embedded code for google fonts</a>
 
 ### Wireframe:
-  - [Wireframe Designs](https://balsamiq.cloud/shet7bv/pwveyaz/rD893)
-  - **Note**: Individual wireframe images are embedded below for accessibility
+  - **Note**: The original Balsamiq wireframe link may require authentication to access
+  - **Alternative**: Individual wireframe images are embedded below for full accessibility and easy viewing
     
 **1. Main Page (Homepage)**
  
@@ -267,7 +267,7 @@ Sticky navbar with clear labels enhances usability and helps users navigate easi
 * Bootstrap 5 grid system ensures the website adapts to different screen sizes.
 * Cards and images scale dynamically, preventing content from breaking on smaller screens.
 * Collapsible menu for mobile devices improves accessibility and usability.
-  [Am I responsive ](https://github.com/user-attachments/assets/d2712591-64d1-41dd-871f-c2d46e14e478)
+  <a href="https://github.com/user-attachments/assets/d2712591-64d1-41dd-871f-c2d46e14e478" target="_blank">Am I responsive</a>
   
 **4. User Engagement & Feedback**
 Comment section with ratings allows users to share their experiences with a chef’s kitchen.
@@ -299,8 +299,12 @@ Feedback mechanism (e.g., “Like” or “Helpful” buttons) to engage users f
 * The recipe page provides a step-by-step guide for preparing Gujarati dishes, ensuring clarity for all users, including those with cognitive impairments.
 * Each chef’s page includes social media links (YouTube, Facebook, Instagram) and a comment section for user engagement.
   
-  ![dish page](https://github.com/user-attachments/assets/50724d34-e09a-4200-bd83-8f8d45e94c85)
-  ![chef's kitchen page](https://github.com/user-attachments/assets/7d608059-b4f2-4d40-b22f-21c777c05472)
+  <a href="https://github.com/user-attachments/assets/50724d34-e09a-4200-bd83-8f8d45e94c85" target="_blank">
+  <img src="https://github.com/user-attachments/assets/50724d34-e09a-4200-bd83-8f8d45e94c85" alt="dish page">
+  </a>
+  <a href="https://github.com/user-attachments/assets/7d608059-b4f2-4d40-b22f-21c777c05472" target="_blank">
+  <img src="https://github.com/user-attachments/assets/7d608059-b4f2-4d40-b22f-21c777c05472" alt="chef's kitchen page">
+  </a>
   
 ![social accout excess](https://github.com/user-attachments/assets/13147f72-37fc-46f1-bdf6-1f6f4fdae516)
 ![required to login](https://github.com/user-attachments/assets/6f211881-dbbd-4ba9-a560-79dd76af4512)
@@ -333,13 +337,21 @@ Feedback mechanism (e.g., “Like” or “Helpful” buttons) to engage users f
 * Edit & Delete options are available for authorized users, maintaining content quality.
 * Clear timestamp and username display enhance credibility and transparency.
 
-![login required to comment](https://github.com/user-attachments/assets/f6262a83-82bd-4772-87d6-bad51f78d79c)
+<a href="https://github.com/user-attachments/assets/f6262a83-82bd-4772-87d6-bad51f78d79c" target="_blank">
+<img src="https://github.com/user-attachments/assets/f6262a83-82bd-4772-87d6-bad51f78d79c" alt="login required to comment">
+</a>
 
-![approve comment](https://github.com/user-attachments/assets/d7ca02b2-61cc-4f08-b633-487ab253a712)
+<a href="https://github.com/user-attachments/assets/d7ca02b2-61cc-4f08-b633-487ab253a712" target="_blank">
+<img src="https://github.com/user-attachments/assets/d7ca02b2-61cc-4f08-b633-487ab253a712" alt="approve comment">
+</a>
 
-![admin can approve comment](https://github.com/user-attachments/assets/8e61b460-514b-47a1-9247-f999e2772cf5)
+<a href="https://github.com/user-attachments/assets/8e61b460-514b-47a1-9247-f999e2772cf5" target="_blank">
+<img src="https://github.com/user-attachments/assets/8e61b460-514b-47a1-9247-f999e2772cf5" alt="admin can approve comment">
+</a>
 
-![edit and delete comment](https://github.com/user-attachments/assets/7a807771-d9e5-47b9-a875-34f1149c858e)
+<a href="https://github.com/user-attachments/assets/7a807771-d9e5-47b9-a875-34f1149c858e" target="_blank">
+<img src="https://github.com/user-attachments/assets/7a807771-d9e5-47b9-a875-34f1149c858e" alt="edit and delete comment">
+</a>
 
 ![comment added in chefs profile page ](https://github.com/user-attachments/assets/43c11962-249b-485a-94d2-7a3c664828e9)
 

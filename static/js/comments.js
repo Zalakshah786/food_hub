@@ -55,6 +55,7 @@ document.querySelectorAll('.btn-edit').forEach(item => {
         </div>
         <input type="hidden" name="rating" value="${rating}">
         <button type="submit" class="btn btn-primary mt-2">Save</button>
+        <button type="button" class="btn btn-secondary mt-2 ms-2" onclick="location.reload()">Cancel</button>
       </form>
     `;
     comment.innerHTML = form;

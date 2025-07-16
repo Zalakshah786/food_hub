@@ -20,10 +20,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 if os.path.exists(os.path.join(BASE_DIR, 'env.py')):
     import env
 
+# Import local settings for development (not committed to git)
+if os.path.exists(os.path.join(BASE_DIR, 'local_settings.py')):
+    import local_settings
+
 SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
+# For local development, you can set DEBUG=True by setting environment variable
+# or creating a local_settings.py file (not committed to git)
+
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.herokuapp.com']
 
 # Security settings for production
 if not DEBUG:
