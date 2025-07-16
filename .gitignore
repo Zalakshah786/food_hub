@@ -59,8 +59,33 @@ cover/
 # Django stuff:
 *.log
 local_settings.py
+local_settings.py.backup
+local_settings.py.*
 db.sqlite3
 db.sqlite3-journal
+
+# Environment and configuration files (SECURITY CRITICAL)
+env.py
+env.py.backup
+env.py.*
+.env
+.env.local
+.env.production
+.env.staging
+config.py
+config.py.backup
+config.py.*
+secrets.py
+secrets.py.*
+
+# IDE and system files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
 
 # Flask stuff:
 instance/
@@ -133,6 +158,13 @@ celerybeat.pid
 .venv
 env/
 venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Virtual environment directories
+venv/
+env/
 ENV/
 env.bak/
 venv.bak/
