@@ -4,6 +4,24 @@
 <img src="https://github.com/user-attachments/assets/35397cfd-f83a-4831-b465-cbb60f10b627" alt="mainpage">
 </a>
 
+## 🔐 ASSESSOR INFORMATION
+
+### Admin Credentials:
+- **Username**: `assessor`
+- **Password**: `assessor123`
+- **Admin Panel**: [https://food-hub-0b5046e8acf1.herokuapp.com/admin/](https://food-hub-0b5046e8acf1.herokuapp.com/admin/)
+
+### Test User Credentials:
+- **User 1**: `testuser` / `testpass123`
+- **User 2**: `demouser` / `demopass123`
+
+### 📋 Assessment Documentation:
+- **Assessor Guide**: [ASSESSOR_CREDENTIALS.md](ASSESSOR_CREDENTIALS.md)
+- **Security Compliance**: [SECURITY_COMPLIANCE.md](SECURITY_COMPLIANCE.md)
+- **Resubmission Summary**: [RESUBMISSION_SUMMARY.md](RESUBMISSION_SUMMARY.md)
+
+---
+
 
 
 ### Overview 
